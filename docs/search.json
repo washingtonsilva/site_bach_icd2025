@@ -1,0 +1,218 @@
+[
+  {
+    "objectID": "programa.html",
+    "href": "programa.html",
+    "title": "Programa da Disciplina",
+    "section": "",
+    "text": "Fundamentos de Ciência de Dados aplicados à Administração. Ambiente de trabalho e ferramentas computacionais (RStudio, Linguagem R, Git, GitHub e Sistema Quarto). Preparação, manipulação e transformação de dados com tidyverse. Estatística descritiva. Visualização de dados com ggplot2. Fundamentos de probabilidade. Introdução à inferência estatística. Criação de relatórios e dashboards para comunicação de resultados.",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#ementa",
+    "href": "programa.html#ementa",
+    "title": "Programa da Disciplina",
+    "section": "",
+    "text": "Fundamentos de Ciência de Dados aplicados à Administração. Ambiente de trabalho e ferramentas computacionais (RStudio, Linguagem R, Git, GitHub e Sistema Quarto). Preparação, manipulação e transformação de dados com tidyverse. Estatística descritiva. Visualização de dados com ggplot2. Fundamentos de probabilidade. Introdução à inferência estatística. Criação de relatórios e dashboards para comunicação de resultados.",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#objetivo-geral",
+    "href": "programa.html#objetivo-geral",
+    "title": "Programa da Disciplina",
+    "section": "Objetivo Geral",
+    "text": "Objetivo Geral\nEsta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até programação e aplicações práticas, para equipar o graduando com um sólido conhecimento básico para trabalhar com análise de dados em contextos empresariais. O curso fornece uma introdução aos princípios do processo de análise de dados, com exemplos práticos sobre como aplicá-los em decisões. São apresentados conceitos essenciais de manipulação de dados, estatística descritiva, visualização e fundamentos de probabilidade e inferência, proporcionando ao estudante habilidades críticas para analisar dados de forma eficaz na era da Ciência de Dados. O objetivo final é preparar os graduandos para o mercado de trabalho atual, tornando-os capazes de coletar, preparar, analisar e comunicar insights baseados em dados em um contexto de negócios.",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#objetivos-específicos",
+    "href": "programa.html#objetivos-específicos",
+    "title": "Programa da Disciplina",
+    "section": "Objetivos Específicos",
+    "text": "Objetivos Específicos\n\nCapacitar o graduando em ferramentas e técnicas modernas essenciais para Ciência de Dados, com foco na linguagem R e no ambiente RStudio para a importação, organização, visualização e análise estatística de dados.\nDesenvolver habilidades de preparação e manipulação de dados usando o metapacote tidyverse, capacitando o estudante a transformar dados brutos em formatos adequados para análise.\nAplicar conceitos fundamentais de estatística descritiva e visualização de dados para identificar padrões e tendências relevantes em conjuntos de dados.\nIntroduzir fundamentos de probabilidade e inferência estatística necessários para a tomada de decisão baseada em dados, incluindo simulações de Monte Carlo aplicadas a problemas de negócios.\nCapacitar o graduando para a criação de relatórios e dashboards usando o sistema Quarto, permitindo a reprodutibilidade das análises e a comunicação eficaz de resultados analíticos.",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#bibliografia-básica",
+    "href": "programa.html#bibliografia-básica",
+    "title": "Programa da Disciplina",
+    "section": "Bibliografia Básica",
+    "text": "Bibliografia Básica\nWICKHAM, Hadley; ÇETINKAYA-RUNDEL, Mine; GROLEMUND, Garrett. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd. ed. 2023. O’Reilly Media, Inc. Disponível em: R for Data Science. Tradução em Português disponível em: R para Ciência de Dados\nDEVORE, J. L. Probabilidade e Estatística para Engenharia e Ciências. São Paulo: Thomson, 2006. Disponível na biblioteca do campus.\nSMAY, Chester; KIM, Albert Y. Introduction to Data Science: Data Wrangling and Visualization with R. 2nd Edition. CRC Press, 2025. Disponível em: Introduction to Data Science",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#bibliografia-complementar",
+    "href": "programa.html#bibliografia-complementar",
+    "title": "Programa da Disciplina",
+    "section": "Bibliografia Complementar",
+    "text": "Bibliografia Complementar\nFARIA, Pedro Duarte. Introdução à Linguagem R: Seus Fundamentos e sua Prática. 2024. Disponível em: Introdução à Linguagem R\nTRIOLA, Mário F. Introdução à Estatística. 10 edição. Rio de Janeiro: LTC, 2008. Disponível na biblioteca do campus.\nManual do Sistema Quarto.",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#avaliação",
+    "href": "programa.html#avaliação",
+    "title": "Programa da Disciplina",
+    "section": "Avaliação",
+    "text": "Avaliação\nOs pontos referentes às avaliações serão distribuídos da seguinte forma:\n\nAvaliação 1 (33 pontos): Fundamentos de R e Manipulação de Dados\n\nAplicada após o módulo 3\nProjeto individual: importação e manipulação de dados empresariais\nEntrega: Documento Quarto via GitHub\n\nAvaliação 2 (33 pontos): Estatística Descritiva e Visualização\n\nAplicada após o módulo 5\nProjeto em duplas: análise exploratória e visualizações\nEntrega: Documento Quarto com análises e visualizações comentadas\n\nAvaliação 3 (34 pontos): Projeto Final\n\nAplicada ao final do curso\nProjeto em grupos de 3-4 alunos: análise completa de um problema aplicado\nEntrega: Relatório Quarto ou Dashboard analíticos\n\n\nPara aprovação, é necessária a obtenção de pelo menos 60 pontos. Pode haver alterações no conteúdo das avaliações conforme o andamento da disciplina e rendimento da turma.",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#conteúdo-programático",
+    "href": "programa.html#conteúdo-programático",
+    "title": "Programa da Disciplina",
+    "section": "Conteúdo Programático",
+    "text": "Conteúdo Programático\n\n1. Introdução à Ciência de Dados para Administração\n\n1.1. O que é Ciência de Dados e aplicações\n1.2. CRISP-DM: Um processo de análise de dados\n1.3. Tipos de análise: descritiva, diagnóstica e preditiva\n\n\n\n2. Ambiente de Trabalho e Ferramentas\n\n2.1. RStudio e projetos estruturados\n\n2.1.1. Interface e configuração\n2.1.2. Projetos RStudio: criação e vantagens\n\n2.2. Sistema de Publicação Quarto\n\n2.2.1. Documentos reproduzíveis: código e texto integrados\n2.2.2. Formatos de saída relevantes para Administração (relatórios, apresentações)\n\n2.3. Introdução à Linguagem R\n\n2.3.1. Operações básicas e tipos de dados\n2.3.2. Estruturas de dados fundamentais (vetores, dataframes)\n2.3.3. Programação com Funções\n\n2.4. Controle de versão com Git e GitHub\n\n2.4.1. Conceitos fundamentais e fluxo de trabalho básico\n2.4.2. Criando e mantendo um repositório para o projeto da disciplina\n\n\n\n\n3. Preparação de Dados com Tidyverse (12 horas)\n\n3.1. Importação de dados com readr e readxl\n\n3.1.1. Arquivos CSV e Excel\n\n3.2. Manipulação de dados com dplyr\n\n3.2.1. Filtragem, seleção e ordenação (filter, select, arrange)\n3.2.2. Criação de novas variáveis (mutate)\n3.2.3. Sumarização de dados (group_by, summarize)\n\n3.3. Reestruturação de dados com tidyr\n\n3.3.1. Dados organizados (tidy data)\n3.3.2. Funções pivot_longer e pivot_wider\n\n3.4. Combinação de conjuntos de dados (joins)\n\n\n\n4. Fundamentos de Probabilidade para Decisões\n\n4.1. Introdução à Probabilidade\n4.2. Probabilidade Condicional\n4.3. Variáveis Aleatórias e Distribuições de Probabilidade\n4.4. Valor Esperado, Variância e Covariância\n4.5. Simulação de Monte Carlo aplicada à Administração\n\n\n\n5. Análise Exploratória de Dados\n\n5.1. Tipos de Variáveis\n5.2. Análise exploratória numérica\n\n5.2.1. Medidas de Posição e de Variação\n5.2.2. Correlações e tabelas de contingência\n\n5.5. Análise exploratória gráfica\n\n\n\n6. Visualização de Dados com ggplot2\n\n6.1. Princípios básicos do ggplot2\n6.2. Visualizações essenciais para análise de negócios\n\n6.2.1. Histogramas e Densidades\n6.2.2. Gráficos de barras\n6.2.3. Gráficos de linhas e séries temporais\n6.2.4. Gráficos de dispersão\n6.2.5. Boas práticas de visualização\n\n\n\n\n7. Introdução à Inferência Estatística\n\n7.1. Amostragem e distribuições amostrais\n7.2. Estimação Pontual, Intervalos de Confiança e Bootstrap\n7.3. Introdução aos Testes de Hipóteses com aplicações práticas\n\n\n\n8. Tópicos Extras\n\n8.1. Relatórios Parametrizados com Quarto\n8.2. Dashboards básicos para monitoramento de indicadores",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#recursos-didáticos",
+    "href": "programa.html#recursos-didáticos",
+    "title": "Programa da Disciplina",
+    "section": "Recursos Didáticos",
+    "text": "Recursos Didáticos\nEntre os recursos didáticos utilizados na disciplina estão: Slides e notas de aula, tutoriais desenvolvidos em Quarto, aulas computacionais práticas listas de exercícios aplicados, conjuntos de dados reais e simulados para análise, repositório GitHub da disciplina para compartilhamento de materiais e submissão de atividades, e ambiente virtual de aprendizagem para suporte.",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#metodologia-de-ensino",
+    "href": "programa.html#metodologia-de-ensino",
+    "title": "Programa da Disciplina",
+    "section": "Metodologia de Ensino",
+    "text": "Metodologia de Ensino\nTrata-se de um curso do tipo “hands-on” e baseado no conceito de aprendizagem ativa. Nesse sentido, e dados os objetivos do curso, faremos uso intensivo de aulas práticas nas quais os graduandos deverão praticar as metodologias para análise de dados e sua implementação via linguagem R e sistema de publicação Quarto. O aprendizado será estruturado por meio de projetos progressivos, começando com exercícios simples de manipulação de dados e avançando para análises mais complexas, culminando em um projeto final que sintetiza as competências desenvolvidas ao longo do semestre. Esta abordagem visa facilitar a aplicação imediata dos conhecimentos no contexto profissional dos estudantes.",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#plano-de-aulas",
+    "href": "programa.html#plano-de-aulas",
+    "title": "Programa da Disciplina",
+    "section": "Plano de Aulas",
+    "text": "Plano de Aulas\nO cronograma a seguir é apenas um planejamento, portanto, pode ser alterado conforme o andamento da disciplina e o rendimento da turma.\n\n\n\n\n\n\n\n\nData\nTotal de Aulas\nTópico\n\n\n\n\n26/03/25\n2\nApresentação da Disciplina\n\n\n\n\nO que é Ciência de Dados e aplicações\n\n\n28/03/25\n2\nCRISP-DM e Tipos de análise\n\n\n02/04/25\n2\nRStudio e projetos estruturados\n\n\n04/04/25\n2\nSistema de Publicação Quarto\n\n\n09/04/25\n2\nIntrodução à Linguagem R (Parte 1)\n\n\n11/04/25\n2\nIntrodução à Linguagem R (Parte 2)\n\n\n16/04/25\n2\nControle de versão com Git e GitHub\n\n\n23/04/25\n2\nImportação de dados com readr e readxl\n\n\n25/04/25\n2\nManipulação de dados com dplyr (Parte 1)\n\n\n30/04/25\n2\nManipulação de dados com dplyr (Parte 2)\n\n\n07/05/25\n2\nReestruturação de dados com tidyr\n\n\n09/05/25\n2\nCombinação de conjuntos de dados (joins)\n\n\n14/05/25\n2\nAvaliação 1\n\n\n16/05/25\n2\nFundamentos de Probabilidade\n\n\n21/05/25\n2\nSimulação de Monte Carlo\n\n\n23/05/25\n2\nAnálise Exploratória Numérica\n\n\n28/05/25\n2\nAnálise Exploratória Numérica\n\n\n30/05/25\n2\nAnálise Exploratória Gráfica\n\n\n02/06/25\n2\nAnálise Exploratória Gráfica\n\n\n04/06/25\n2\nAnálise Exploratória Gráfica\n\n\n11/06/25\n2\nAvaliação 2\n\n\n13/06/25\n2\nAnálise Exploratória Gráfica\n\n\n18/06/25\n2\nIntrodução à Inferência Estatística\n\n\n25/06/25\n2\nIntrodução à Inferência Estatística\n\n\n27/06/25\n2\nIntrodução à Inferência Estatística\n\n\n02/07/25\n2\nIntrodução à Inferência Estatística\n\n\n04/07/25\n2\nRelatórios Quarto Parametrizados\n\n\n09/07/25\n2\nDashboards\n\n\n11/07/25\n2\nAvaliação 3\n\n\n18/07/25\n2\nEncerramento",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#recuperação",
+    "href": "programa.html#recuperação",
+    "title": "Programa da Disciplina",
+    "section": "Recuperação",
+    "text": "Recuperação\nConforme o regulamento dos cursos de graduação do IFMG.",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "cronograma.html",
+    "href": "cronograma.html",
+    "title": "Cronograma",
+    "section": "",
+    "text": "Nesta página, você encontrará o cronograma completo da disciplina, com links para os materiais de cada aula, incluindo slides, arquivos Quarto para prática, e outros recursos relevantes.",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
+    "objectID": "cronograma.html#aula-1-26032025",
+    "href": "cronograma.html#aula-1-26032025",
+    "title": "Cronograma",
+    "section": "Aula 1 (26/03/2025)",
+    "text": "Aula 1 (26/03/2025)\n\nTópicos:\n\nO que é Ciência de Dados\nAplicações em Administração\nVisão geral do curso\n\nMateriais:\n\nSlides da Aula 1\nTutoriais relacionados:\n\nIntrodução ao RStudio",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
+    "objectID": "cronograma.html#aula-2-28032025",
+    "href": "cronograma.html#aula-2-28032025",
+    "title": "Cronograma",
+    "section": "Aula 2 (28/03/2025)",
+    "text": "Aula 2 (28/03/2025)\n\nTópicos:\n\nMetodologia CRISP-DM\nAnálise descritiva, diagnóstica, preditiva e prescritiva\nExemplos de aplicação em Administração\n\nMateriais:\n\nSlides da Aula 2\n\nTutoriais relacionados:\n\nMarkdown Básico",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introdução à Ciência de Dados 2025",
+    "section": "",
+    "text": "Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até programação e aplicações práticas em contextos empresariais.",
+    "crumbs": [
+      "Início",
+      "Introdução à Ciência de Dados 2025"
+    ]
+  },
+  {
+    "objectID": "index.html#bem-vindo-à-disciplina",
+    "href": "index.html#bem-vindo-à-disciplina",
+    "title": "Introdução à Ciência de Dados 2025",
+    "section": "",
+    "text": "Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até programação e aplicações práticas em contextos empresariais.",
+    "crumbs": [
+      "Início",
+      "Introdução à Ciência de Dados 2025"
+    ]
+  },
+  {
+    "objectID": "index.html#informações-gerais",
+    "href": "index.html#informações-gerais",
+    "title": "Introdução à Ciência de Dados 2025",
+    "section": "Informações Gerais",
+    "text": "Informações Gerais\n\nProfessor: Prof. Dr. Washington Santos da Silva\nE-mail: washington.silva@ifmg.edu.br\nHorário de aula: Quartas e Sextas, 18:30-20:30\nLocal: Laboratório de Informática 2 - Bloco B - 2 andar.",
+    "crumbs": [
+      "Início",
+      "Introdução à Ciência de Dados 2025"
+    ]
+  },
+  {
+    "objectID": "index.html#conteúdo",
+    "href": "index.html#conteúdo",
+    "title": "Introdução à Ciência de Dados 2025",
+    "section": "Conteúdo",
+    "text": "Conteúdo\nO conteúdo da disciplina está organizado na página Cronograma, onde você encontrará todos os materiais necessários para acompanhar as aulas, incluindo slides, arquivos Quarto, tutoriais, entre outros.",
+    "crumbs": [
+      "Início",
+      "Introdução à Ciência de Dados 2025"
+    ]
+  }
+]

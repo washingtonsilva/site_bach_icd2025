@@ -1,0 +1,45 @@
+---
+title: "Cronograma"
+lang: pt-BR
+---
+
+Nesta página, você encontrará o cronograma completo da disciplina, com 
+links para os materiais de cada aula, incluindo slides, arquivos Quarto 
+para prática, e outros recursos relevantes.
+
+
+# Semana 1
+
+## Aula 1 (26/03/2025) 
+
+- **Tópicos:**
+
+  - O que é Ciência de Dados
+  - Aplicações em Administração
+  - Visão geral do curso
+
+- **Materiais:**
+
+  - [Slides da Aula 1](/slides/slides_aula01.html)
+  
+  - **Tutoriais relacionados:**
+  
+    - [Introdução ao RStudio](https://washingtonsilva.github.io/tutorials/rstudio/){target="_blank"}
+
+
+## Aula 2 (28/03/2025) 
+
+- **Tópicos:**
+
+  - Metodologia CRISP-DM
+  - Análise descritiva, diagnóstica, preditiva e prescritiva
+  - Exemplos de aplicação em Administração
+
+- **Materiais:**
+
+  - [Slides da Aula 2](/slides/aula2.html)
+  
+- **Tutoriais relacionados:**
+  
+  - [Markdown Básico](/tutoriais/markdown-intro.html)
+

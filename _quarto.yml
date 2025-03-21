@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+
+website:
+  title: "Introdução à Ciência de Dados"
+  navbar:
+    background: primary
+    left:
+      - href: index.html
+        text: "Início"
+      - href: programa.html
+        text: "Programa da Disciplina"
+      - href: cronograma.html
+        text: "Cronograma"
+
+  sidebar:
+    style: docked
+    search: true
+    contents:
+          - index.qmd
+          - text: "Programa da Disciplina"
+            href: programa.qmd
+          - cronograma.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    lang: pt-BR
+
+
+
+

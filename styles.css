@@ -1,0 +1,39 @@
+/* css styles */
+
+/* Cores personalizadas para o IFMG */
+.navbar {
+  background-color: #000000; /* verde escuro - ajuste conforme identidade do IFMG */
+}
+
+/* Estilo para cabeçalhos */
+h1, h2, h3 {
+  color: #000000;
+}
+
+/* Espaçamento para conteúdo */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Justificação de texto para todos os elementos de texto */
+p, li, td, th, figcaption, blockquote, .description, .lead, .abstract, div {
+  text-align: justify;
+}
+
+/* Ajusta o espaçamento entre palavras para melhorar a justificação */
+p, li, td, th, figcaption, blockquote, .description, .lead, .abstract, div {
+  word-spacing: 0.05em;
+  hyphens: auto;
+}
+
+/* Mantem alinhamento left para elementos que não devem ser justificados */
+pre, code, .sourceCode, h1, h2, h3, h4, h5, h6 {
+  text-align: left;
+}
+
+/* Ajusta o último parágrafo de cada seção para evitar espaçamento estranho */
+p:last-of-type {
+  text-align-last: left;
+}
