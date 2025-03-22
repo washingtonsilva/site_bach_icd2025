@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5389d4ab929c550394c6a762f14605b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d4469d78b3b6e6f034277cd27f5841ad.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -190,20 +219,22 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="bem-vindo-à-disciplina" class="level2">
 <h2 class="anchored" data-anchor-id="bem-vindo-à-disciplina">Bem-vindo à disciplina</h2>
-<p>Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até programação e aplicações práticas em contextos empresariais.</p>
+<p>Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até a linguagem R, IDE RStudio, sistema Quarto, controle de versão com Git/GitHub e aplicações.</p>
 </section>
 <section id="informações-gerais" class="level2">
 <h2 class="anchored" data-anchor-id="informações-gerais">Informações Gerais</h2>
 <ul>
-<li><strong>Professor:</strong> Prof.&nbsp;Dr.&nbsp;Washington Santos da Silva</li>
+<li><strong>Professor:</strong> <a href="https://washingtonsilva.github.io" target="_blank">Prof.&nbsp;Dr.&nbsp;Washington Santos da Silva</a></li>
 <li><strong>E-mail:</strong> washington.silva@ifmg.edu.br</li>
 <li><strong>Horário de aula:</strong> Quartas e Sextas, 18:30-20:30</li>
-<li><strong>Local:</strong> Laboratório de Informática 2 - Bloco B - 2 andar.</li>
+<li><strong>Local:</strong> Laboratório de Informática <strong>2</strong> - Bloco B - 2<span class="math inline">\(^{o}\)</span> andar.</li>
 </ul>
 </section>
 <section id="conteúdo" class="level2">
 <h2 class="anchored" data-anchor-id="conteúdo">Conteúdo</h2>
 <p>O conteúdo da disciplina está organizado na página <a href="./cronograma.html">Cronograma</a>, onde você encontrará todos os materiais necessários para acompanhar as aulas, incluindo slides, arquivos Quarto, tutoriais, entre outros.</p>
+<p>0 programa da disciplina pode ser consultado na página <a href="./programa.html">Programa da Disciplina</a>, na qual você poderá obter informações sobre os objetivos, bibliografia, avaliações, entre outras.</p>
+<p>O programa completo da disciplina está disponível na página <a href="./programa.html">Programa da Disciplina</a>, onde você encontrará informações detalhadas sobre objetivos, ementa, bibliografia, avaliações, entre outras.</p>
 
 
 </section>
@@ -627,6 +658,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2025, Washington Santos da Silva</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/washingtonssilva/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://washingtonsilva.github.io">
+      <i class="bi bi-globe" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 

@@ -7,18 +7,6 @@ author: "Prof. Dr. Washington S. da Silva"
 
 
 
-## Ementa
-
-Fundamentos de Ciência de Dados aplicados à Administração. Ambiente de 
-trabalho e ferramentas computacionais (RStudio, Linguagem R, Git, GitHub e 
-Sistema Quarto). Preparação, manipulação e transformação de dados com 
-tidyverse. Estatística descritiva. Visualização de dados com ggplot2. 
-Fundamentos de probabilidade. Introdução à inferência estatística. Criação de 
-relatórios e dashboards para comunicação de resultados.
-
-
-
-
 ## Objetivo Geral
 
 Esta disciplina cobre os fundamentos de ciência de dados aplicados à 
@@ -56,6 +44,19 @@ de Monte Carlo aplicadas a problemas de negócios.
 5. Capacitar o graduando para a criação de relatórios e dashboards usando 
 o sistema Quarto, permitindo a reprodutibilidade das análises e a
 comunicação eficaz de resultados analíticos.
+
+
+
+
+
+## Ementa
+
+Fundamentos de Ciência de Dados aplicados à Administração. Ambiente de 
+trabalho e ferramentas computacionais (RStudio, Linguagem R, Git, GitHub e 
+Sistema Quarto). Preparação, manipulação e transformação de dados com 
+tidyverse. Estatística descritiva. Visualização de dados com ggplot2. 
+Fundamentos de probabilidade. Introdução à inferência estatística. Criação de 
+relatórios e dashboards para comunicação de resultados.
 
 
 

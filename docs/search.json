@@ -4,18 +4,7 @@
     "href": "programa.html",
     "title": "Programa da Disciplina",
     "section": "",
-    "text": "Fundamentos de Ciência de Dados aplicados à Administração. Ambiente de trabalho e ferramentas computacionais (RStudio, Linguagem R, Git, GitHub e Sistema Quarto). Preparação, manipulação e transformação de dados com tidyverse. Estatística descritiva. Visualização de dados com ggplot2. Fundamentos de probabilidade. Introdução à inferência estatística. Criação de relatórios e dashboards para comunicação de resultados.",
-    "crumbs": [
-      "Início",
-      "Programa da Disciplina"
-    ]
-  },
-  {
-    "objectID": "programa.html#ementa",
-    "href": "programa.html#ementa",
-    "title": "Programa da Disciplina",
-    "section": "",
-    "text": "Fundamentos de Ciência de Dados aplicados à Administração. Ambiente de trabalho e ferramentas computacionais (RStudio, Linguagem R, Git, GitHub e Sistema Quarto). Preparação, manipulação e transformação de dados com tidyverse. Estatística descritiva. Visualização de dados com ggplot2. Fundamentos de probabilidade. Introdução à inferência estatística. Criação de relatórios e dashboards para comunicação de resultados.",
+    "text": "Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até programação e aplicações práticas, para equipar o graduando com um sólido conhecimento básico para trabalhar com análise de dados em contextos empresariais. O curso fornece uma introdução aos princípios do processo de análise de dados, com exemplos práticos sobre como aplicá-los em decisões. São apresentados conceitos essenciais de manipulação de dados, estatística descritiva, visualização e fundamentos de probabilidade e inferência, proporcionando ao estudante habilidades críticas para analisar dados de forma eficaz na era da Ciência de Dados. O objetivo final é preparar os graduandos para o mercado de trabalho atual, tornando-os capazes de coletar, preparar, analisar e comunicar insights baseados em dados em um contexto de negócios.",
     "crumbs": [
       "Início",
       "Programa da Disciplina"
@@ -25,8 +14,8 @@
     "objectID": "programa.html#objetivo-geral",
     "href": "programa.html#objetivo-geral",
     "title": "Programa da Disciplina",
-    "section": "Objetivo Geral",
-    "text": "Objetivo Geral\nEsta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até programação e aplicações práticas, para equipar o graduando com um sólido conhecimento básico para trabalhar com análise de dados em contextos empresariais. O curso fornece uma introdução aos princípios do processo de análise de dados, com exemplos práticos sobre como aplicá-los em decisões. São apresentados conceitos essenciais de manipulação de dados, estatística descritiva, visualização e fundamentos de probabilidade e inferência, proporcionando ao estudante habilidades críticas para analisar dados de forma eficaz na era da Ciência de Dados. O objetivo final é preparar os graduandos para o mercado de trabalho atual, tornando-os capazes de coletar, preparar, analisar e comunicar insights baseados em dados em um contexto de negócios.",
+    "section": "",
+    "text": "Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até programação e aplicações práticas, para equipar o graduando com um sólido conhecimento básico para trabalhar com análise de dados em contextos empresariais. O curso fornece uma introdução aos princípios do processo de análise de dados, com exemplos práticos sobre como aplicá-los em decisões. São apresentados conceitos essenciais de manipulação de dados, estatística descritiva, visualização e fundamentos de probabilidade e inferência, proporcionando ao estudante habilidades críticas para analisar dados de forma eficaz na era da Ciência de Dados. O objetivo final é preparar os graduandos para o mercado de trabalho atual, tornando-os capazes de coletar, preparar, analisar e comunicar insights baseados em dados em um contexto de negócios.",
     "crumbs": [
       "Início",
       "Programa da Disciplina"
@@ -38,6 +27,17 @@
     "title": "Programa da Disciplina",
     "section": "Objetivos Específicos",
     "text": "Objetivos Específicos\n\nCapacitar o graduando em ferramentas e técnicas modernas essenciais para Ciência de Dados, com foco na linguagem R e no ambiente RStudio para a importação, organização, visualização e análise estatística de dados.\nDesenvolver habilidades de preparação e manipulação de dados usando o metapacote tidyverse, capacitando o estudante a transformar dados brutos em formatos adequados para análise.\nAplicar conceitos fundamentais de estatística descritiva e visualização de dados para identificar padrões e tendências relevantes em conjuntos de dados.\nIntroduzir fundamentos de probabilidade e inferência estatística necessários para a tomada de decisão baseada em dados, incluindo simulações de Monte Carlo aplicadas a problemas de negócios.\nCapacitar o graduando para a criação de relatórios e dashboards usando o sistema Quarto, permitindo a reprodutibilidade das análises e a comunicação eficaz de resultados analíticos.",
+    "crumbs": [
+      "Início",
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#ementa",
+    "href": "programa.html#ementa",
+    "title": "Programa da Disciplina",
+    "section": "Ementa",
+    "text": "Ementa\nFundamentos de Ciência de Dados aplicados à Administração. Ambiente de trabalho e ferramentas computacionais (RStudio, Linguagem R, Git, GitHub e Sistema Quarto). Preparação, manipulação e transformação de dados com tidyverse. Estatística descritiva. Visualização de dados com ggplot2. Fundamentos de probabilidade. Introdução à inferência estatística. Criação de relatórios e dashboards para comunicação de resultados.",
     "crumbs": [
       "Início",
       "Programa da Disciplina"
@@ -136,7 +136,7 @@
     "href": "cronograma.html",
     "title": "Cronograma",
     "section": "",
-    "text": "Nesta página, você encontrará o cronograma completo da disciplina, com links para os materiais de cada aula, incluindo slides, arquivos Quarto para prática, e outros recursos relevantes.",
+    "text": "Nesta página, você encontrará o cronograma completo da disciplina, com links para os materiais de cada aula, incluindo slides, links para tutoriais criados para a disciplina, arquivos quarto (.qmd) e outros recursos que poderão ser disponibilizados.",
     "crumbs": [
       "Início",
       "Cronograma"
@@ -176,7 +176,7 @@
     "href": "index.html",
     "title": "Introdução à Ciência de Dados 2025",
     "section": "",
-    "text": "Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até programação e aplicações práticas em contextos empresariais.",
+    "text": "Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até a linguagem R, IDE RStudio, sistema Quarto, controle de versão com Git/GitHub e aplicações.",
     "crumbs": [
       "Início",
       "Introdução à Ciência de Dados 2025"
@@ -187,7 +187,7 @@
     "href": "index.html#bem-vindo-à-disciplina",
     "title": "Introdução à Ciência de Dados 2025",
     "section": "",
-    "text": "Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até programação e aplicações práticas em contextos empresariais.",
+    "text": "Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até a linguagem R, IDE RStudio, sistema Quarto, controle de versão com Git/GitHub e aplicações.",
     "crumbs": [
       "Início",
       "Introdução à Ciência de Dados 2025"
@@ -198,7 +198,7 @@
     "href": "index.html#informações-gerais",
     "title": "Introdução à Ciência de Dados 2025",
     "section": "Informações Gerais",
-    "text": "Informações Gerais\n\nProfessor: Prof. Dr. Washington Santos da Silva\nE-mail: washington.silva@ifmg.edu.br\nHorário de aula: Quartas e Sextas, 18:30-20:30\nLocal: Laboratório de Informática 2 - Bloco B - 2 andar.",
+    "text": "Informações Gerais\n\nProfessor: Prof. Dr. Washington Santos da Silva\nE-mail: washington.silva@ifmg.edu.br\nHorário de aula: Quartas e Sextas, 18:30-20:30\nLocal: Laboratório de Informática 2 - Bloco B - 2\\(^{o}\\) andar.",
     "crumbs": [
       "Início",
       "Introdução à Ciência de Dados 2025"
@@ -209,7 +209,7 @@
     "href": "index.html#conteúdo",
     "title": "Introdução à Ciência de Dados 2025",
     "section": "Conteúdo",
-    "text": "Conteúdo\nO conteúdo da disciplina está organizado na página Cronograma, onde você encontrará todos os materiais necessários para acompanhar as aulas, incluindo slides, arquivos Quarto, tutoriais, entre outros.",
+    "text": "Conteúdo\nO conteúdo da disciplina está organizado na página Cronograma, onde você encontrará todos os materiais necessários para acompanhar as aulas, incluindo slides, arquivos Quarto, tutoriais, entre outros.\n0 programa da disciplina pode ser consultado na página Programa da Disciplina, na qual você poderá obter informações sobre os objetivos, bibliografia, avaliações, entre outras.\nO programa completo da disciplina está disponível na página Programa da Disciplina, onde você encontrará informações detalhadas sobre objetivos, ementa, bibliografia, avaliações, entre outras.",
     "crumbs": [
       "Início",
       "Introdução à Ciência de Dados 2025"

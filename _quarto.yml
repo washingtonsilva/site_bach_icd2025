@@ -15,6 +15,14 @@ website:
         text: "Programa da Disciplina"
       - href: cronograma.html
         text: "Cronograma"
+  page-footer:
+    left: "Copyright 2025, Washington Santos da Silva"
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/washingtonssilva/
+      - icon: globe
+        href: https://washingtonsilva.github.io
+    background: "#000000"
 
   sidebar:
     style: docked

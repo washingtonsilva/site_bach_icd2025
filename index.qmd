@@ -7,15 +7,16 @@ subtitle: "Bacharelado em Administração - IFMG Campus Formiga"
 ## Bem-vindo à disciplina
 
 Esta disciplina cobre os fundamentos de ciência de dados aplicados à 
-administração, desde estatística e probabilidade até programação e 
-aplicações práticas em contextos empresariais.
+administração, desde estatística e probabilidade até a linguagem R, 
+IDE RStudio, sistema Quarto, controle de versão com Git/GitHub e
+aplicações.
 
 ## Informações Gerais
 
-- **Professor:** Prof. Dr. Washington Santos da Silva
+- **Professor:** [Prof. Dr. Washington Santos da Silva](https://washingtonsilva.github.io){target="_blank"}
 - **E-mail:** washington.silva@ifmg.edu.br
 - **Horário de aula:** Quartas e Sextas, 18:30-20:30
-- **Local:** Laboratório de Informática 2 - Bloco B - 2 andar.
+- **Local:** Laboratório de Informática **2** - Bloco B - 2$^{o}$ andar.
 
 ## Conteúdo
 
@@ -23,3 +24,12 @@ O conteúdo da disciplina está organizado na página
 [Cronograma](cronograma.qmd), onde você encontrará todos os materiais 
 necessários para acompanhar as aulas, incluindo slides, arquivos Quarto, 
 tutoriais, entre outros.
+
+0 programa da disciplina pode ser consultado na página 
+[Programa da Disciplina](programa.qmd), na qual você poderá 
+obter informações sobre os objetivos, bibliografia, avaliações, entre 
+outras.
+
+O programa completo da disciplina está disponível na página 
+[Programa da Disciplina](programa.qmd), onde você encontrará informações 
+detalhadas sobre objetivos, ementa, bibliografia, avaliações, entre outras.

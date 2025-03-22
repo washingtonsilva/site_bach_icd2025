@@ -3,9 +3,10 @@ title: "Cronograma"
 lang: pt-BR
 ---
 
-Nesta página, você encontrará o cronograma completo da disciplina, com 
-links para os materiais de cada aula, incluindo slides, arquivos Quarto 
-para prática, e outros recursos relevantes.
+Nesta página, você encontrará o cronograma completo da disciplina, com
+links para os materiais de cada aula, incluindo slides, links para 
+tutoriais criados para a disciplina, arquivos quarto (.qmd) e outros 
+recursos que poderão ser disponibilizados.
 
 
 # Semana 1
