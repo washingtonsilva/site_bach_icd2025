@@ -25,11 +25,6 @@ O conteúdo da disciplina está organizado na página
 necessários para acompanhar as aulas, incluindo slides, arquivos Quarto, 
 tutoriais, entre outros.
 
-0 programa da disciplina pode ser consultado na página 
-[Programa da Disciplina](programa.qmd), na qual você poderá 
-obter informações sobre os objetivos, bibliografia, avaliações, entre 
-outras.
-
 O programa completo da disciplina está disponível na página 
 [Programa da Disciplina](programa.qmd), onde você encontrará informações 
 detalhadas sobre objetivos, ementa, bibliografia, avaliações, entre outras.
