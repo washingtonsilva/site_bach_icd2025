@@ -245,8 +245,8 @@ alterado conforme o andamento da disciplina e o rendimento da turma.
 
 | Data        | Total de Aulas  |    Tópico                                   |
 |:-----------:|:---------------:|:-------------------------------------------:|
-| 26/03/25   |    2            | Apresentação da Disciplina                   |
-|            |                 | O que é Ciência de Dados e aplicações        |
+| 26/03/25   |    2            | O que é Ciência de Dados?                    |
+|            |                 | Apresentação da Disciplina                   |
 | 28/03/25   |    2            | CRISP-DM e Tipos de análise                  | 
 | 02/04/25   |    2            | RStudio e projetos estruturados              |
 | 04/04/25   |    2            | Sistema de Publicação Quarto                 |

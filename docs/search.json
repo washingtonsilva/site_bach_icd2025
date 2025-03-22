@@ -114,7 +114,7 @@
     "href": "programa.html#plano-de-aulas",
     "title": "Programa da Disciplina",
     "section": "Plano de Aulas",
-    "text": "Plano de Aulas\nO cronograma a seguir é apenas um planejamento, portanto, pode ser alterado conforme o andamento da disciplina e o rendimento da turma.\n\n\n\n\n\n\n\n\nData\nTotal de Aulas\nTópico\n\n\n\n\n26/03/25\n2\nApresentação da Disciplina\n\n\n\n\nO que é Ciência de Dados e aplicações\n\n\n28/03/25\n2\nCRISP-DM e Tipos de análise\n\n\n02/04/25\n2\nRStudio e projetos estruturados\n\n\n04/04/25\n2\nSistema de Publicação Quarto\n\n\n09/04/25\n2\nIntrodução à Linguagem R (Parte 1)\n\n\n11/04/25\n2\nIntrodução à Linguagem R (Parte 2)\n\n\n16/04/25\n2\nControle de versão com Git e GitHub\n\n\n23/04/25\n2\nImportação de dados com readr e readxl\n\n\n25/04/25\n2\nManipulação de dados com dplyr (Parte 1)\n\n\n30/04/25\n2\nManipulação de dados com dplyr (Parte 2)\n\n\n07/05/25\n2\nReestruturação de dados com tidyr\n\n\n09/05/25\n2\nCombinação de conjuntos de dados (joins)\n\n\n14/05/25\n2\nAvaliação 1\n\n\n16/05/25\n2\nFundamentos de Probabilidade\n\n\n21/05/25\n2\nSimulação de Monte Carlo\n\n\n23/05/25\n2\nAnálise Exploratória Numérica\n\n\n28/05/25\n2\nAnálise Exploratória Numérica\n\n\n30/05/25\n2\nAnálise Exploratória Gráfica\n\n\n02/06/25\n2\nAnálise Exploratória Gráfica\n\n\n04/06/25\n2\nAnálise Exploratória Gráfica\n\n\n11/06/25\n2\nAvaliação 2\n\n\n13/06/25\n2\nAnálise Exploratória Gráfica\n\n\n18/06/25\n2\nIntrodução à Inferência Estatística\n\n\n25/06/25\n2\nIntrodução à Inferência Estatística\n\n\n27/06/25\n2\nIntrodução à Inferência Estatística\n\n\n02/07/25\n2\nIntrodução à Inferência Estatística\n\n\n04/07/25\n2\nRelatórios Quarto Parametrizados\n\n\n09/07/25\n2\nDashboards\n\n\n11/07/25\n2\nAvaliação 3\n\n\n18/07/25\n2\nEncerramento",
+    "text": "Plano de Aulas\nO cronograma a seguir é apenas um planejamento, portanto, pode ser alterado conforme o andamento da disciplina e o rendimento da turma.\n\n\n\n\n\n\n\n\nData\nTotal de Aulas\nTópico\n\n\n\n\n26/03/25\n2\nO que é Ciência de Dados?\n\n\n\n\nApresentação da Disciplina\n\n\n28/03/25\n2\nCRISP-DM e Tipos de análise\n\n\n02/04/25\n2\nRStudio e projetos estruturados\n\n\n04/04/25\n2\nSistema de Publicação Quarto\n\n\n09/04/25\n2\nIntrodução à Linguagem R (Parte 1)\n\n\n11/04/25\n2\nIntrodução à Linguagem R (Parte 2)\n\n\n16/04/25\n2\nControle de versão com Git e GitHub\n\n\n23/04/25\n2\nImportação de dados com readr e readxl\n\n\n25/04/25\n2\nManipulação de dados com dplyr (Parte 1)\n\n\n30/04/25\n2\nManipulação de dados com dplyr (Parte 2)\n\n\n07/05/25\n2\nReestruturação de dados com tidyr\n\n\n09/05/25\n2\nCombinação de conjuntos de dados (joins)\n\n\n14/05/25\n2\nAvaliação 1\n\n\n16/05/25\n2\nFundamentos de Probabilidade\n\n\n21/05/25\n2\nSimulação de Monte Carlo\n\n\n23/05/25\n2\nAnálise Exploratória Numérica\n\n\n28/05/25\n2\nAnálise Exploratória Numérica\n\n\n30/05/25\n2\nAnálise Exploratória Gráfica\n\n\n02/06/25\n2\nAnálise Exploratória Gráfica\n\n\n04/06/25\n2\nAnálise Exploratória Gráfica\n\n\n11/06/25\n2\nAvaliação 2\n\n\n13/06/25\n2\nAnálise Exploratória Gráfica\n\n\n18/06/25\n2\nIntrodução à Inferência Estatística\n\n\n25/06/25\n2\nIntrodução à Inferência Estatística\n\n\n27/06/25\n2\nIntrodução à Inferência Estatística\n\n\n02/07/25\n2\nIntrodução à Inferência Estatística\n\n\n04/07/25\n2\nRelatórios Quarto Parametrizados\n\n\n09/07/25\n2\nDashboards\n\n\n11/07/25\n2\nAvaliação 3\n\n\n18/07/25\n2\nEncerramento",
     "crumbs": [
       "Início",
       "Programa da Disciplina"
@@ -147,7 +147,7 @@
     "href": "cronograma.html#aula-1-26032025",
     "title": "Cronograma",
     "section": "Aula 1 (26/03/2025)",
-    "text": "Aula 1 (26/03/2025)\n\nTópicos:\n\nO que é Ciência de Dados\nAplicações em Administração\nVisão geral do curso\n\nMateriais:\n\nSlides da Aula 1\nTutoriais relacionados:\n\nIntrodução ao RStudio",
+    "text": "Aula 1 (26/03/2025)\n\nTópicos:\n\nO que é Ciência de Dados?\nApresentação da disciplina\n\nMateriais:\n\nSlides da Aula 1\nTutoriais relacionados:\n\nIntrodução ao RStudio",
     "crumbs": [
       "Início",
       "Cronograma"
@@ -158,7 +158,7 @@
     "href": "cronograma.html#aula-2-28032025",
     "title": "Cronograma",
     "section": "Aula 2 (28/03/2025)",
-    "text": "Aula 2 (28/03/2025)\n\nTópicos:\n\nMetodologia CRISP-DM\nAnálise descritiva, diagnóstica, preditiva e prescritiva\nExemplos de aplicação em Administração\n\nMateriais:\n\nSlides da Aula 2\n\nTutoriais relacionados:\n\nMarkdown Básico",
+    "text": "Aula 2 (28/03/2025)\n\nTópicos:\n\nMetodologia CRISP-DM\nAnálise descritiva, diagnóstica, preditiva e prescritiva\n\nMateriais:\n\nSlides da Aula 2\n\nTutoriais relacionados:\n\nMarkdown Básico",
     "crumbs": [
       "Início",
       "Cronograma"

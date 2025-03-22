@@ -15,9 +15,8 @@ recursos que poderão ser disponibilizados.
 
 - **Tópicos:**
 
-  - O que é Ciência de Dados
-  - Aplicações em Administração
-  - Visão geral do curso
+  - O que é Ciência de Dados?
+  - Apresentação da disciplina
 
 - **Materiais:**
 
@@ -34,8 +33,7 @@ recursos que poderão ser disponibilizados.
 
   - Metodologia CRISP-DM
   - Análise descritiva, diagnóstica, preditiva e prescritiva
-  - Exemplos de aplicação em Administração
-
+  
 - **Materiais:**
 
   - [Slides da Aula 2](/slides/aula2.html)
