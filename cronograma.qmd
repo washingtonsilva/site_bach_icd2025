@@ -16,11 +16,13 @@ recursos que poderão ser disponibilizados.
 - **Tópicos:**
 
   - O que é Ciência de Dados?
-  - Apresentação da disciplina
+  - Papéis em Ciência de Dados
+  - Apresentação do Programa da disciplina
 
 - **Materiais:**
 
-  - [Slides da Aula 1](/slides/slides_aula01.html)
+  - [Slides da Aula 1 - html](/slides/slides_aula01.html)
+  - [Slides da Aula 1 - pdf](/slides/slides_aula01.pdf)
   
 - **Tutoriais relacionados:**
   
@@ -32,14 +34,18 @@ recursos que poderão ser disponibilizados.
 
 - **Tópicos:**
 
+  - (Cont.) Apresentação do Programa da disciplina
   - Metodologia CRISP-DM
-  - Análise descritiva, diagnóstica, preditiva e prescritiva
+  - Tipos de Análise
   
 - **Materiais:**
 
-  - [Slides da Aula 2](/slides/aula2.html)
-  
+  - 
+
 - **Tutoriais relacionados:**
   
-  - [Markdown Básico](/tutoriais/markdown-intro.html)
+  - [Introdução ao RStudio](https://washingtonsilva.github.io/tutorials/rstudio/){target="_blank"}
+
+  
+
 
