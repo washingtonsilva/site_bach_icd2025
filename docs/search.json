@@ -176,7 +176,7 @@
     "href": "index.html",
     "title": "Introdução à Ciência de Dados 2025",
     "section": "",
-    "text": "Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até a linguagem R, IDE RStudio, sistema Quarto, controle de versão com Git/GitHub e aplicações.",
+    "text": "Esta disciplina aborda os fundamentos da Ciência de Dados, combinando ferramentas computacionais (R, RStudio, Quarto, Git/GitHub), manipulação e visualização de dados e conceitos básicos de estatística e probabilidade, com foco em aplicações na área de administração.",
     "crumbs": [
       "Início",
       "Introdução à Ciência de Dados 2025"
@@ -187,7 +187,7 @@
     "href": "index.html#bem-vindo-à-disciplina",
     "title": "Introdução à Ciência de Dados 2025",
     "section": "",
-    "text": "Esta disciplina cobre os fundamentos de ciência de dados aplicados à administração, desde estatística e probabilidade até a linguagem R, IDE RStudio, sistema Quarto, controle de versão com Git/GitHub e aplicações.",
+    "text": "Esta disciplina aborda os fundamentos da Ciência de Dados, combinando ferramentas computacionais (R, RStudio, Quarto, Git/GitHub), manipulação e visualização de dados e conceitos básicos de estatística e probabilidade, com foco em aplicações na área de administração.",
     "crumbs": [
       "Início",
       "Introdução à Ciência de Dados 2025"
@@ -209,7 +209,7 @@
     "href": "index.html#conteúdo",
     "title": "Introdução à Ciência de Dados 2025",
     "section": "Conteúdo",
-    "text": "Conteúdo\nO conteúdo da disciplina está organizado na página Cronograma, onde você encontrará todos os materiais necessários para acompanhar as aulas, incluindo slides, arquivos Quarto, tutoriais, entre outros.\nO programa completo da disciplina está disponível na página Programa da Disciplina, onde você encontrará informações detalhadas sobre objetivos, ementa, bibliografia, avaliações, entre outras.",
+    "text": "Conteúdo\nO conteúdo da disciplina está organizado na página Cronograma, onde você encontrará os materiais necessários para acompanhar as aulas, incluindo slides, arquivos Quarto, tutoriais, entre outros.\nO programa da disciplina está disponível na página Programa da Disciplina, nela você encontrará informações detalhadas sobre objetivos, ementa, bibliografia, avaliações, entre outras.",
     "crumbs": [
       "Início",
       "Introdução à Ciência de Dados 2025"

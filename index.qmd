@@ -6,10 +6,10 @@ subtitle: "Bacharelado em Administração - IFMG Campus Formiga"
 
 ## Bem-vindo à disciplina
 
-Esta disciplina cobre os fundamentos de ciência de dados aplicados à 
-administração, desde estatística e probabilidade até a linguagem R, 
-IDE RStudio, sistema Quarto, controle de versão com Git/GitHub e
-aplicações.
+Esta disciplina aborda os fundamentos da Ciência de Dados, combinando 
+ferramentas computacionais (R, RStudio, Quarto, Git/GitHub), manipulação e 
+visualização de dados e conceitos básicos de estatística e probabilidade, 
+com foco em aplicações na área de administração.
 
 ## Informações Gerais
 
@@ -21,10 +21,10 @@ aplicações.
 ## Conteúdo
 
 O conteúdo da disciplina está organizado na página
-[Cronograma](cronograma.qmd), onde você encontrará todos os materiais 
+[Cronograma](cronograma.qmd), onde você encontrará os materiais 
 necessários para acompanhar as aulas, incluindo slides, arquivos Quarto, 
 tutoriais, entre outros.
 
-O programa completo da disciplina está disponível na página 
-[Programa da Disciplina](programa.qmd), onde você encontrará informações 
+O programa da disciplina está disponível na página 
+[Programa da Disciplina](programa.qmd), nela você encontrará informações 
 detalhadas sobre objetivos, ementa, bibliografia, avaliações, entre outras.
