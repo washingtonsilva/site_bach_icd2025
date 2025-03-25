@@ -1,7 +1,7 @@
 ---
 lang: pt-BR
 title: "Introdução à Ciência de Dados 2025"
-subtitle: "Bacharelado em Administração - IFMG Campus Formiga"
+subtitle: "Bacharelado em Administração <br> IFMG - Campus Formiga"
 ---
 
 ## Bem-vindo à disciplina
