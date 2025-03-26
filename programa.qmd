@@ -93,9 +93,13 @@ Disponível em:
 TRIOLA, Mário F. **Introdução à Estatística**. 10 edição. Rio de Janeiro: 
 LTC, 2008. Disponível na biblioteca do campus.
 
-[Manual do Sistema Quarto](https://quarto.org/docs/guide/){target="_blank"}.
+CHANG, Winston. **R Graphics Cookbook**. 2025, O'Reilly. Disponível em: 
+[R Graphics Cookbook](https://r-graphics.org){target="_blank"}
 
 
+**Recursos Online:**
+
+- [Manual do Sistema Quarto](https://quarto.org/docs/guide/){target="_blank"}
 
 
 
