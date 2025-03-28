@@ -60,7 +60,7 @@ recursos que poderão ser disponibilizados.
 
 - **CRISP-DM**
 
-  - [Guia CRISP-DM da IBM](arquivos/guia-ibm-crispdm.pdf) 
+  - [Guia CRISP-DM da IBM](arquivos/guia-ibm-crispdm.pdf){target="_blank"}
 
 
 - **Tutoriais**
