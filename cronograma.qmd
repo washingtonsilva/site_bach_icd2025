@@ -45,19 +45,35 @@ recursos que poderão ser disponibilizados.
 
 - **Tópicos:**
 
-  - (Cont.) Apresentação do Programa da disciplina
   - Metodologia CRISP-DM
   - Tipos de Análise
+  - Configuração Git/GitHub
+  - (Cont.) Apresentaçào do Programa da Disciplina
 
   
 - **Materiais:**
 
-  - 
+  <iframe src="/slides/slides_aula02.html" width="100%" height="450px"></iframe>
+  
+  - [slides: versão para download (.zip)](arquivos/slides_aula02.zip)
+  
+
+- **CRISP-DM**
+
+  - [Guia CRISP-DM da IBM](arquivos/guia-ibm-crispdm.pdf) 
 
 
-- **Tutoriais relacionados:**
+- **Tutoriais**
   
   - [Introdução ao RStudio](https://washingtonsilva.github.io/tutorials/rstudio/){target="_blank"}
+  
+  - [Introdução ao Sistema Quarto](https://washingtonsilva.github.io/tutorials/quarto/){target="_blank"}
+  
+  - [Markdown](https://washingtonsilva.github.io/tutorials/markdown/){target="_blank"}
+  
+  - [Introdução à Linguagem R](https://washingtonsilva.github.io/tutorials/R/){target="_blank"}
+  
+  - [Controle de Versão com Git e GitHub](https://washingtonsilva.github.io/tutorials/git/){target="_blank"}
 
   
 

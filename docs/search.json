@@ -158,7 +158,7 @@
     "href": "cronograma.html#aula-2-28032025",
     "title": "Cronograma",
     "section": "Aula 2 (28/03/2025)",
-    "text": "Aula 2 (28/03/2025)\n\nTópicos:\n\n(Cont.) Apresentação do Programa da disciplina\nMetodologia CRISP-DM\nTipos de Análise\n\nMateriais:\n\n\n\nTutoriais relacionados:\n\nIntrodução ao RStudio",
+    "text": "Aula 2 (28/03/2025)\n\nTópicos:\n\nMetodologia CRISP-DM\nTipos de Análise\nConfiguração Git/GitHub\n(Cont.) Apresentaçào do Programa da Disciplina\n\nMateriais:\n\n\n\nslides: versão para download (.zip)\n\nCRISP-DM\n\nGuia CRISP-DM da IBM\n\nTutoriais\n\nIntrodução ao RStudio\nIntrodução ao Sistema Quarto\nMarkdown\nIntrodução à Linguagem R\nControle de Versão com Git e GitHub",
     "crumbs": [
       "Início",
       "Cronograma"
