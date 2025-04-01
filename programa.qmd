@@ -277,11 +277,11 @@ alterado conforme o andamento da disciplina e o rendimento da turma.
 |            |                 | Apresentação da Disciplina                   |
 | 28/03/25   |    2            | CRISP-DM e Tipos de análise                  | 
 |            |                 | Configuração Git/GitHub                      |
-| 02/04/25   |    2            | Visão Geral RStudio/Quarto/R/Git/GitHub      |
-| 04/04/25   |    2            | Introdução à Linguagem R (Parte 1)           |
-| 09/04/25   |    2            | Introdução à Linguagem R (Parte 2)           | 
-| 11/04/25   |    2            | Introdução à Linguagem R (Parte 3)           | 
-| 16/04/25   |    2            | Controle de versão com Git e GitHub          |  
+| 02/04/25   |    2            | Visão Geral RStudio/Quarto/R/Git/GitHub I    |
+| 04/04/25   |    2            | Visão Geral RStudio/Quarto/R/Git/GitHub  II  |
+| 09/04/25   |    2            | Introdução à Linguagem R (Parte 1)           | 
+| 11/04/25   |    2            | ntrodução à Linguagem R (Parte 2)            | 
+| 16/04/25   |    2            | ntrodução à Linguagem R (Parte 3)            |  
 | 23/04/25   |    2            | Importação de dados com readr e readxl       | 
 | 25/04/25   |    2            | Manipulação de dados com dplyr (Parte 1)     | 
 | 30/04/25   |    2            | Manipulação de dados com dplyr (Parte 2)     | 
