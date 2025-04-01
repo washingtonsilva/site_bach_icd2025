@@ -276,10 +276,11 @@ alterado conforme o andamento da disciplina e o rendimento da turma.
 | 26/03/25   |    2            | O que é Ciência de Dados?                    |
 |            |                 | Apresentação da Disciplina                   |
 | 28/03/25   |    2            | CRISP-DM e Tipos de análise                  | 
-| 02/04/25   |    2            | RStudio e projetos estruturados              |
-| 04/04/25   |    2            | Sistema de Publicação Quarto                 |
-| 09/04/25   |    2            | Introdução à Linguagem R (Parte 1)           | 
-| 11/04/25   |    2            | Introdução à Linguagem R (Parte 2)           | 
+|            |                 | Configuração Git/GitHub                      |
+| 02/04/25   |    2            | Visão Geral RStudio/Quarto/R/Git/GitHub      |
+| 04/04/25   |    2            | Introdução à Linguagem R (Parte 1)           |
+| 09/04/25   |    2            | Introdução à Linguagem R (Parte 2)           | 
+| 11/04/25   |    2            | Introdução à Linguagem R (Parte 3)           | 
 | 16/04/25   |    2            | Controle de versão com Git e GitHub          |  
 | 23/04/25   |    2            | Importação de dados com readr e readxl       | 
 | 25/04/25   |    2            | Manipulação de dados com dplyr (Parte 1)     | 
