@@ -75,6 +75,28 @@ recursos que poderão ser disponibilizados.
   
   - [Controle de Versão com Git e GitHub](https://washingtonsilva.github.io/tutorials/git/){target="_blank"}
 
+
+
+
+# Semana 2
+
+## Aula 3 (02/04/2025) 
+
+- **Tópicos:**
+
+  - Introdução ao RStudio 
+  - Introdução ao Sistema de Publicação Quarto
+  - Introdução ao Git e GitHub
+  - Fluxo de trabalho integrando RStudio/Quarto/R/Git/GitHub
+
+  
+- **Materiais:**
+
+  <iframe src="/slides/slides_aula03.html" width="100%" height="450px"></iframe>
+  
+  - [slides: versão para download (.zip)](arquivos/slides_aula03.zip)
+
+
   
 
 

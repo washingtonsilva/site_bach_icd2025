@@ -165,6 +165,17 @@
     ]
   },
   {
+    "objectID": "cronograma.html#aula-3-02042025",
+    "href": "cronograma.html#aula-3-02042025",
+    "title": "Cronograma",
+    "section": "Aula 3 (02/04/2025)",
+    "text": "Aula 3 (02/04/2025)\n\nTópicos:\n\nIntrodução ao RStudio\nIntrodução ao Sistema de Publicação Quarto\nIntrodução ao Git e GitHub\nFluxo de trabalho integrando RStudio/Quarto/R/Git/GitHub\n\nMateriais:\n\n\n\nslides: versão para download (.zip)",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
