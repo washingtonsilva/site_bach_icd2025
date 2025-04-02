@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -314,6 +348,38 @@ Para navegar e visualizar
 <li><a href="arquivos/01-relatorio-html.zip">01-relatorio-html (.zip)</a></li>
 </ul></li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Como verificar e configurar seu perfil do Git no laboratório
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Verificando quem está “logado” no Git</strong></p>
+<p>Abra o Git Bash (no Windows) e digite:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config user.name</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pressione Enter. Aparecerá um nome (exemplo: “Maria Silva”).</p>
+<p>Em seguida, digite:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config user.email</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pressione Enter. Aparecerá um email (exemplo: “maria@gmail.com”).</p>
+<p><strong>Se o nome e email que aparecerem não forem os seus, siga para o próximo passo!</strong></p>
+<p><strong>Configurando seu perfil no Git</strong></p>
+<p>Digite os comandos abaixo, substituindo “Seu Nome” pelo seu nome real e “seu.email@exemplo.com” pelo seu email:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Seu Nome"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"seu.email@exemplo.com"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Confirmando que deu certo</strong></p>
+<p>Para ter certeza que a mudança funcionou, repita o primeiro passo e verifique se agora aparece seu nome e email corretos.</p>
+<p><strong>Dicas importantes:</strong></p>
+<ul>
+<li><p><strong>Sempre verifique</strong> quem está “logado” no Git antes de começar a trabalhar.</p></li>
+<li><p>Se estiver usando uma máquina diferente na próxima aula, repita estes passos.</p></li>
+<li><p>Anote seu nome e email exatamente como configurou para lembrar nas próximas vezes.</p></li>
+</ul>
+</div>
+</div>
 
 
 </section>
