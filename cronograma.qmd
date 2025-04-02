@@ -130,7 +130,7 @@ recursos que poderão ser disponibilizados.
 
 **Verificando quem está "logado" no Git**
 
-Abra o Git Bash (no Windows) e digite:
+Abra o **Git Bash** (no Windows) e digite:
 
 ```{.bash}
 git config user.name
