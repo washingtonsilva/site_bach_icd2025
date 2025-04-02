@@ -169,7 +169,7 @@
     "href": "cronograma.html#aula-3-02042025",
     "title": "Cronograma",
     "section": "Aula 3 (02/04/2025)",
-    "text": "Aula 3 (02/04/2025)\n\nTópicos:\n\nIntrodução ao RStudio\nIntrodução ao Sistema de Publicação Quarto\nIntrodução ao Git e GitHub\nFluxo de trabalho integrando RStudio/Quarto/R/Git/GitHub\n\nMateriais:\n\n\n\nslides: versão para download (.zip)",
+    "text": "Aula 3 (02/04/2025)\n\nTópicos:\n\nIntrodução ao RStudio\nIntrodução ao Sistema de Publicação Quarto\nIntrodução ao Git e GitHub\nFluxo de trabalho integrando RStudio/Quarto/R/Git/GitHub\n\nMateriais:\n\n\n\nslides: versão para download (.zip)\n\nArquivo de dados\n\nproductionlog_sample (.csv)\n\nArquivo quarto\n\n01-relatorio-html (.zip)",
     "crumbs": [
       "Início",
       "Cronograma"

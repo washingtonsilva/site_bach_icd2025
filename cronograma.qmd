@@ -97,6 +97,18 @@ recursos que poderão ser disponibilizados.
   - [slides: versão para download (.zip)](arquivos/slides_aula03.zip)
 
 
+- **Arquivo de dados**
+
+  - [productionlog_sample (.csv)](arquivos/productionlog_sample.csv)
+
+
+- **Arquivo quarto**
+
+  - [01-relatorio-html (.zip)](arquivos/01-relatorio-html.zip)  
+
+  
+
+
   
 
 
