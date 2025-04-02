@@ -20,7 +20,7 @@ recursos que poderão ser disponibilizados.
   - Apresentação do Programa da disciplina
 
 
-- **Materiais:**
+- **Slides:**
 
   ::: {.callout-tip}
   ## Slides Aula 1 - html 
@@ -51,7 +51,7 @@ recursos que poderão ser disponibilizados.
   - (Cont.) Apresentaçào do Programa da Disciplina
 
   
-- **Materiais:**
+- **Slides:**
 
   <iframe src="/slides/slides_aula02.html" width="100%" height="450px"></iframe>
   
@@ -90,7 +90,7 @@ recursos que poderão ser disponibilizados.
   - Fluxo de trabalho integrando RStudio/Quarto/R/Git/GitHub
 
   
-- **Materiais:**
+- **Slides:**
 
   <iframe src="/slides/slides_aula03.html" width="100%" height="450px"></iframe>
   
