@@ -208,7 +208,30 @@ próximas vezes.
   - [Controle de Versão com Git e GitHub](https://washingtonsilva.github.io/tutorials/git/){target="_blank"}
   
   - [Introdução ao RStudio](https://washingtonsilva.github.io/tutorials/rstudio/){target="_blank"}
+
+
+
+
+# Semana 3
+
+## Aula 5 (09/04/2025)   
+
+- **Tópicos:**
+
+  - Breve revisão sobre o IDE RStudio 
+  - Introdução ao sistema de publicação Quarto
+  - Sessão prática guiada
+
+ 
+- **Slides:**
+
+  ::: {.callout-tip}
+  ## Para navegar e visualizar 
   
+  Clique no símbolo > à direita ou use as teclas: seta para direita →, espaço, 
+  ou letra "n"   para avançar. Pressione "F" para modo de tela cheia e "Esc" 
+  para sair.
+  ::: 
 
 
 
