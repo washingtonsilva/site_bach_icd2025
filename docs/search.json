@@ -114,7 +114,7 @@
     "href": "programa.html#plano-de-aulas",
     "title": "Programa da Disciplina",
     "section": "Plano de Aulas",
-    "text": "Plano de Aulas\nO cronograma a seguir é apenas um planejamento, portanto, pode ser alterado conforme o andamento da disciplina e o rendimento da turma.\n\n\n\n\n\n\n\n\nData\nTotal de Aulas\nTópico\n\n\n\n\n26/03/25\n2\nO que é Ciência de Dados?\n\n\n\n\nApresentação da Disciplina\n\n\n28/03/25\n2\nCRISP-DM e Tipos de análise\n\n\n\n\nConfiguração Git/GitHub\n\n\n02/04/25\n2\nVisão Geral RStudio/Quarto/R/Git/GitHub I\n\n\n04/04/25\n2\nVisão Geral RStudio/Quarto/R/Git/GitHub II\n\n\n09/04/25\n2\nIntrodução à Linguagem R (Parte 1)\n\n\n11/04/25\n2\nntrodução à Linguagem R (Parte 2)\n\n\n16/04/25\n2\nntrodução à Linguagem R (Parte 3)\n\n\n23/04/25\n2\nImportação de dados com readr e readxl\n\n\n25/04/25\n2\nManipulação de dados com dplyr (Parte 1)\n\n\n30/04/25\n2\nManipulação de dados com dplyr (Parte 2)\n\n\n07/05/25\n2\nReestruturação de dados com tidyr\n\n\n09/05/25\n2\nCombinação de conjuntos de dados (joins)\n\n\n14/05/25\n2\nAvaliação 1\n\n\n16/05/25\n2\nFundamentos de Probabilidade\n\n\n21/05/25\n2\nSimulação de Monte Carlo\n\n\n23/05/25\n2\nAnálise Exploratória Numérica\n\n\n28/05/25\n2\nAnálise Exploratória Numérica\n\n\n30/05/25\n2\nAnálise Exploratória Gráfica\n\n\n02/06/25\n2\nAnálise Exploratória Gráfica\n\n\n04/06/25\n2\nAnálise Exploratória Gráfica\n\n\n11/06/25\n2\nAvaliação 2\n\n\n13/06/25\n2\nAnálise Exploratória Gráfica\n\n\n18/06/25\n2\nIntrodução à Inferência Estatística\n\n\n25/06/25\n2\nIntrodução à Inferência Estatística\n\n\n27/06/25\n2\nIntrodução à Inferência Estatística\n\n\n02/07/25\n2\nIntrodução à Inferência Estatística\n\n\n04/07/25\n2\nRelatórios Quarto Parametrizados\n\n\n09/07/25\n2\nDashboards\n\n\n11/07/25\n2\nAvaliação 3\n\n\n18/07/25\n2\nEncerramento",
+    "text": "Plano de Aulas\nO cronograma a seguir é apenas um planejamento, portanto, pode ser alterado conforme o andamento da disciplina e o rendimento da turma.\n\n\n\n\n\n\n\n\nData\nTotal de Aulas\nTópico\n\n\n\n\n26/03/25\n2\nO que é Ciência de Dados?\n\n\n\n\nApresentação da Disciplina\n\n\n28/03/25\n2\nCRISP-DM e Tipos de análise\n\n\n\n\nConfiguração Git/GitHub\n\n\n02/04/25\n2\nVisão Geral RStudio/Quarto/R/Git/GitHub I\n\n\n04/04/25\n2\nVisão Geral RStudio/Quarto/R/Git/GitHub II\n\n\n09/04/25\n2\nVisão Geral RStudio/Quarto/R/Git/GitHub III\n\n\n11/04/25\n2\nIntrodução à Linguagem R (Parte 1)\n\n\n16/04/25\n2\nIntrodução à Linguagem R (Parte 2)\n\n\n23/04/25\n2\nImportação de dados com readr e readxl\n\n\n25/04/25\n2\nManipulação de dados com dplyr (Parte 1)\n\n\n30/04/25\n2\nManipulação de dados com dplyr (Parte 2)\n\n\n07/05/25\n2\nReestruturação de dados com tidyr\n\n\n09/05/25\n2\nCombinação de conjuntos de dados (joins)\n\n\n14/05/25\n2\nAvaliação 1\n\n\n16/05/25\n2\nFundamentos de Probabilidade\n\n\n21/05/25\n2\nSimulação de Monte Carlo\n\n\n23/05/25\n2\nAnálise Exploratória Numérica\n\n\n28/05/25\n2\nAnálise Exploratória Numérica\n\n\n30/05/25\n2\nAnálise Exploratória Gráfica\n\n\n02/06/25\n2\nAnálise Exploratória Gráfica\n\n\n04/06/25\n2\nAnálise Exploratória Gráfica\n\n\n11/06/25\n2\nAvaliação 2\n\n\n13/06/25\n2\nAnálise Exploratória Gráfica\n\n\n18/06/25\n2\nIntrodução à Inferência Estatística\n\n\n25/06/25\n2\nIntrodução à Inferência Estatística\n\n\n27/06/25\n2\nIntrodução à Inferência Estatística\n\n\n02/07/25\n2\nIntrodução à Inferência Estatística\n\n\n04/07/25\n2\nRelatórios Quarto Parametrizados\n\n\n09/07/25\n2\nDashboards\n\n\n11/07/25\n2\nAvaliação 3\n\n\n18/07/25\n2\nEncerramento",
     "crumbs": [
       "Início",
       "Programa da Disciplina"
@@ -192,6 +192,17 @@
     "title": "Cronograma",
     "section": "Aula 5 (09/04/2025)",
     "text": "Aula 5 (09/04/2025)\n\nTópicos:\n\nBreve revisão sobre o IDE RStudio\nIntrodução ao sistema de publicação Quarto\nIntrodução a Git/GitHub\nSessão prática guiada\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\n\nslides: versão para download (.zip)",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
+    "objectID": "cronograma.html#aula-6-11042025",
+    "href": "cronograma.html#aula-6-11042025",
+    "title": "Cronograma",
+    "section": "Aula 6 (11/04/2025)",
+    "text": "Aula 6 (11/04/2025)\n\nTópicos:\n\n\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.",
     "crumbs": [
       "Início",
       "Cronograma"

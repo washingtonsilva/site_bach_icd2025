@@ -241,6 +241,25 @@ próximas vezes.
 
 
 
+## Aula 6 (11/04/2025)   
+
+- **Tópicos:**
+
+  - 
+
+ 
+- **Slides:**
+
+  ::: {.callout-tip}
+  ## Para navegar e visualizar 
+  
+  Clique no símbolo > à direita ou use as teclas: seta para direita →, espaço, 
+  ou letra "n"   para avançar. Pressione "F" para modo de tela cheia e "Esc" 
+  para sair.
+  :::
+
+
+
   
 
 
