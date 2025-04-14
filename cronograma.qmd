@@ -245,16 +245,15 @@ próximas vezes.
 
 - **Tópicos:**
 
-- Parte I:
+  - Parte I:
 
-    - O Relatório Junglivet e a Metodologia CRISP-DM 
-    - Primeiro contato com a linguagem R por meio dos códigos do relatório
+       - O Relatório Junglivet e a Metodologia CRISP-DM 
+       - Primeiro contato com a linguagem R por meio dos códigos do relatório
 
-- Parte II:
+  - Parte II:
 
-    - Para alunos com projetos estruturados: Atividade prática
-
-    - Para alunos com dificuldades técnicas: Atendimento individualizado para estruturação de projetos
+       - Para alunos com projetos estruturados: Atividade prática
+       - Para alunos com dificuldades técnicas: Atendimento individualizado para estruturação de projetos
 
  
 - **Slides:**
@@ -271,6 +270,28 @@ próximas vezes.
   
   - [slides: versão para download (.zip)](arquivos/slides_aula06.zip)
 
+
+
+
+# Semana 4
+
+## Aula 7 (16/04/2025)  
+
+- **Tópicos:**
+
+  - Introdução à Linguagem R - Parte I
+
+
+- **Slides:**
+
+  ::: {.callout-tip}
+  ## Para navegar e visualizar 
+  
+  Clique no símbolo > à direita ou use as teclas: seta para direita →, espaço, 
+  ou letra "n"   para avançar. Pressione "F" para modo de tela cheia e "Esc" 
+  para sair.
+  :::  
+  
 
 
   
