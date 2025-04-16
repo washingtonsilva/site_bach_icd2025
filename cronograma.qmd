@@ -279,8 +279,8 @@ próximas vezes.
 
 - **Tópicos:**
 
-  - Introdução à Linguagem R - Parte I
-
+  - Introdução ao sistema Quarto (continuação): 
+  - Introdução à Linguagem R (continuação):
 
 - **Slides:**
 
@@ -292,6 +292,9 @@ próximas vezes.
   para sair.
   :::  
   
+  <iframe src="/slides/slides_aula07.html" width="100%" height="450px"></iframe>
+  
+  - [slides: versão para download (.zip)](arquivos/slides_aula07.zip)
 
 
   
