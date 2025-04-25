@@ -322,3 +322,24 @@ próximas vezes.
 - **Arquivo quarto**
 
   - [04-relatorio (.zip)](arquivos/04-relatorio.zip)  
+  
+
+## Aula 9 (25/04/2025) 
+
+- **Tópicos:**
+
+  - Solução dos exercícios sobre as funções select e filter
+  - Função mutate
+  - Funções group_by e summarize
+  - Função arrange
+  
+  ::: {.callout-tip}
+  ## Slides desta aula
+  
+  - Slides da aula 8 a partir da função mutate
+  
+  - Os slides a seguir contém a solução dos exercícios sobre as 
+    funções select e filter
+  :::
+  
+  

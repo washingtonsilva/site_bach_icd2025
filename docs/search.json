@@ -231,6 +231,17 @@
     ]
   },
   {
+    "objectID": "cronograma.html#aula-9-25042025",
+    "href": "cronograma.html#aula-9-25042025",
+    "title": "Cronograma",
+    "section": "Aula 9 (25/04/2025)",
+    "text": "Aula 9 (25/04/2025)\n\nTópicos:\n\nSolução dos exercícios sobre as funções select e filter\nFunção mutate\nFunções group_by e summarize\nFunção arrange\n\n\n\n\n\n\n\nSlides desta aula\n\n\n\n\nSlides da aula 8 a partir da função mutate\nOs slides a seguir contém a solução dos exercícios sobre as funções select e filter",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
