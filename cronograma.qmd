@@ -342,4 +342,6 @@ próximas vezes.
     funções select e filter
   :::
   
+  <iframe src="/slides/solucoes_select_filter.html" width="100%" height="450px"></iframe>
+  
   
