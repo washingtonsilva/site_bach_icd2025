@@ -329,14 +329,13 @@ próximas vezes.
 - **Tópicos:**
 
   - Solução dos exercícios sobre as funções select e filter
-  - Função mutate
-  - Funções group_by e summarize
-  - Função arrange
+  - Função mutate (slides da Aula 8)
+
   
   ::: {.callout-tip}
   ## Slides desta aula
   
-  - Slides da aula 8 a partir da função mutate
+  - Slides da aula 8 sobre a função mutate
   
   - Os slides a seguir contém a solução dos exercícios sobre as 
     funções select e filter
