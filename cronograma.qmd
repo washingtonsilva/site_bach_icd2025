@@ -335,12 +335,36 @@ próximas vezes.
   ::: {.callout-tip}
   ## Slides desta aula
   
-  - Slides da aula 8 sobre a função mutate
+  - Slides da aula 8 sobre a função mutate (a partir do slide de número 62)
   
   - Os slides a seguir contém a solução dos exercícios sobre as 
     funções select e filter
   :::
   
   <iframe src="/slides/solucoes_select_filter.html" width="100%" height="450px"></iframe>
+
+
+
+
+# Semana 6
+
+## Aula 10 (30/04/2025)
+
+- **Tópicos:**
+
+  - Solução dos exercícios sobre a função mutate
+  - Funções group_by e summarize (slides da Aula 8)
+  
+  ::: {.callout-tip}
+  ## Slides desta aula
+  
+  - Slides da aula 8 sobre as funções group_by e summarize (a partir do slide 
+    de número 75)
+  
+  - Os slides a seguir contém a solução dos exercícios sobre as 
+    funções select e filter
+  :::
+
+
   
   
