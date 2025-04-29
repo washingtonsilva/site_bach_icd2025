@@ -329,7 +329,7 @@ próximas vezes.
 - **Tópicos:**
 
   - Solução dos exercícios sobre as funções select e filter
-  - Função mutate (slides da Aula 8)
+  - Função mutate
 
   
   ::: {.callout-tip}
@@ -341,7 +341,7 @@ próximas vezes.
     funções select e filter
   :::
   
-  <iframe src="/slides/solucoes_select_filter.html" width="100%" height="450px"></iframe>
+  <iframe src="/slides/slides_aula09_solucoes.html" width="100%" height="450px"></iframe>
 
 
 
@@ -353,17 +353,19 @@ próximas vezes.
 - **Tópicos:**
 
   - Solução dos exercícios sobre a função mutate
-  - Funções group_by e summarize (slides da Aula 8)
+  - Funções group_by, summarize e arrange 
   
   ::: {.callout-tip}
   ## Slides desta aula
   
-  - Slides da aula 8 sobre as funções group_by e summarize (a partir do slide 
-    de número 75)
+  - Slides da aula 8 sobre as funções group_by, summarize e arrange (a 
+    partir do slide de número 75)
   
-  - Os slides a seguir contém a solução dos exercícios sobre as 
-    funções select e filter
+  - Os slides a seguir contém a solução dos exercícios sobre a 
+    função mutate.
   :::
+  
+  <iframe src="/slides/slides_aula10_solucoes.html" width="100%" height="450px"></iframe>
 
 
   

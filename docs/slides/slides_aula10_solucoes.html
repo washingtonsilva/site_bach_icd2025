@@ -1083,7 +1083,7 @@ margin-right: 0; }
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center"><h1 class="title">Introdução à Ciência de Dados</h1>
-  <p class="subtitle">Soluções dos Exercícios: Funcões select e filter</p>
+  <p class="subtitle">Soluções dos Exercícios: Função mutate</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1096,7 +1096,7 @@ Prof. Washington Santos da Silva
     </div>
 </div>
 
-  <p class="date">25 de abril de 2025</p>
+  <p class="date">30 de abril de 2025</p>
 </section><section id="data-frame-gapminder" class="slide level2"><h2>Data Frame gapminder</h2>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -1155,314 +1155,1977 @@ Prof. Washington Santos da Silva
 </div>
 </div>
 </div>
-</section><section><section id="função-select-soluções-dos-exercícios" class="title-slide slide level1 center" data-background-color="#F1E9D2"><h1>Função select: Soluções dos Exercícios</h1>
+</section><section><section id="função-mutate-soluções-dos-exercícios" class="title-slide slide level1 center" data-background-color="#F1E9D2"><h1>Função mutate: Soluções dos Exercícios</h1>
 
-</section><section id="nível-1-primeiros-passos" class="slide level2"><h2>Nível 1: Primeiros Passos</h2>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
+</section><section id="nível-1-começando-com-mutate" class="slide level2"><h2>Nível 1: Começando com mutate()</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício 1</strong></p>
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Solução do Exercício 1</strong></p>
 </div>
 <div class="callout-content">
-<p>Complete o código abaixo para selecionar apenas o país, o ano e a expectativa de vida:</p>
+<p>Complete o código abaixo para criar uma nova variável que converta a população para milhões:</p>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href></a><span class="co"># seleciona país, ano e expectativa de vida</span></span>
-<span id="cb1-2"><a href></a>dados_expectativa <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
-<span id="cb1-3"><a href></a>  <span class="fu">select</span>(country, year, lifeExp) <span class="co"># seleção por inclusão</span></span>
-<span id="cb1-4"><a href></a></span>
-<span id="cb1-5"><a href></a><span class="co"># exibe as primeiras 6 linhas do resultado</span></span>
-<span id="cb1-6"><a href></a><span class="fu">head</span>(dados_expectativa)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href></a>dados_novavariavel <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb1-2"><a href></a>  <span class="fu">mutate</span>(<span class="at">pop_em_milhoes =</span> pop <span class="sc">/</span> <span class="dv">1000000</span>)</span>
+<span id="cb1-3"><a href></a></span>
+<span id="cb1-4"><a href></a><span class="co"># exibe as 6 primeiras linhas de uma df</span></span>
+<span id="cb1-5"><a href></a><span class="fu">head</span>(dados_novavariavel)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 3
-  country      year lifeExp
-  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;
-1 Afghanistan  1952    28.8
-2 Afghanistan  1957    30.3
-3 Afghanistan  1962    32.0
-4 Afghanistan  1967    34.0
-5 Afghanistan  1972    36.1
-6 Afghanistan  1977    38.4</code></pre>
+<pre><code># A tibble: 6 × 7
+  country     continent  year lifeExp      pop gdpPercap pop_em_milhoes
+  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;          &lt;dbl&gt;
+1 Afghanistan Asia       1952    28.8  8425333      779.           8.43
+2 Afghanistan Asia       1957    30.3  9240934      821.           9.24
+3 Afghanistan Asia       1962    32.0 10267083      853.          10.3 
+4 Afghanistan Asia       1967    34.0 11537966      836.          11.5 
+5 Afghanistan Asia       1972    36.1 13079460      740.          13.1 
+6 Afghanistan Asia       1977    38.4 14880372      786.          14.9 </code></pre>
 </div>
 </div>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício 2</strong></p>
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Solução do Exercício 2</strong></p>
 </div>
 <div class="callout-content">
-<p>Escreva o código para selecionar todas as variáveis EXCETO população e PIB per capita:</p>
+<p>Crie uma nova variável que calcule o “PIB total” (PIB per capita × população) para cada país.</p>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href></a><span class="co"># seleciona todas as variáveis, exceto população e pib per capita</span></span>
-<span id="cb3-2"><a href></a>dados_sem_pop_pib <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href></a>  <span class="fu">select</span>(<span class="sc">-</span>pop, <span class="sc">-</span>gdpPercap) <span class="co"># seleção por exclusão</span></span>
-<span id="cb3-4"><a href></a></span>
-<span id="cb3-5"><a href></a><span class="co"># exibe as primeiras 6 linhas do resultado</span></span>
-<span id="cb3-6"><a href></a><span class="fu">head</span>(dados_sem_pop_pib)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href></a>dados_pib_total <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href></a>  <span class="fu">mutate</span>(<span class="at">pib_total =</span> gdpPercap <span class="sc">*</span> pop)</span>
+<span id="cb3-3"><a href></a></span>
+<span id="cb3-4"><a href></a><span class="co"># exibe as 6 primeiras linhas de uma df</span></span>
+<span id="cb3-5"><a href></a><span class="fu">head</span>(dados_pib_total)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 4
-  country     continent  year lifeExp
-  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;
-1 Afghanistan Asia       1952    28.8
-2 Afghanistan Asia       1957    30.3
-3 Afghanistan Asia       1962    32.0
-4 Afghanistan Asia       1967    34.0
-5 Afghanistan Asia       1972    36.1
-6 Afghanistan Asia       1977    38.4</code></pre>
+<pre><code># A tibble: 6 × 7
+  country     continent  year lifeExp      pop gdpPercap    pib_total
+  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;        &lt;dbl&gt;
+1 Afghanistan Asia       1952    28.8  8425333      779.  6567086330.
+2 Afghanistan Asia       1957    30.3  9240934      821.  7585448670.
+3 Afghanistan Asia       1962    32.0 10267083      853.  8758855797.
+4 Afghanistan Asia       1967    34.0 11537966      836.  9648014150.
+5 Afghanistan Asia       1972    36.1 13079460      740.  9678553274.
+6 Afghanistan Asia       1977    38.4 14880372      786. 11697659231.</code></pre>
 </div>
 </div>
-</section><section id="nível-2-técnicas-avançadas" class="slide level2"><h2>Nível 2: Técnicas Avançadas</h2>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
+</section><section id="nível-2-aplicando-categorias" class="slide level2"><h2>Nível 2: Aplicando categorias</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Exercício 3</strong></p>
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Solução do Exercício 3</strong></p>
 </div>
 <div class="callout-content">
-<p>Complete o código abaixo para selecionar apenas as variáveis que começam com a letra “c”:</p>
+<p>Usando <code><a href="https://rdrr.io/r/base/ifelse.html">ifelse()</a></code>, crie uma variável chamada <code>economia_grande</code> que seja “Sim” quando a população for maior que 50 milhões e “Não” caso contrário.</p>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href></a><span class="co"># seleciona apenas as variáveis que começam com a letra &quot;c&quot;</span></span>
-<span id="cb5-2"><a href></a>variaveis_com_c <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
-<span id="cb5-3"><a href></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">&quot;c&quot;</span>))</span>
-<span id="cb5-4"><a href></a></span>
-<span id="cb5-5"><a href></a><span class="co"># exibe as primeiras 6 linhas do resultado</span></span>
-<span id="cb5-6"><a href></a><span class="fu">head</span>(variaveis_com_c)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href></a>dados_economia_grande <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href></a>  <span class="fu">mutate</span>(<span class="at">economia_grande =</span> <span class="fu">ifelse</span>(pop <span class="sc">&gt;</span> <span class="dv">50000000</span>, <span class="st">&quot;Sim&quot;</span>, <span class="st">&quot;Não&quot;</span>))</span>
+<span id="cb5-3"><a href></a></span>
+<span id="cb5-4"><a href></a><span class="co"># exibe todas as linhas da df</span></span>
+<span id="cb5-5"><a href></a><span class="fu">print</span>(dados_economia_grande, <span class="at">n =</span> <span class="cn">Inf</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 2
-  country     continent
-  &lt;fct&gt;       &lt;fct&gt;    
-1 Afghanistan Asia     
-2 Afghanistan Asia     
-3 Afghanistan Asia     
-4 Afghanistan Asia     
-5 Afghanistan Asia     
-6 Afghanistan Asia     </code></pre>
-</div>
-</div>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 4</strong></p>
-</div>
-<div class="callout-content">
-<p>Escreva o código para selecionar todas as variáveis desde “country” até “pop” (em sequência na tabela):</p>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href></a><span class="co"># selecionar todas as variáveis entre &quot;country&quot; e &quot;pop&quot;</span></span>
-<span id="cb7-2"><a href></a>variaveis_sequencia <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href></a>  <span class="fu">select</span>(country<span class="sc">:</span>pop)</span>
-<span id="cb7-4"><a href></a></span>
-<span id="cb7-5"><a href></a><span class="co"># exibe as primeiras 6 linhas do resultado</span></span>
-<span id="cb7-6"><a href></a><span class="fu">head</span>(variaveis_sequencia)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 5
-  country     continent  year lifeExp      pop
-  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;
-1 Afghanistan Asia       1952    28.8  8425333
-2 Afghanistan Asia       1957    30.3  9240934
-3 Afghanistan Asia       1962    32.0 10267083
-4 Afghanistan Asia       1967    34.0 11537966
-5 Afghanistan Asia       1972    36.1 13079460
-6 Afghanistan Asia       1977    38.4 14880372</code></pre>
+<pre><code># A tibble: 1,704 × 7
+     country            continent  year lifeExp    pop gdpPercap economia_grande
+     &lt;fct&gt;              &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;          
+   1 Afghanistan        Asia       1952    28.8 8.43e6      779. Não            
+   2 Afghanistan        Asia       1957    30.3 9.24e6      821. Não            
+   3 Afghanistan        Asia       1962    32.0 1.03e7      853. Não            
+   4 Afghanistan        Asia       1967    34.0 1.15e7      836. Não            
+   5 Afghanistan        Asia       1972    36.1 1.31e7      740. Não            
+   6 Afghanistan        Asia       1977    38.4 1.49e7      786. Não            
+   7 Afghanistan        Asia       1982    39.9 1.29e7      978. Não            
+   8 Afghanistan        Asia       1987    40.8 1.39e7      852. Não            
+   9 Afghanistan        Asia       1992    41.7 1.63e7      649. Não            
+  10 Afghanistan        Asia       1997    41.8 2.22e7      635. Não            
+  11 Afghanistan        Asia       2002    42.1 2.53e7      727. Não            
+  12 Afghanistan        Asia       2007    43.8 3.19e7      975. Não            
+  13 Albania            Europe     1952    55.2 1.28e6     1601. Não            
+  14 Albania            Europe     1957    59.3 1.48e6     1942. Não            
+  15 Albania            Europe     1962    64.8 1.73e6     2313. Não            
+  16 Albania            Europe     1967    66.2 1.98e6     2760. Não            
+  17 Albania            Europe     1972    67.7 2.26e6     3313. Não            
+  18 Albania            Europe     1977    68.9 2.51e6     3533. Não            
+  19 Albania            Europe     1982    70.4 2.78e6     3631. Não            
+  20 Albania            Europe     1987    72   3.08e6     3739. Não            
+  21 Albania            Europe     1992    71.6 3.33e6     2497. Não            
+  22 Albania            Europe     1997    73.0 3.43e6     3193. Não            
+  23 Albania            Europe     2002    75.7 3.51e6     4604. Não            
+  24 Albania            Europe     2007    76.4 3.60e6     5937. Não            
+  25 Algeria            Africa     1952    43.1 9.28e6     2449. Não            
+  26 Algeria            Africa     1957    45.7 1.03e7     3014. Não            
+  27 Algeria            Africa     1962    48.3 1.10e7     2551. Não            
+  28 Algeria            Africa     1967    51.4 1.28e7     3247. Não            
+  29 Algeria            Africa     1972    54.5 1.48e7     4183. Não            
+  30 Algeria            Africa     1977    58.0 1.72e7     4910. Não            
+  31 Algeria            Africa     1982    61.4 2.00e7     5745. Não            
+  32 Algeria            Africa     1987    65.8 2.33e7     5681. Não            
+  33 Algeria            Africa     1992    67.7 2.63e7     5023. Não            
+  34 Algeria            Africa     1997    69.2 2.91e7     4797. Não            
+  35 Algeria            Africa     2002    71.0 3.13e7     5288. Não            
+  36 Algeria            Africa     2007    72.3 3.33e7     6223. Não            
+  37 Angola             Africa     1952    30.0 4.23e6     3521. Não            
+  38 Angola             Africa     1957    32.0 4.56e6     3828. Não            
+  39 Angola             Africa     1962    34   4.83e6     4269. Não            
+  40 Angola             Africa     1967    36.0 5.25e6     5523. Não            
+  41 Angola             Africa     1972    37.9 5.89e6     5473. Não            
+  42 Angola             Africa     1977    39.5 6.16e6     3009. Não            
+  43 Angola             Africa     1982    39.9 7.02e6     2757. Não            
+  44 Angola             Africa     1987    39.9 7.87e6     2430. Não            
+  45 Angola             Africa     1992    40.6 8.74e6     2628. Não            
+  46 Angola             Africa     1997    41.0 9.88e6     2277. Não            
+  47 Angola             Africa     2002    41.0 1.09e7     2773. Não            
+  48 Angola             Africa     2007    42.7 1.24e7     4797. Não            
+  49 Argentina          Americas   1952    62.5 1.79e7     5911. Não            
+  50 Argentina          Americas   1957    64.4 1.96e7     6857. Não            
+  51 Argentina          Americas   1962    65.1 2.13e7     7133. Não            
+  52 Argentina          Americas   1967    65.6 2.29e7     8053. Não            
+  53 Argentina          Americas   1972    67.1 2.48e7     9443. Não            
+  54 Argentina          Americas   1977    68.5 2.70e7    10079. Não            
+  55 Argentina          Americas   1982    69.9 2.93e7     8998. Não            
+  56 Argentina          Americas   1987    70.8 3.16e7     9140. Não            
+  57 Argentina          Americas   1992    71.9 3.40e7     9308. Não            
+  58 Argentina          Americas   1997    73.3 3.62e7    10967. Não            
+  59 Argentina          Americas   2002    74.3 3.83e7     8798. Não            
+  60 Argentina          Americas   2007    75.3 4.03e7    12779. Não            
+  61 Australia          Oceania    1952    69.1 8.69e6    10040. Não            
+  62 Australia          Oceania    1957    70.3 9.71e6    10950. Não            
+  63 Australia          Oceania    1962    70.9 1.08e7    12217. Não            
+  64 Australia          Oceania    1967    71.1 1.19e7    14526. Não            
+  65 Australia          Oceania    1972    71.9 1.32e7    16789. Não            
+  66 Australia          Oceania    1977    73.5 1.41e7    18334. Não            
+  67 Australia          Oceania    1982    74.7 1.52e7    19477. Não            
+  68 Australia          Oceania    1987    76.3 1.63e7    21889. Não            
+  69 Australia          Oceania    1992    77.6 1.75e7    23425. Não            
+  70 Australia          Oceania    1997    78.8 1.86e7    26998. Não            
+  71 Australia          Oceania    2002    80.4 1.95e7    30688. Não            
+  72 Australia          Oceania    2007    81.2 2.04e7    34435. Não            
+  73 Austria            Europe     1952    66.8 6.93e6     6137. Não            
+  74 Austria            Europe     1957    67.5 6.97e6     8843. Não            
+  75 Austria            Europe     1962    69.5 7.13e6    10751. Não            
+  76 Austria            Europe     1967    70.1 7.38e6    12835. Não            
+  77 Austria            Europe     1972    70.6 7.54e6    16662. Não            
+  78 Austria            Europe     1977    72.2 7.57e6    19749. Não            
+  79 Austria            Europe     1982    73.2 7.57e6    21597. Não            
+  80 Austria            Europe     1987    74.9 7.58e6    23688. Não            
+  81 Austria            Europe     1992    76.0 7.91e6    27042. Não            
+  82 Austria            Europe     1997    77.5 8.07e6    29096. Não            
+  83 Austria            Europe     2002    79.0 8.15e6    32418. Não            
+  84 Austria            Europe     2007    79.8 8.20e6    36126. Não            
+  85 Bahrain            Asia       1952    50.9 1.20e5     9867. Não            
+  86 Bahrain            Asia       1957    53.8 1.39e5    11636. Não            
+  87 Bahrain            Asia       1962    56.9 1.72e5    12753. Não            
+  88 Bahrain            Asia       1967    59.9 2.02e5    14805. Não            
+  89 Bahrain            Asia       1972    63.3 2.31e5    18269. Não            
+  90 Bahrain            Asia       1977    65.6 2.97e5    19340. Não            
+  91 Bahrain            Asia       1982    69.1 3.78e5    19211. Não            
+  92 Bahrain            Asia       1987    70.8 4.55e5    18524. Não            
+  93 Bahrain            Asia       1992    72.6 5.29e5    19036. Não            
+  94 Bahrain            Asia       1997    73.9 5.99e5    20292. Não            
+  95 Bahrain            Asia       2002    74.8 6.56e5    23404. Não            
+  96 Bahrain            Asia       2007    75.6 7.09e5    29796. Não            
+  97 Bangladesh         Asia       1952    37.5 4.69e7      684. Não            
+  98 Bangladesh         Asia       1957    39.3 5.14e7      662. Sim            
+  99 Bangladesh         Asia       1962    41.2 5.68e7      686. Sim            
+ 100 Bangladesh         Asia       1967    43.5 6.28e7      721. Sim            
+ 101 Bangladesh         Asia       1972    45.3 7.08e7      630. Sim            
+ 102 Bangladesh         Asia       1977    46.9 8.04e7      660. Sim            
+ 103 Bangladesh         Asia       1982    50.0 9.31e7      677. Sim            
+ 104 Bangladesh         Asia       1987    52.8 1.04e8      752. Sim            
+ 105 Bangladesh         Asia       1992    56.0 1.14e8      838. Sim            
+ 106 Bangladesh         Asia       1997    59.4 1.23e8      973. Sim            
+ 107 Bangladesh         Asia       2002    62.0 1.36e8     1136. Sim            
+ 108 Bangladesh         Asia       2007    64.1 1.50e8     1391. Sim            
+ 109 Belgium            Europe     1952    68   8.73e6     8343. Não            
+ 110 Belgium            Europe     1957    69.2 8.99e6     9715. Não            
+ 111 Belgium            Europe     1962    70.2 9.22e6    10991. Não            
+ 112 Belgium            Europe     1967    70.9 9.56e6    13149. Não            
+ 113 Belgium            Europe     1972    71.4 9.71e6    16672. Não            
+ 114 Belgium            Europe     1977    72.8 9.82e6    19118. Não            
+ 115 Belgium            Europe     1982    73.9 9.86e6    20980. Não            
+ 116 Belgium            Europe     1987    75.4 9.87e6    22526. Não            
+ 117 Belgium            Europe     1992    76.5 1.00e7    25576. Não            
+ 118 Belgium            Europe     1997    77.5 1.02e7    27561. Não            
+ 119 Belgium            Europe     2002    78.3 1.03e7    30486. Não            
+ 120 Belgium            Europe     2007    79.4 1.04e7    33693. Não            
+ 121 Benin              Africa     1952    38.2 1.74e6     1063. Não            
+ 122 Benin              Africa     1957    40.4 1.93e6      960. Não            
+ 123 Benin              Africa     1962    42.6 2.15e6      949. Não            
+ 124 Benin              Africa     1967    44.9 2.43e6     1036. Não            
+ 125 Benin              Africa     1972    47.0 2.76e6     1086. Não            
+ 126 Benin              Africa     1977    49.2 3.17e6     1029. Não            
+ 127 Benin              Africa     1982    50.9 3.64e6     1278. Não            
+ 128 Benin              Africa     1987    52.3 4.24e6     1226. Não            
+ 129 Benin              Africa     1992    53.9 4.98e6     1191. Não            
+ 130 Benin              Africa     1997    54.8 6.07e6     1233. Não            
+ 131 Benin              Africa     2002    54.4 7.03e6     1373. Não            
+ 132 Benin              Africa     2007    56.7 8.08e6     1441. Não            
+ 133 Bolivia            Americas   1952    40.4 2.88e6     2677. Não            
+ 134 Bolivia            Americas   1957    41.9 3.21e6     2128. Não            
+ 135 Bolivia            Americas   1962    43.4 3.59e6     2181. Não            
+ 136 Bolivia            Americas   1967    45.0 4.04e6     2587. Não            
+ 137 Bolivia            Americas   1972    46.7 4.57e6     2980. Não            
+ 138 Bolivia            Americas   1977    50.0 5.08e6     3548. Não            
+ 139 Bolivia            Americas   1982    53.9 5.64e6     3157. Não            
+ 140 Bolivia            Americas   1987    57.3 6.16e6     2754. Não            
+ 141 Bolivia            Americas   1992    60.0 6.89e6     2962. Não            
+ 142 Bolivia            Americas   1997    62.0 7.69e6     3326. Não            
+ 143 Bolivia            Americas   2002    63.9 8.45e6     3413. Não            
+ 144 Bolivia            Americas   2007    65.6 9.12e6     3822. Não            
+ 145 Bosnia and Herzeg… Europe     1952    53.8 2.79e6      974. Não            
+ 146 Bosnia and Herzeg… Europe     1957    58.4 3.08e6     1354. Não            
+ 147 Bosnia and Herzeg… Europe     1962    61.9 3.35e6     1710. Não            
+ 148 Bosnia and Herzeg… Europe     1967    64.8 3.59e6     2172. Não            
+ 149 Bosnia and Herzeg… Europe     1972    67.4 3.82e6     2860. Não            
+ 150 Bosnia and Herzeg… Europe     1977    69.9 4.09e6     3528. Não            
+ 151 Bosnia and Herzeg… Europe     1982    70.7 4.17e6     4127. Não            
+ 152 Bosnia and Herzeg… Europe     1987    71.1 4.34e6     4314. Não            
+ 153 Bosnia and Herzeg… Europe     1992    72.2 4.26e6     2547. Não            
+ 154 Bosnia and Herzeg… Europe     1997    73.2 3.61e6     4766. Não            
+ 155 Bosnia and Herzeg… Europe     2002    74.1 4.17e6     6019. Não            
+ 156 Bosnia and Herzeg… Europe     2007    74.9 4.55e6     7446. Não            
+ 157 Botswana           Africa     1952    47.6 4.42e5      851. Não            
+ 158 Botswana           Africa     1957    49.6 4.75e5      918. Não            
+ 159 Botswana           Africa     1962    51.5 5.13e5      984. Não            
+ 160 Botswana           Africa     1967    53.3 5.54e5     1215. Não            
+ 161 Botswana           Africa     1972    56.0 6.19e5     2264. Não            
+ 162 Botswana           Africa     1977    59.3 7.81e5     3215. Não            
+ 163 Botswana           Africa     1982    61.5 9.70e5     4551. Não            
+ 164 Botswana           Africa     1987    63.6 1.15e6     6206. Não            
+ 165 Botswana           Africa     1992    62.7 1.34e6     7954. Não            
+ 166 Botswana           Africa     1997    52.6 1.54e6     8647. Não            
+ 167 Botswana           Africa     2002    46.6 1.63e6    11004. Não            
+ 168 Botswana           Africa     2007    50.7 1.64e6    12570. Não            
+ 169 Brazil             Americas   1952    50.9 5.66e7     2109. Sim            
+ 170 Brazil             Americas   1957    53.3 6.56e7     2487. Sim            
+ 171 Brazil             Americas   1962    55.7 7.60e7     3337. Sim            
+ 172 Brazil             Americas   1967    57.6 8.80e7     3430. Sim            
+ 173 Brazil             Americas   1972    59.5 1.01e8     4986. Sim            
+ 174 Brazil             Americas   1977    61.5 1.14e8     6660. Sim            
+ 175 Brazil             Americas   1982    63.3 1.29e8     7031. Sim            
+ 176 Brazil             Americas   1987    65.2 1.43e8     7807. Sim            
+ 177 Brazil             Americas   1992    67.1 1.56e8     6950. Sim            
+ 178 Brazil             Americas   1997    69.4 1.69e8     7958. Sim            
+ 179 Brazil             Americas   2002    71.0 1.80e8     8131. Sim            
+ 180 Brazil             Americas   2007    72.4 1.90e8     9066. Sim            
+ 181 Bulgaria           Europe     1952    59.6 7.27e6     2444. Não            
+ 182 Bulgaria           Europe     1957    66.6 7.65e6     3009. Não            
+ 183 Bulgaria           Europe     1962    69.5 8.01e6     4254. Não            
+ 184 Bulgaria           Europe     1967    70.4 8.31e6     5577. Não            
+ 185 Bulgaria           Europe     1972    70.9 8.58e6     6597. Não            
+ 186 Bulgaria           Europe     1977    70.8 8.80e6     7612. Não            
+ 187 Bulgaria           Europe     1982    71.1 8.89e6     8224. Não            
+ 188 Bulgaria           Europe     1987    71.3 8.97e6     8240. Não            
+ 189 Bulgaria           Europe     1992    71.2 8.66e6     6303. Não            
+ 190 Bulgaria           Europe     1997    70.3 8.07e6     5970. Não            
+ 191 Bulgaria           Europe     2002    72.1 7.66e6     7697. Não            
+ 192 Bulgaria           Europe     2007    73.0 7.32e6    10681. Não            
+ 193 Burkina Faso       Africa     1952    32.0 4.47e6      543. Não            
+ 194 Burkina Faso       Africa     1957    34.9 4.71e6      617. Não            
+ 195 Burkina Faso       Africa     1962    37.8 4.92e6      723. Não            
+ 196 Burkina Faso       Africa     1967    40.7 5.13e6      795. Não            
+ 197 Burkina Faso       Africa     1972    43.6 5.43e6      855. Não            
+ 198 Burkina Faso       Africa     1977    46.1 5.89e6      743. Não            
+ 199 Burkina Faso       Africa     1982    48.1 6.63e6      807. Não            
+ 200 Burkina Faso       Africa     1987    49.6 7.59e6      912. Não            
+ 201 Burkina Faso       Africa     1992    50.3 8.88e6      932. Não            
+ 202 Burkina Faso       Africa     1997    50.3 1.04e7      946. Não            
+ 203 Burkina Faso       Africa     2002    50.6 1.23e7     1038. Não            
+ 204 Burkina Faso       Africa     2007    52.3 1.43e7     1217. Não            
+ 205 Burundi            Africa     1952    39.0 2.45e6      339. Não            
+ 206 Burundi            Africa     1957    40.5 2.67e6      380. Não            
+ 207 Burundi            Africa     1962    42.0 2.96e6      355. Não            
+ 208 Burundi            Africa     1967    43.5 3.33e6      413. Não            
+ 209 Burundi            Africa     1972    44.1 3.53e6      464. Não            
+ 210 Burundi            Africa     1977    45.9 3.83e6      556. Não            
+ 211 Burundi            Africa     1982    47.5 4.58e6      560. Não            
+ 212 Burundi            Africa     1987    48.2 5.13e6      622. Não            
+ 213 Burundi            Africa     1992    44.7 5.81e6      632. Não            
+ 214 Burundi            Africa     1997    45.3 6.12e6      463. Não            
+ 215 Burundi            Africa     2002    47.4 7.02e6      446. Não            
+ 216 Burundi            Africa     2007    49.6 8.39e6      430. Não            
+ 217 Cambodia           Asia       1952    39.4 4.69e6      368. Não            
+ 218 Cambodia           Asia       1957    41.4 5.32e6      434. Não            
+ 219 Cambodia           Asia       1962    43.4 6.08e6      497. Não            
+ 220 Cambodia           Asia       1967    45.4 6.96e6      523. Não            
+ 221 Cambodia           Asia       1972    40.3 7.45e6      422. Não            
+ 222 Cambodia           Asia       1977    31.2 6.98e6      525. Não            
+ 223 Cambodia           Asia       1982    51.0 7.27e6      624. Não            
+ 224 Cambodia           Asia       1987    53.9 8.37e6      684. Não            
+ 225 Cambodia           Asia       1992    55.8 1.02e7      682. Não            
+ 226 Cambodia           Asia       1997    56.5 1.18e7      734. Não            
+ 227 Cambodia           Asia       2002    56.8 1.29e7      896. Não            
+ 228 Cambodia           Asia       2007    59.7 1.41e7     1714. Não            
+ 229 Cameroon           Africa     1952    38.5 5.01e6     1173. Não            
+ 230 Cameroon           Africa     1957    40.4 5.36e6     1313. Não            
+ 231 Cameroon           Africa     1962    42.6 5.79e6     1400. Não            
+ 232 Cameroon           Africa     1967    44.8 6.34e6     1508. Não            
+ 233 Cameroon           Africa     1972    47.0 7.02e6     1684. Não            
+ 234 Cameroon           Africa     1977    49.4 7.96e6     1783. Não            
+ 235 Cameroon           Africa     1982    53.0 9.25e6     2368. Não            
+ 236 Cameroon           Africa     1987    55.0 1.08e7     2603. Não            
+ 237 Cameroon           Africa     1992    54.3 1.25e7     1793. Não            
+ 238 Cameroon           Africa     1997    52.2 1.42e7     1694. Não            
+ 239 Cameroon           Africa     2002    49.9 1.59e7     1934. Não            
+ 240 Cameroon           Africa     2007    50.4 1.77e7     2042. Não            
+ 241 Canada             Americas   1952    68.8 1.48e7    11367. Não            
+ 242 Canada             Americas   1957    70.0 1.70e7    12490. Não            
+ 243 Canada             Americas   1962    71.3 1.90e7    13462. Não            
+ 244 Canada             Americas   1967    72.1 2.08e7    16077. Não            
+ 245 Canada             Americas   1972    72.9 2.23e7    18971. Não            
+ 246 Canada             Americas   1977    74.2 2.38e7    22091. Não            
+ 247 Canada             Americas   1982    75.8 2.52e7    22899. Não            
+ 248 Canada             Americas   1987    76.9 2.65e7    26627. Não            
+ 249 Canada             Americas   1992    78.0 2.85e7    26343. Não            
+ 250 Canada             Americas   1997    78.6 3.03e7    28955. Não            
+ 251 Canada             Americas   2002    79.8 3.19e7    33329. Não            
+ 252 Canada             Americas   2007    80.7 3.34e7    36319. Não            
+ 253 Central African R… Africa     1952    35.5 1.29e6     1071. Não            
+ 254 Central African R… Africa     1957    37.5 1.39e6     1191. Não            
+ 255 Central African R… Africa     1962    39.5 1.52e6     1193. Não            
+ 256 Central African R… Africa     1967    41.5 1.73e6     1136. Não            
+ 257 Central African R… Africa     1972    43.5 1.93e6     1070. Não            
+ 258 Central African R… Africa     1977    46.8 2.17e6     1109. Não            
+ 259 Central African R… Africa     1982    48.3 2.48e6      957. Não            
+ 260 Central African R… Africa     1987    50.5 2.84e6      845. Não            
+ 261 Central African R… Africa     1992    49.4 3.27e6      748. Não            
+ 262 Central African R… Africa     1997    46.1 3.70e6      741. Não            
+ 263 Central African R… Africa     2002    43.3 4.05e6      739. Não            
+ 264 Central African R… Africa     2007    44.7 4.37e6      706. Não            
+ 265 Chad               Africa     1952    38.1 2.68e6     1179. Não            
+ 266 Chad               Africa     1957    39.9 2.89e6     1308. Não            
+ 267 Chad               Africa     1962    41.7 3.15e6     1390. Não            
+ 268 Chad               Africa     1967    43.6 3.50e6     1197. Não            
+ 269 Chad               Africa     1972    45.6 3.90e6     1104. Não            
+ 270 Chad               Africa     1977    47.4 4.39e6     1134. Não            
+ 271 Chad               Africa     1982    49.5 4.88e6      798. Não            
+ 272 Chad               Africa     1987    51.1 5.50e6      952. Não            
+ 273 Chad               Africa     1992    51.7 6.43e6     1058. Não            
+ 274 Chad               Africa     1997    51.6 7.56e6     1005. Não            
+ 275 Chad               Africa     2002    50.5 8.84e6     1156. Não            
+ 276 Chad               Africa     2007    50.7 1.02e7     1704. Não            
+ 277 Chile              Americas   1952    54.7 6.38e6     3940. Não            
+ 278 Chile              Americas   1957    56.1 7.05e6     4316. Não            
+ 279 Chile              Americas   1962    57.9 7.96e6     4519. Não            
+ 280 Chile              Americas   1967    60.5 8.86e6     5107. Não            
+ 281 Chile              Americas   1972    63.4 9.72e6     5494. Não            
+ 282 Chile              Americas   1977    67.1 1.06e7     4757. Não            
+ 283 Chile              Americas   1982    70.6 1.15e7     5096. Não            
+ 284 Chile              Americas   1987    72.5 1.25e7     5547. Não            
+ 285 Chile              Americas   1992    74.1 1.36e7     7596. Não            
+ 286 Chile              Americas   1997    75.8 1.46e7    10118. Não            
+ 287 Chile              Americas   2002    77.9 1.55e7    10779. Não            
+ 288 Chile              Americas   2007    78.6 1.63e7    13172. Não            
+ 289 China              Asia       1952    44   5.56e8      400. Sim            
+ 290 China              Asia       1957    50.5 6.37e8      576. Sim            
+ 291 China              Asia       1962    44.5 6.66e8      488. Sim            
+ 292 China              Asia       1967    58.4 7.55e8      613. Sim            
+ 293 China              Asia       1972    63.1 8.62e8      677. Sim            
+ 294 China              Asia       1977    64.0 9.43e8      741. Sim            
+ 295 China              Asia       1982    65.5 1.00e9      962. Sim            
+ 296 China              Asia       1987    67.3 1.08e9     1379. Sim            
+ 297 China              Asia       1992    68.7 1.16e9     1656. Sim            
+ 298 China              Asia       1997    70.4 1.23e9     2289. Sim            
+ 299 China              Asia       2002    72.0 1.28e9     3119. Sim            
+ 300 China              Asia       2007    73.0 1.32e9     4959. Sim            
+ 301 Colombia           Americas   1952    50.6 1.24e7     2144. Não            
+ 302 Colombia           Americas   1957    55.1 1.45e7     2324. Não            
+ 303 Colombia           Americas   1962    57.9 1.70e7     2492. Não            
+ 304 Colombia           Americas   1967    60.0 1.98e7     2679. Não            
+ 305 Colombia           Americas   1972    61.6 2.25e7     3265. Não            
+ 306 Colombia           Americas   1977    63.8 2.51e7     3816. Não            
+ 307 Colombia           Americas   1982    66.7 2.78e7     4398. Não            
+ 308 Colombia           Americas   1987    67.8 3.10e7     4903. Não            
+ 309 Colombia           Americas   1992    68.4 3.42e7     5445. Não            
+ 310 Colombia           Americas   1997    70.3 3.77e7     6117. Não            
+ 311 Colombia           Americas   2002    71.7 4.10e7     5755. Não            
+ 312 Colombia           Americas   2007    72.9 4.42e7     7007. Não            
+ 313 Comoros            Africa     1952    40.7 1.54e5     1103. Não            
+ 314 Comoros            Africa     1957    42.5 1.71e5     1211. Não            
+ 315 Comoros            Africa     1962    44.5 1.92e5     1407. Não            
+ 316 Comoros            Africa     1967    46.5 2.17e5     1876. Não            
+ 317 Comoros            Africa     1972    48.9 2.50e5     1938. Não            
+ 318 Comoros            Africa     1977    50.9 3.05e5     1173. Não            
+ 319 Comoros            Africa     1982    52.9 3.49e5     1267. Não            
+ 320 Comoros            Africa     1987    54.9 3.95e5     1316. Não            
+ 321 Comoros            Africa     1992    57.9 4.54e5     1247. Não            
+ 322 Comoros            Africa     1997    60.7 5.28e5     1174. Não            
+ 323 Comoros            Africa     2002    63.0 6.14e5     1076. Não            
+ 324 Comoros            Africa     2007    65.2 7.11e5      986. Não            
+ 325 Congo, Dem. Rep.   Africa     1952    39.1 1.41e7      781. Não            
+ 326 Congo, Dem. Rep.   Africa     1957    40.7 1.56e7      906. Não            
+ 327 Congo, Dem. Rep.   Africa     1962    42.1 1.75e7      896. Não            
+ 328 Congo, Dem. Rep.   Africa     1967    44.1 1.99e7      862. Não            
+ 329 Congo, Dem. Rep.   Africa     1972    46.0 2.30e7      905. Não            
+ 330 Congo, Dem. Rep.   Africa     1977    47.8 2.65e7      796. Não            
+ 331 Congo, Dem. Rep.   Africa     1982    47.8 3.06e7      674. Não            
+ 332 Congo, Dem. Rep.   Africa     1987    47.4 3.55e7      673. Não            
+ 333 Congo, Dem. Rep.   Africa     1992    45.5 4.17e7      458. Não            
+ 334 Congo, Dem. Rep.   Africa     1997    42.6 4.78e7      312. Não            
+ 335 Congo, Dem. Rep.   Africa     2002    45.0 5.54e7      241. Sim            
+ 336 Congo, Dem. Rep.   Africa     2007    46.5 6.46e7      278. Sim            
+ 337 Congo, Rep.        Africa     1952    42.1 8.55e5     2126. Não            
+ 338 Congo, Rep.        Africa     1957    45.1 9.40e5     2315. Não            
+ 339 Congo, Rep.        Africa     1962    48.4 1.05e6     2465. Não            
+ 340 Congo, Rep.        Africa     1967    52.0 1.18e6     2678. Não            
+ 341 Congo, Rep.        Africa     1972    54.9 1.34e6     3213. Não            
+ 342 Congo, Rep.        Africa     1977    55.6 1.54e6     3259. Não            
+ 343 Congo, Rep.        Africa     1982    56.7 1.77e6     4880. Não            
+ 344 Congo, Rep.        Africa     1987    57.5 2.06e6     4201. Não            
+ 345 Congo, Rep.        Africa     1992    56.4 2.41e6     4016. Não            
+ 346 Congo, Rep.        Africa     1997    53.0 2.80e6     3484. Não            
+ 347 Congo, Rep.        Africa     2002    53.0 3.33e6     3484. Não            
+ 348 Congo, Rep.        Africa     2007    55.3 3.80e6     3633. Não            
+ 349 Costa Rica         Americas   1952    57.2 9.26e5     2627. Não            
+ 350 Costa Rica         Americas   1957    60.0 1.11e6     2990. Não            
+ 351 Costa Rica         Americas   1962    62.8 1.35e6     3461. Não            
+ 352 Costa Rica         Americas   1967    65.4 1.59e6     4162. Não            
+ 353 Costa Rica         Americas   1972    67.8 1.83e6     5118. Não            
+ 354 Costa Rica         Americas   1977    70.8 2.11e6     5927. Não            
+ 355 Costa Rica         Americas   1982    73.4 2.42e6     5263. Não            
+ 356 Costa Rica         Americas   1987    74.8 2.80e6     5630. Não            
+ 357 Costa Rica         Americas   1992    75.7 3.17e6     6160. Não            
+ 358 Costa Rica         Americas   1997    77.3 3.52e6     6677. Não            
+ 359 Costa Rica         Americas   2002    78.1 3.83e6     7723. Não            
+ 360 Costa Rica         Americas   2007    78.8 4.13e6     9645. Não            
+ 361 Cote d&#39;Ivoire      Africa     1952    40.5 2.98e6     1389. Não            
+ 362 Cote d&#39;Ivoire      Africa     1957    42.5 3.30e6     1501. Não            
+ 363 Cote d&#39;Ivoire      Africa     1962    44.9 3.83e6     1729. Não            
+ 364 Cote d&#39;Ivoire      Africa     1967    47.4 4.74e6     2052. Não            
+ 365 Cote d&#39;Ivoire      Africa     1972    49.8 6.07e6     2378. Não            
+ 366 Cote d&#39;Ivoire      Africa     1977    52.4 7.46e6     2518. Não            
+ 367 Cote d&#39;Ivoire      Africa     1982    54.0 9.03e6     2603. Não            
+ 368 Cote d&#39;Ivoire      Africa     1987    54.7 1.08e7     2157. Não            
+ 369 Cote d&#39;Ivoire      Africa     1992    52.0 1.28e7     1648. Não            
+ 370 Cote d&#39;Ivoire      Africa     1997    48.0 1.46e7     1786. Não            
+ 371 Cote d&#39;Ivoire      Africa     2002    46.8 1.63e7     1649. Não            
+ 372 Cote d&#39;Ivoire      Africa     2007    48.3 1.80e7     1545. Não            
+ 373 Croatia            Europe     1952    61.2 3.88e6     3119. Não            
+ 374 Croatia            Europe     1957    64.8 3.99e6     4338. Não            
+ 375 Croatia            Europe     1962    67.1 4.08e6     5478. Não            
+ 376 Croatia            Europe     1967    68.5 4.17e6     6960. Não            
+ 377 Croatia            Europe     1972    69.6 4.23e6     9164. Não            
+ 378 Croatia            Europe     1977    70.6 4.32e6    11305. Não            
+ 379 Croatia            Europe     1982    70.5 4.41e6    13222. Não            
+ 380 Croatia            Europe     1987    71.5 4.48e6    13823. Não            
+ 381 Croatia            Europe     1992    72.5 4.49e6     8448. Não            
+ 382 Croatia            Europe     1997    73.7 4.44e6     9876. Não            
+ 383 Croatia            Europe     2002    74.9 4.48e6    11628. Não            
+ 384 Croatia            Europe     2007    75.7 4.49e6    14619. Não            
+ 385 Cuba               Americas   1952    59.4 6.01e6     5587. Não            
+ 386 Cuba               Americas   1957    62.3 6.64e6     6092. Não            
+ 387 Cuba               Americas   1962    65.2 7.25e6     5181. Não            
+ 388 Cuba               Americas   1967    68.3 8.14e6     5690. Não            
+ 389 Cuba               Americas   1972    70.7 8.83e6     5305. Não            
+ 390 Cuba               Americas   1977    72.6 9.54e6     6380. Não            
+ 391 Cuba               Americas   1982    73.7 9.79e6     7317. Não            
+ 392 Cuba               Americas   1987    74.2 1.02e7     7533. Não            
+ 393 Cuba               Americas   1992    74.4 1.07e7     5593. Não            
+ 394 Cuba               Americas   1997    76.2 1.10e7     5432. Não            
+ 395 Cuba               Americas   2002    77.2 1.12e7     6341. Não            
+ 396 Cuba               Americas   2007    78.3 1.14e7     8948. Não            
+ 397 Czech Republic     Europe     1952    66.9 9.13e6     6876. Não            
+ 398 Czech Republic     Europe     1957    69.0 9.51e6     8256. Não            
+ 399 Czech Republic     Europe     1962    69.9 9.62e6    10137. Não            
+ 400 Czech Republic     Europe     1967    70.4 9.84e6    11399. Não            
+ 401 Czech Republic     Europe     1972    70.3 9.86e6    13108. Não            
+ 402 Czech Republic     Europe     1977    70.7 1.02e7    14800. Não            
+ 403 Czech Republic     Europe     1982    71.0 1.03e7    15377. Não            
+ 404 Czech Republic     Europe     1987    71.6 1.03e7    16310. Não            
+ 405 Czech Republic     Europe     1992    72.4 1.03e7    14297. Não            
+ 406 Czech Republic     Europe     1997    74.0 1.03e7    16049. Não            
+ 407 Czech Republic     Europe     2002    75.5 1.03e7    17596. Não            
+ 408 Czech Republic     Europe     2007    76.5 1.02e7    22833. Não            
+ 409 Denmark            Europe     1952    70.8 4.33e6     9692. Não            
+ 410 Denmark            Europe     1957    71.8 4.49e6    11100. Não            
+ 411 Denmark            Europe     1962    72.4 4.65e6    13583. Não            
+ 412 Denmark            Europe     1967    73.0 4.84e6    15937. Não            
+ 413 Denmark            Europe     1972    73.5 4.99e6    18866. Não            
+ 414 Denmark            Europe     1977    74.7 5.09e6    20423. Não            
+ 415 Denmark            Europe     1982    74.6 5.12e6    21688. Não            
+ 416 Denmark            Europe     1987    74.8 5.13e6    25116. Não            
+ 417 Denmark            Europe     1992    75.3 5.17e6    26407. Não            
+ 418 Denmark            Europe     1997    76.1 5.28e6    29804. Não            
+ 419 Denmark            Europe     2002    77.2 5.37e6    32167. Não            
+ 420 Denmark            Europe     2007    78.3 5.47e6    35278. Não            
+ 421 Djibouti           Africa     1952    34.8 6.31e4     2670. Não            
+ 422 Djibouti           Africa     1957    37.3 7.19e4     2865. Não            
+ 423 Djibouti           Africa     1962    39.7 8.99e4     3021. Não            
+ 424 Djibouti           Africa     1967    42.1 1.28e5     3020. Não            
+ 425 Djibouti           Africa     1972    44.4 1.79e5     3694. Não            
+ 426 Djibouti           Africa     1977    46.5 2.29e5     3082. Não            
+ 427 Djibouti           Africa     1982    48.8 3.06e5     2879. Não            
+ 428 Djibouti           Africa     1987    50.0 3.11e5     2880. Não            
+ 429 Djibouti           Africa     1992    51.6 3.84e5     2377. Não            
+ 430 Djibouti           Africa     1997    53.2 4.18e5     1895. Não            
+ 431 Djibouti           Africa     2002    53.4 4.47e5     1908. Não            
+ 432 Djibouti           Africa     2007    54.8 4.96e5     2082. Não            
+ 433 Dominican Republic Americas   1952    45.9 2.49e6     1398. Não            
+ 434 Dominican Republic Americas   1957    49.8 2.92e6     1544. Não            
+ 435 Dominican Republic Americas   1962    53.5 3.45e6     1662. Não            
+ 436 Dominican Republic Americas   1967    56.8 4.05e6     1654. Não            
+ 437 Dominican Republic Americas   1972    59.6 4.67e6     2190. Não            
+ 438 Dominican Republic Americas   1977    61.8 5.30e6     2682. Não            
+ 439 Dominican Republic Americas   1982    63.7 5.97e6     2861. Não            
+ 440 Dominican Republic Americas   1987    66.0 6.66e6     2900. Não            
+ 441 Dominican Republic Americas   1992    68.5 7.35e6     3044. Não            
+ 442 Dominican Republic Americas   1997    70.0 7.99e6     3614. Não            
+ 443 Dominican Republic Americas   2002    70.8 8.65e6     4564. Não            
+ 444 Dominican Republic Americas   2007    72.2 9.32e6     6025. Não            
+ 445 Ecuador            Americas   1952    48.4 3.55e6     3522. Não            
+ 446 Ecuador            Americas   1957    51.4 4.06e6     3781. Não            
+ 447 Ecuador            Americas   1962    54.6 4.68e6     4086. Não            
+ 448 Ecuador            Americas   1967    56.7 5.43e6     4579. Não            
+ 449 Ecuador            Americas   1972    58.8 6.30e6     5281. Não            
+ 450 Ecuador            Americas   1977    61.3 7.28e6     6680. Não            
+ 451 Ecuador            Americas   1982    64.3 8.37e6     7214. Não            
+ 452 Ecuador            Americas   1987    67.2 9.55e6     6482. Não            
+ 453 Ecuador            Americas   1992    69.6 1.07e7     7104. Não            
+ 454 Ecuador            Americas   1997    72.3 1.19e7     7429. Não            
+ 455 Ecuador            Americas   2002    74.2 1.29e7     5773. Não            
+ 456 Ecuador            Americas   2007    75.0 1.38e7     6873. Não            
+ 457 Egypt              Africa     1952    41.9 2.22e7     1419. Não            
+ 458 Egypt              Africa     1957    44.4 2.50e7     1459. Não            
+ 459 Egypt              Africa     1962    47.0 2.82e7     1693. Não            
+ 460 Egypt              Africa     1967    49.3 3.17e7     1815. Não            
+ 461 Egypt              Africa     1972    51.1 3.48e7     2024. Não            
+ 462 Egypt              Africa     1977    53.3 3.88e7     2785. Não            
+ 463 Egypt              Africa     1982    56.0 4.57e7     3504. Não            
+ 464 Egypt              Africa     1987    59.8 5.28e7     3885. Sim            
+ 465 Egypt              Africa     1992    63.7 5.94e7     3795. Sim            
+ 466 Egypt              Africa     1997    67.2 6.61e7     4173. Sim            
+ 467 Egypt              Africa     2002    69.8 7.33e7     4755. Sim            
+ 468 Egypt              Africa     2007    71.3 8.03e7     5581. Sim            
+ 469 El Salvador        Americas   1952    45.3 2.04e6     3048. Não            
+ 470 El Salvador        Americas   1957    48.6 2.36e6     3422. Não            
+ 471 El Salvador        Americas   1962    52.3 2.75e6     3777. Não            
+ 472 El Salvador        Americas   1967    55.9 3.23e6     4359. Não            
+ 473 El Salvador        Americas   1972    58.2 3.79e6     4520. Não            
+ 474 El Salvador        Americas   1977    56.7 4.28e6     5139. Não            
+ 475 El Salvador        Americas   1982    56.6 4.47e6     4098. Não            
+ 476 El Salvador        Americas   1987    63.2 4.84e6     4140. Não            
+ 477 El Salvador        Americas   1992    66.8 5.27e6     4444. Não            
+ 478 El Salvador        Americas   1997    69.5 5.78e6     5155. Não            
+ 479 El Salvador        Americas   2002    70.7 6.35e6     5352. Não            
+ 480 El Salvador        Americas   2007    71.9 6.94e6     5728. Não            
+ 481 Equatorial Guinea  Africa     1952    34.5 2.17e5      376. Não            
+ 482 Equatorial Guinea  Africa     1957    36.0 2.33e5      426. Não            
+ 483 Equatorial Guinea  Africa     1962    37.5 2.49e5      583. Não            
+ 484 Equatorial Guinea  Africa     1967    39.0 2.60e5      916. Não            
+ 485 Equatorial Guinea  Africa     1972    40.5 2.78e5      672. Não            
+ 486 Equatorial Guinea  Africa     1977    42.0 1.93e5      959. Não            
+ 487 Equatorial Guinea  Africa     1982    43.7 2.85e5      928. Não            
+ 488 Equatorial Guinea  Africa     1987    45.7 3.41e5      967. Não            
+ 489 Equatorial Guinea  Africa     1992    47.5 3.88e5     1132. Não            
+ 490 Equatorial Guinea  Africa     1997    48.2 4.40e5     2814. Não            
+ 491 Equatorial Guinea  Africa     2002    49.3 4.96e5     7703. Não            
+ 492 Equatorial Guinea  Africa     2007    51.6 5.51e5    12154. Não            
+ 493 Eritrea            Africa     1952    35.9 1.44e6      329. Não            
+ 494 Eritrea            Africa     1957    38.0 1.54e6      344. Não            
+ 495 Eritrea            Africa     1962    40.2 1.67e6      381. Não            
+ 496 Eritrea            Africa     1967    42.2 1.82e6      469. Não            
+ 497 Eritrea            Africa     1972    44.1 2.26e6      514. Não            
+ 498 Eritrea            Africa     1977    44.5 2.51e6      506. Não            
+ 499 Eritrea            Africa     1982    43.9 2.64e6      525. Não            
+ 500 Eritrea            Africa     1987    46.5 2.92e6      521. Não            
+ 501 Eritrea            Africa     1992    50.0 3.67e6      583. Não            
+ 502 Eritrea            Africa     1997    53.4 4.06e6      913. Não            
+ 503 Eritrea            Africa     2002    55.2 4.41e6      765. Não            
+ 504 Eritrea            Africa     2007    58.0 4.91e6      641. Não            
+ 505 Ethiopia           Africa     1952    34.1 2.09e7      362. Não            
+ 506 Ethiopia           Africa     1957    36.7 2.28e7      379. Não            
+ 507 Ethiopia           Africa     1962    40.1 2.51e7      419. Não            
+ 508 Ethiopia           Africa     1967    42.1 2.79e7      516. Não            
+ 509 Ethiopia           Africa     1972    43.5 3.08e7      566. Não            
+ 510 Ethiopia           Africa     1977    44.5 3.46e7      557. Não            
+ 511 Ethiopia           Africa     1982    44.9 3.81e7      578. Não            
+ 512 Ethiopia           Africa     1987    46.7 4.30e7      574. Não            
+ 513 Ethiopia           Africa     1992    48.1 5.21e7      421. Sim            
+ 514 Ethiopia           Africa     1997    49.4 5.99e7      516. Sim            
+ 515 Ethiopia           Africa     2002    50.7 6.79e7      530. Sim            
+ 516 Ethiopia           Africa     2007    52.9 7.65e7      691. Sim            
+ 517 Finland            Europe     1952    66.6 4.09e6     6425. Não            
+ 518 Finland            Europe     1957    67.5 4.32e6     7545. Não            
+ 519 Finland            Europe     1962    68.8 4.49e6     9372. Não            
+ 520 Finland            Europe     1967    69.8 4.61e6    10922. Não            
+ 521 Finland            Europe     1972    70.9 4.64e6    14359. Não            
+ 522 Finland            Europe     1977    72.5 4.74e6    15605. Não            
+ 523 Finland            Europe     1982    74.6 4.83e6    18533. Não            
+ 524 Finland            Europe     1987    74.8 4.93e6    21141. Não            
+ 525 Finland            Europe     1992    75.7 5.04e6    20647. Não            
+ 526 Finland            Europe     1997    77.1 5.13e6    23724. Não            
+ 527 Finland            Europe     2002    78.4 5.19e6    28205. Não            
+ 528 Finland            Europe     2007    79.3 5.24e6    33207. Não            
+ 529 France             Europe     1952    67.4 4.25e7     7030. Não            
+ 530 France             Europe     1957    68.9 4.43e7     8663. Não            
+ 531 France             Europe     1962    70.5 4.71e7    10560. Não            
+ 532 France             Europe     1967    71.6 4.96e7    13000. Não            
+ 533 France             Europe     1972    72.4 5.17e7    16107. Sim            
+ 534 France             Europe     1977    73.8 5.32e7    18293. Sim            
+ 535 France             Europe     1982    74.9 5.44e7    20294. Sim            
+ 536 France             Europe     1987    76.3 5.56e7    22066. Sim            
+ 537 France             Europe     1992    77.5 5.74e7    24704. Sim            
+ 538 France             Europe     1997    78.6 5.86e7    25890. Sim            
+ 539 France             Europe     2002    79.6 5.99e7    28926. Sim            
+ 540 France             Europe     2007    80.7 6.11e7    30470. Sim            
+ 541 Gabon              Africa     1952    37.0 4.21e5     4293. Não            
+ 542 Gabon              Africa     1957    39.0 4.35e5     4976. Não            
+ 543 Gabon              Africa     1962    40.5 4.56e5     6631. Não            
+ 544 Gabon              Africa     1967    44.6 4.89e5     8359. Não            
+ 545 Gabon              Africa     1972    48.7 5.38e5    11402. Não            
+ 546 Gabon              Africa     1977    52.8 7.06e5    21746. Não            
+ 547 Gabon              Africa     1982    56.6 7.54e5    15113. Não            
+ 548 Gabon              Africa     1987    60.2 8.80e5    11864. Não            
+ 549 Gabon              Africa     1992    61.4 9.86e5    13522. Não            
+ 550 Gabon              Africa     1997    60.5 1.13e6    14723. Não            
+ 551 Gabon              Africa     2002    56.8 1.30e6    12522. Não            
+ 552 Gabon              Africa     2007    56.7 1.45e6    13206. Não            
+ 553 Gambia             Africa     1952    30   2.84e5      485. Não            
+ 554 Gambia             Africa     1957    32.1 3.23e5      521. Não            
+ 555 Gambia             Africa     1962    33.9 3.74e5      600. Não            
+ 556 Gambia             Africa     1967    35.9 4.40e5      735. Não            
+ 557 Gambia             Africa     1972    38.3 5.17e5      756. Não            
+ 558 Gambia             Africa     1977    41.8 6.08e5      885. Não            
+ 559 Gambia             Africa     1982    45.6 7.16e5      836. Não            
+ 560 Gambia             Africa     1987    49.3 8.48e5      612. Não            
+ 561 Gambia             Africa     1992    52.6 1.03e6      666. Não            
+ 562 Gambia             Africa     1997    55.9 1.24e6      654. Não            
+ 563 Gambia             Africa     2002    58.0 1.46e6      661. Não            
+ 564 Gambia             Africa     2007    59.4 1.69e6      753. Não            
+ 565 Germany            Europe     1952    67.5 6.91e7     7144. Sim            
+ 566 Germany            Europe     1957    69.1 7.10e7    10188. Sim            
+ 567 Germany            Europe     1962    70.3 7.37e7    12902. Sim            
+ 568 Germany            Europe     1967    70.8 7.64e7    14746. Sim            
+ 569 Germany            Europe     1972    71   7.87e7    18016. Sim            
+ 570 Germany            Europe     1977    72.5 7.82e7    20513. Sim            
+ 571 Germany            Europe     1982    73.8 7.83e7    22032. Sim            
+ 572 Germany            Europe     1987    74.8 7.77e7    24639. Sim            
+ 573 Germany            Europe     1992    76.1 8.06e7    26505. Sim            
+ 574 Germany            Europe     1997    77.3 8.20e7    27789. Sim            
+ 575 Germany            Europe     2002    78.7 8.24e7    30036. Sim            
+ 576 Germany            Europe     2007    79.4 8.24e7    32170. Sim            
+ 577 Ghana              Africa     1952    43.1 5.58e6      911. Não            
+ 578 Ghana              Africa     1957    44.8 6.39e6     1044. Não            
+ 579 Ghana              Africa     1962    46.5 7.36e6     1190. Não            
+ 580 Ghana              Africa     1967    48.1 8.49e6     1126. Não            
+ 581 Ghana              Africa     1972    49.9 9.35e6     1178. Não            
+ 582 Ghana              Africa     1977    51.8 1.05e7      993. Não            
+ 583 Ghana              Africa     1982    53.7 1.14e7      876. Não            
+ 584 Ghana              Africa     1987    55.7 1.42e7      847. Não            
+ 585 Ghana              Africa     1992    57.5 1.63e7      925. Não            
+ 586 Ghana              Africa     1997    58.6 1.84e7     1005. Não            
+ 587 Ghana              Africa     2002    58.5 2.06e7     1112. Não            
+ 588 Ghana              Africa     2007    60.0 2.29e7     1328. Não            
+ 589 Greece             Europe     1952    65.9 7.73e6     3531. Não            
+ 590 Greece             Europe     1957    67.9 8.10e6     4916. Não            
+ 591 Greece             Europe     1962    69.5 8.45e6     6017. Não            
+ 592 Greece             Europe     1967    71   8.72e6     8513. Não            
+ 593 Greece             Europe     1972    72.3 8.89e6    12725. Não            
+ 594 Greece             Europe     1977    73.7 9.31e6    14196. Não            
+ 595 Greece             Europe     1982    75.2 9.79e6    15268. Não            
+ 596 Greece             Europe     1987    76.7 9.97e6    16121. Não            
+ 597 Greece             Europe     1992    77.0 1.03e7    17541. Não            
+ 598 Greece             Europe     1997    77.9 1.05e7    18748. Não            
+ 599 Greece             Europe     2002    78.3 1.06e7    22514. Não            
+ 600 Greece             Europe     2007    79.5 1.07e7    27538. Não            
+ 601 Guatemala          Americas   1952    42.0 3.15e6     2428. Não            
+ 602 Guatemala          Americas   1957    44.1 3.64e6     2617. Não            
+ 603 Guatemala          Americas   1962    47.0 4.21e6     2750. Não            
+ 604 Guatemala          Americas   1967    50.0 4.69e6     3243. Não            
+ 605 Guatemala          Americas   1972    53.7 5.15e6     4031. Não            
+ 606 Guatemala          Americas   1977    56.0 5.70e6     4880. Não            
+ 607 Guatemala          Americas   1982    58.1 6.40e6     4820. Não            
+ 608 Guatemala          Americas   1987    60.8 7.33e6     4246. Não            
+ 609 Guatemala          Americas   1992    63.4 8.49e6     4439. Não            
+ 610 Guatemala          Americas   1997    66.3 9.80e6     4684. Não            
+ 611 Guatemala          Americas   2002    69.0 1.12e7     4858. Não            
+ 612 Guatemala          Americas   2007    70.3 1.26e7     5186. Não            
+ 613 Guinea             Africa     1952    33.6 2.66e6      510. Não            
+ 614 Guinea             Africa     1957    34.6 2.88e6      576. Não            
+ 615 Guinea             Africa     1962    35.8 3.14e6      686. Não            
+ 616 Guinea             Africa     1967    37.2 3.45e6      709. Não            
+ 617 Guinea             Africa     1972    38.8 3.81e6      742. Não            
+ 618 Guinea             Africa     1977    40.8 4.23e6      875. Não            
+ 619 Guinea             Africa     1982    42.9 4.71e6      857. Não            
+ 620 Guinea             Africa     1987    45.6 5.65e6      806. Não            
+ 621 Guinea             Africa     1992    48.6 6.99e6      794. Não            
+ 622 Guinea             Africa     1997    51.5 8.05e6      869. Não            
+ 623 Guinea             Africa     2002    53.7 8.81e6      946. Não            
+ 624 Guinea             Africa     2007    56.0 9.95e6      943. Não            
+ 625 Guinea-Bissau      Africa     1952    32.5 5.81e5      300. Não            
+ 626 Guinea-Bissau      Africa     1957    33.5 6.01e5      432. Não            
+ 627 Guinea-Bissau      Africa     1962    34.5 6.28e5      522. Não            
+ 628 Guinea-Bissau      Africa     1967    35.5 6.01e5      716. Não            
+ 629 Guinea-Bissau      Africa     1972    36.5 6.25e5      820. Não            
+ 630 Guinea-Bissau      Africa     1977    37.5 7.45e5      765. Não            
+ 631 Guinea-Bissau      Africa     1982    39.3 8.26e5      838. Não            
+ 632 Guinea-Bissau      Africa     1987    41.2 9.28e5      736. Não            
+ 633 Guinea-Bissau      Africa     1992    43.3 1.05e6      746. Não            
+ 634 Guinea-Bissau      Africa     1997    44.9 1.19e6      797. Não            
+ 635 Guinea-Bissau      Africa     2002    45.5 1.33e6      576. Não            
+ 636 Guinea-Bissau      Africa     2007    46.4 1.47e6      579. Não            
+ 637 Haiti              Americas   1952    37.6 3.20e6     1840. Não            
+ 638 Haiti              Americas   1957    40.7 3.51e6     1727. Não            
+ 639 Haiti              Americas   1962    43.6 3.88e6     1797. Não            
+ 640 Haiti              Americas   1967    46.2 4.32e6     1452. Não            
+ 641 Haiti              Americas   1972    48.0 4.70e6     1654. Não            
+ 642 Haiti              Americas   1977    49.9 4.91e6     1874. Não            
+ 643 Haiti              Americas   1982    51.5 5.20e6     2011. Não            
+ 644 Haiti              Americas   1987    53.6 5.76e6     1823. Não            
+ 645 Haiti              Americas   1992    55.1 6.33e6     1456. Não            
+ 646 Haiti              Americas   1997    56.7 6.91e6     1342. Não            
+ 647 Haiti              Americas   2002    58.1 7.61e6     1270. Não            
+ 648 Haiti              Americas   2007    60.9 8.50e6     1202. Não            
+ 649 Honduras           Americas   1952    41.9 1.52e6     2195. Não            
+ 650 Honduras           Americas   1957    44.7 1.77e6     2220. Não            
+ 651 Honduras           Americas   1962    48.0 2.09e6     2291. Não            
+ 652 Honduras           Americas   1967    50.9 2.50e6     2538. Não            
+ 653 Honduras           Americas   1972    53.9 2.97e6     2530. Não            
+ 654 Honduras           Americas   1977    57.4 3.06e6     3203. Não            
+ 655 Honduras           Americas   1982    60.9 3.67e6     3122. Não            
+ 656 Honduras           Americas   1987    64.5 4.37e6     3023. Não            
+ 657 Honduras           Americas   1992    66.4 5.08e6     3082. Não            
+ 658 Honduras           Americas   1997    67.7 5.87e6     3160. Não            
+ 659 Honduras           Americas   2002    68.6 6.68e6     3100. Não            
+ 660 Honduras           Americas   2007    70.2 7.48e6     3548. Não            
+ 661 Hong Kong, China   Asia       1952    61.0 2.13e6     3054. Não            
+ 662 Hong Kong, China   Asia       1957    64.8 2.74e6     3629. Não            
+ 663 Hong Kong, China   Asia       1962    67.6 3.31e6     4693. Não            
+ 664 Hong Kong, China   Asia       1967    70   3.72e6     6198. Não            
+ 665 Hong Kong, China   Asia       1972    72   4.12e6     8316. Não            
+ 666 Hong Kong, China   Asia       1977    73.6 4.58e6    11186. Não            
+ 667 Hong Kong, China   Asia       1982    75.4 5.26e6    14561. Não            
+ 668 Hong Kong, China   Asia       1987    76.2 5.58e6    20038. Não            
+ 669 Hong Kong, China   Asia       1992    77.6 5.83e6    24758. Não            
+ 670 Hong Kong, China   Asia       1997    80   6.50e6    28378. Não            
+ 671 Hong Kong, China   Asia       2002    81.5 6.76e6    30209. Não            
+ 672 Hong Kong, China   Asia       2007    82.2 6.98e6    39725. Não            
+ 673 Hungary            Europe     1952    64.0 9.50e6     5264. Não            
+ 674 Hungary            Europe     1957    66.4 9.84e6     6040. Não            
+ 675 Hungary            Europe     1962    68.0 1.01e7     7550. Não            
+ 676 Hungary            Europe     1967    69.5 1.02e7     9327. Não            
+ 677 Hungary            Europe     1972    69.8 1.04e7    10169. Não            
+ 678 Hungary            Europe     1977    70.0 1.06e7    11675. Não            
+ 679 Hungary            Europe     1982    69.4 1.07e7    12546. Não            
+ 680 Hungary            Europe     1987    69.6 1.06e7    12986. Não            
+ 681 Hungary            Europe     1992    69.2 1.03e7    10536. Não            
+ 682 Hungary            Europe     1997    71.0 1.02e7    11713. Não            
+ 683 Hungary            Europe     2002    72.6 1.01e7    14844. Não            
+ 684 Hungary            Europe     2007    73.3 9.96e6    18009. Não            
+ 685 Iceland            Europe     1952    72.5 1.48e5     7268. Não            
+ 686 Iceland            Europe     1957    73.5 1.65e5     9244. Não            
+ 687 Iceland            Europe     1962    73.7 1.82e5    10350. Não            
+ 688 Iceland            Europe     1967    73.7 1.99e5    13320. Não            
+ 689 Iceland            Europe     1972    74.5 2.09e5    15798. Não            
+ 690 Iceland            Europe     1977    76.1 2.22e5    19655. Não            
+ 691 Iceland            Europe     1982    77.0 2.34e5    23270. Não            
+ 692 Iceland            Europe     1987    77.2 2.45e5    26923. Não            
+ 693 Iceland            Europe     1992    78.8 2.59e5    25144. Não            
+ 694 Iceland            Europe     1997    79.0 2.71e5    28061. Não            
+ 695 Iceland            Europe     2002    80.5 2.88e5    31163. Não            
+ 696 Iceland            Europe     2007    81.8 3.02e5    36181. Não            
+ 697 India              Asia       1952    37.4 3.72e8      547. Sim            
+ 698 India              Asia       1957    40.2 4.09e8      590. Sim            
+ 699 India              Asia       1962    43.6 4.54e8      658. Sim            
+ 700 India              Asia       1967    47.2 5.06e8      701. Sim            
+ 701 India              Asia       1972    50.7 5.67e8      724. Sim            
+ 702 India              Asia       1977    54.2 6.34e8      813. Sim            
+ 703 India              Asia       1982    56.6 7.08e8      856. Sim            
+ 704 India              Asia       1987    58.6 7.88e8      977. Sim            
+ 705 India              Asia       1992    60.2 8.72e8     1164. Sim            
+ 706 India              Asia       1997    61.8 9.59e8     1459. Sim            
+ 707 India              Asia       2002    62.9 1.03e9     1747. Sim            
+ 708 India              Asia       2007    64.7 1.11e9     2452. Sim            
+ 709 Indonesia          Asia       1952    37.5 8.21e7      750. Sim            
+ 710 Indonesia          Asia       1957    39.9 9.01e7      859. Sim            
+ 711 Indonesia          Asia       1962    42.5 9.90e7      849. Sim            
+ 712 Indonesia          Asia       1967    46.0 1.09e8      762. Sim            
+ 713 Indonesia          Asia       1972    49.2 1.21e8     1111. Sim            
+ 714 Indonesia          Asia       1977    52.7 1.37e8     1383. Sim            
+ 715 Indonesia          Asia       1982    56.2 1.53e8     1517. Sim            
+ 716 Indonesia          Asia       1987    60.1 1.69e8     1748. Sim            
+ 717 Indonesia          Asia       1992    62.7 1.85e8     2383. Sim            
+ 718 Indonesia          Asia       1997    66.0 1.99e8     3119. Sim            
+ 719 Indonesia          Asia       2002    68.6 2.11e8     2874. Sim            
+ 720 Indonesia          Asia       2007    70.6 2.24e8     3541. Sim            
+ 721 Iran               Asia       1952    44.9 1.73e7     3035. Não            
+ 722 Iran               Asia       1957    47.2 1.98e7     3290. Não            
+ 723 Iran               Asia       1962    49.3 2.29e7     4187. Não            
+ 724 Iran               Asia       1967    52.5 2.65e7     5907. Não            
+ 725 Iran               Asia       1972    55.2 3.06e7     9614. Não            
+ 726 Iran               Asia       1977    57.7 3.55e7    11889. Não            
+ 727 Iran               Asia       1982    59.6 4.31e7     7608. Não            
+ 728 Iran               Asia       1987    63.0 5.19e7     6643. Sim            
+ 729 Iran               Asia       1992    65.7 6.04e7     7236. Sim            
+ 730 Iran               Asia       1997    68.0 6.33e7     8264. Sim            
+ 731 Iran               Asia       2002    69.5 6.69e7     9241. Sim            
+ 732 Iran               Asia       2007    71.0 6.95e7    11606. Sim            
+ 733 Iraq               Asia       1952    45.3 5.44e6     4130. Não            
+ 734 Iraq               Asia       1957    48.4 6.25e6     6229. Não            
+ 735 Iraq               Asia       1962    51.5 7.24e6     8342. Não            
+ 736 Iraq               Asia       1967    54.5 8.52e6     8931. Não            
+ 737 Iraq               Asia       1972    57.0 1.01e7     9576. Não            
+ 738 Iraq               Asia       1977    60.4 1.19e7    14688. Não            
+ 739 Iraq               Asia       1982    62.0 1.42e7    14518. Não            
+ 740 Iraq               Asia       1987    65.0 1.65e7    11644. Não            
+ 741 Iraq               Asia       1992    59.5 1.79e7     3746. Não            
+ 742 Iraq               Asia       1997    58.8 2.08e7     3076. Não            
+ 743 Iraq               Asia       2002    57.0 2.40e7     4391. Não            
+ 744 Iraq               Asia       2007    59.5 2.75e7     4471. Não            
+ 745 Ireland            Europe     1952    66.9 2.95e6     5210. Não            
+ 746 Ireland            Europe     1957    68.9 2.88e6     5599. Não            
+ 747 Ireland            Europe     1962    70.3 2.83e6     6632. Não            
+ 748 Ireland            Europe     1967    71.1 2.90e6     7656. Não            
+ 749 Ireland            Europe     1972    71.3 3.02e6     9531. Não            
+ 750 Ireland            Europe     1977    72.0 3.27e6    11151. Não            
+ 751 Ireland            Europe     1982    73.1 3.48e6    12618. Não            
+ 752 Ireland            Europe     1987    74.4 3.54e6    13873. Não            
+ 753 Ireland            Europe     1992    75.5 3.56e6    17559. Não            
+ 754 Ireland            Europe     1997    76.1 3.67e6    24522. Não            
+ 755 Ireland            Europe     2002    77.8 3.88e6    34077. Não            
+ 756 Ireland            Europe     2007    78.9 4.11e6    40676. Não            
+ 757 Israel             Asia       1952    65.4 1.62e6     4087. Não            
+ 758 Israel             Asia       1957    67.8 1.94e6     5385. Não            
+ 759 Israel             Asia       1962    69.4 2.31e6     7106. Não            
+ 760 Israel             Asia       1967    70.8 2.69e6     8394. Não            
+ 761 Israel             Asia       1972    71.6 3.10e6    12787. Não            
+ 762 Israel             Asia       1977    73.1 3.50e6    13307. Não            
+ 763 Israel             Asia       1982    74.4 3.86e6    15367. Não            
+ 764 Israel             Asia       1987    75.6 4.20e6    17122. Não            
+ 765 Israel             Asia       1992    76.9 4.94e6    18052. Não            
+ 766 Israel             Asia       1997    78.3 5.53e6    20897. Não            
+ 767 Israel             Asia       2002    79.7 6.03e6    21906. Não            
+ 768 Israel             Asia       2007    80.7 6.43e6    25523. Não            
+ 769 Italy              Europe     1952    65.9 4.77e7     4931. Não            
+ 770 Italy              Europe     1957    67.8 4.92e7     6249. Não            
+ 771 Italy              Europe     1962    69.2 5.08e7     8244. Sim            
+ 772 Italy              Europe     1967    71.1 5.27e7    10022. Sim            
+ 773 Italy              Europe     1972    72.2 5.44e7    12269. Sim            
+ 774 Italy              Europe     1977    73.5 5.61e7    14256. Sim            
+ 775 Italy              Europe     1982    75.0 5.65e7    16537. Sim            
+ 776 Italy              Europe     1987    76.4 5.67e7    19207. Sim            
+ 777 Italy              Europe     1992    77.4 5.68e7    22014. Sim            
+ 778 Italy              Europe     1997    78.8 5.75e7    24675. Sim            
+ 779 Italy              Europe     2002    80.2 5.79e7    27968. Sim            
+ 780 Italy              Europe     2007    80.5 5.81e7    28570. Sim            
+ 781 Jamaica            Americas   1952    58.5 1.43e6     2899. Não            
+ 782 Jamaica            Americas   1957    62.6 1.54e6     4757. Não            
+ 783 Jamaica            Americas   1962    65.6 1.67e6     5246. Não            
+ 784 Jamaica            Americas   1967    67.5 1.86e6     6125. Não            
+ 785 Jamaica            Americas   1972    69   2.00e6     7434. Não            
+ 786 Jamaica            Americas   1977    70.1 2.16e6     6650. Não            
+ 787 Jamaica            Americas   1982    71.2 2.30e6     6068. Não            
+ 788 Jamaica            Americas   1987    71.8 2.33e6     6351. Não            
+ 789 Jamaica            Americas   1992    71.8 2.38e6     7405. Não            
+ 790 Jamaica            Americas   1997    72.3 2.53e6     7122. Não            
+ 791 Jamaica            Americas   2002    72.0 2.66e6     6995. Não            
+ 792 Jamaica            Americas   2007    72.6 2.78e6     7321. Não            
+ 793 Japan              Asia       1952    63.0 8.65e7     3217. Sim            
+ 794 Japan              Asia       1957    65.5 9.16e7     4318. Sim            
+ 795 Japan              Asia       1962    68.7 9.58e7     6577. Sim            
+ 796 Japan              Asia       1967    71.4 1.01e8     9848. Sim            
+ 797 Japan              Asia       1972    73.4 1.07e8    14779. Sim            
+ 798 Japan              Asia       1977    75.4 1.14e8    16610. Sim            
+ 799 Japan              Asia       1982    77.1 1.18e8    19384. Sim            
+ 800 Japan              Asia       1987    78.7 1.22e8    22376. Sim            
+ 801 Japan              Asia       1992    79.4 1.24e8    26825. Sim            
+ 802 Japan              Asia       1997    80.7 1.26e8    28817. Sim            
+ 803 Japan              Asia       2002    82   1.27e8    28605. Sim            
+ 804 Japan              Asia       2007    82.6 1.27e8    31656. Sim            
+ 805 Jordan             Asia       1952    43.2 6.08e5     1547. Não            
+ 806 Jordan             Asia       1957    45.7 7.47e5     1886. Não            
+ 807 Jordan             Asia       1962    48.1 9.34e5     2348. Não            
+ 808 Jordan             Asia       1967    51.6 1.26e6     2742. Não            
+ 809 Jordan             Asia       1972    56.5 1.61e6     2111. Não            
+ 810 Jordan             Asia       1977    61.1 1.94e6     2852. Não            
+ 811 Jordan             Asia       1982    63.7 2.35e6     4161. Não            
+ 812 Jordan             Asia       1987    65.9 2.82e6     4449. Não            
+ 813 Jordan             Asia       1992    68.0 3.87e6     3432. Não            
+ 814 Jordan             Asia       1997    69.8 4.53e6     3645. Não            
+ 815 Jordan             Asia       2002    71.3 5.31e6     3845. Não            
+ 816 Jordan             Asia       2007    72.5 6.05e6     4519. Não            
+ 817 Kenya              Africa     1952    42.3 6.46e6      854. Não            
+ 818 Kenya              Africa     1957    44.7 7.45e6      944. Não            
+ 819 Kenya              Africa     1962    47.9 8.68e6      897. Não            
+ 820 Kenya              Africa     1967    50.7 1.02e7     1057. Não            
+ 821 Kenya              Africa     1972    53.6 1.20e7     1222. Não            
+ 822 Kenya              Africa     1977    56.2 1.45e7     1268. Não            
+ 823 Kenya              Africa     1982    58.8 1.77e7     1348. Não            
+ 824 Kenya              Africa     1987    59.3 2.12e7     1362. Não            
+ 825 Kenya              Africa     1992    59.3 2.50e7     1342. Não            
+ 826 Kenya              Africa     1997    54.4 2.83e7     1360. Não            
+ 827 Kenya              Africa     2002    51.0 3.14e7     1288. Não            
+ 828 Kenya              Africa     2007    54.1 3.56e7     1463. Não            
+ 829 Korea, Dem. Rep.   Asia       1952    50.1 8.87e6     1088. Não            
+ 830 Korea, Dem. Rep.   Asia       1957    54.1 9.41e6     1571. Não            
+ 831 Korea, Dem. Rep.   Asia       1962    56.7 1.09e7     1622. Não            
+ 832 Korea, Dem. Rep.   Asia       1967    59.9 1.26e7     2144. Não            
+ 833 Korea, Dem. Rep.   Asia       1972    64.0 1.48e7     3702. Não            
+ 834 Korea, Dem. Rep.   Asia       1977    67.2 1.63e7     4106. Não            
+ 835 Korea, Dem. Rep.   Asia       1982    69.1 1.76e7     4107. Não            
+ 836 Korea, Dem. Rep.   Asia       1987    70.6 1.91e7     4106. Não            
+ 837 Korea, Dem. Rep.   Asia       1992    70.0 2.07e7     3726. Não            
+ 838 Korea, Dem. Rep.   Asia       1997    67.7 2.16e7     1691. Não            
+ 839 Korea, Dem. Rep.   Asia       2002    66.7 2.22e7     1647. Não            
+ 840 Korea, Dem. Rep.   Asia       2007    67.3 2.33e7     1593. Não            
+ 841 Korea, Rep.        Asia       1952    47.5 2.09e7     1031. Não            
+ 842 Korea, Rep.        Asia       1957    52.7 2.26e7     1488. Não            
+ 843 Korea, Rep.        Asia       1962    55.3 2.64e7     1536. Não            
+ 844 Korea, Rep.        Asia       1967    57.7 3.01e7     2029. Não            
+ 845 Korea, Rep.        Asia       1972    62.6 3.35e7     3031. Não            
+ 846 Korea, Rep.        Asia       1977    64.8 3.64e7     4657. Não            
+ 847 Korea, Rep.        Asia       1982    67.1 3.93e7     5623. Não            
+ 848 Korea, Rep.        Asia       1987    69.8 4.16e7     8533. Não            
+ 849 Korea, Rep.        Asia       1992    72.2 4.38e7    12104. Não            
+ 850 Korea, Rep.        Asia       1997    74.6 4.62e7    15994. Não            
+ 851 Korea, Rep.        Asia       2002    77.0 4.80e7    19234. Não            
+ 852 Korea, Rep.        Asia       2007    78.6 4.90e7    23348. Não            
+ 853 Kuwait             Asia       1952    55.6 1.6 e5   108382. Não            
+ 854 Kuwait             Asia       1957    58.0 2.13e5   113523. Não            
+ 855 Kuwait             Asia       1962    60.5 3.58e5    95458. Não            
+ 856 Kuwait             Asia       1967    64.6 5.75e5    80895. Não            
+ 857 Kuwait             Asia       1972    67.7 8.42e5   109348. Não            
+ 858 Kuwait             Asia       1977    69.3 1.14e6    59265. Não            
+ 859 Kuwait             Asia       1982    71.3 1.50e6    31354. Não            
+ 860 Kuwait             Asia       1987    74.2 1.89e6    28118. Não            
+ 861 Kuwait             Asia       1992    75.2 1.42e6    34933. Não            
+ 862 Kuwait             Asia       1997    76.2 1.77e6    40301. Não            
+ 863 Kuwait             Asia       2002    76.9 2.11e6    35110. Não            
+ 864 Kuwait             Asia       2007    77.6 2.51e6    47307. Não            
+ 865 Lebanon            Asia       1952    55.9 1.44e6     4835. Não            
+ 866 Lebanon            Asia       1957    59.5 1.65e6     6090. Não            
+ 867 Lebanon            Asia       1962    62.1 1.89e6     5715. Não            
+ 868 Lebanon            Asia       1967    63.9 2.19e6     6007. Não            
+ 869 Lebanon            Asia       1972    65.4 2.68e6     7486. Não            
+ 870 Lebanon            Asia       1977    66.1 3.12e6     8660. Não            
+ 871 Lebanon            Asia       1982    67.0 3.09e6     7641. Não            
+ 872 Lebanon            Asia       1987    67.9 3.09e6     5377. Não            
+ 873 Lebanon            Asia       1992    69.3 3.22e6     6891. Não            
+ 874 Lebanon            Asia       1997    70.3 3.43e6     8755. Não            
+ 875 Lebanon            Asia       2002    71.0 3.68e6     9314. Não            
+ 876 Lebanon            Asia       2007    72.0 3.92e6    10461. Não            
+ 877 Lesotho            Africa     1952    42.1 7.49e5      299. Não            
+ 878 Lesotho            Africa     1957    45.0 8.13e5      336. Não            
+ 879 Lesotho            Africa     1962    47.7 8.93e5      412. Não            
+ 880 Lesotho            Africa     1967    48.5 9.96e5      499. Não            
+ 881 Lesotho            Africa     1972    49.8 1.12e6      497. Não            
+ 882 Lesotho            Africa     1977    52.2 1.25e6      745. Não            
+ 883 Lesotho            Africa     1982    55.1 1.41e6      797. Não            
+ 884 Lesotho            Africa     1987    57.2 1.60e6      774. Não            
+ 885 Lesotho            Africa     1992    59.7 1.80e6      977. Não            
+ 886 Lesotho            Africa     1997    55.6 1.98e6     1186. Não            
+ 887 Lesotho            Africa     2002    44.6 2.05e6     1275. Não            
+ 888 Lesotho            Africa     2007    42.6 2.01e6     1569. Não            
+ 889 Liberia            Africa     1952    38.5 8.63e5      576. Não            
+ 890 Liberia            Africa     1957    39.5 9.76e5      621. Não            
+ 891 Liberia            Africa     1962    40.5 1.11e6      634. Não            
+ 892 Liberia            Africa     1967    41.5 1.28e6      714. Não            
+ 893 Liberia            Africa     1972    42.6 1.48e6      803. Não            
+ 894 Liberia            Africa     1977    43.8 1.70e6      640. Não            
+ 895 Liberia            Africa     1982    44.9 1.96e6      572. Não            
+ 896 Liberia            Africa     1987    46.0 2.27e6      506. Não            
+ 897 Liberia            Africa     1992    40.8 1.91e6      637. Não            
+ 898 Liberia            Africa     1997    42.2 2.20e6      609. Não            
+ 899 Liberia            Africa     2002    43.8 2.81e6      531. Não            
+ 900 Liberia            Africa     2007    45.7 3.19e6      415. Não            
+ 901 Libya              Africa     1952    42.7 1.02e6     2388. Não            
+ 902 Libya              Africa     1957    45.3 1.20e6     3448. Não            
+ 903 Libya              Africa     1962    47.8 1.44e6     6757. Não            
+ 904 Libya              Africa     1967    50.2 1.76e6    18773. Não            
+ 905 Libya              Africa     1972    52.8 2.18e6    21011. Não            
+ 906 Libya              Africa     1977    57.4 2.72e6    21951. Não            
+ 907 Libya              Africa     1982    62.2 3.34e6    17364. Não            
+ 908 Libya              Africa     1987    66.2 3.80e6    11771. Não            
+ 909 Libya              Africa     1992    68.8 4.36e6     9640. Não            
+ 910 Libya              Africa     1997    71.6 4.76e6     9467. Não            
+ 911 Libya              Africa     2002    72.7 5.37e6     9535. Não            
+ 912 Libya              Africa     2007    74.0 6.04e6    12057. Não            
+ 913 Madagascar         Africa     1952    36.7 4.76e6     1443. Não            
+ 914 Madagascar         Africa     1957    38.9 5.18e6     1589. Não            
+ 915 Madagascar         Africa     1962    40.8 5.70e6     1643. Não            
+ 916 Madagascar         Africa     1967    42.9 6.33e6     1634. Não            
+ 917 Madagascar         Africa     1972    44.9 7.08e6     1749. Não            
+ 918 Madagascar         Africa     1977    46.9 8.01e6     1544. Não            
+ 919 Madagascar         Africa     1982    49.0 9.17e6     1303. Não            
+ 920 Madagascar         Africa     1987    49.4 1.06e7     1155. Não            
+ 921 Madagascar         Africa     1992    52.2 1.22e7     1041. Não            
+ 922 Madagascar         Africa     1997    55.0 1.42e7      986. Não            
+ 923 Madagascar         Africa     2002    57.3 1.65e7      895. Não            
+ 924 Madagascar         Africa     2007    59.4 1.92e7     1045. Não            
+ 925 Malawi             Africa     1952    36.3 2.92e6      369. Não            
+ 926 Malawi             Africa     1957    37.2 3.22e6      416. Não            
+ 927 Malawi             Africa     1962    38.4 3.63e6      428. Não            
+ 928 Malawi             Africa     1967    39.5 4.15e6      496. Não            
+ 929 Malawi             Africa     1972    41.8 4.73e6      585. Não            
+ 930 Malawi             Africa     1977    43.8 5.64e6      663. Não            
+ 931 Malawi             Africa     1982    45.6 6.50e6      633. Não            
+ 932 Malawi             Africa     1987    47.5 7.82e6      636. Não            
+ 933 Malawi             Africa     1992    49.4 1.00e7      563. Não            
+ 934 Malawi             Africa     1997    47.5 1.04e7      692. Não            
+ 935 Malawi             Africa     2002    45.0 1.18e7      665. Não            
+ 936 Malawi             Africa     2007    48.3 1.33e7      759. Não            
+ 937 Malaysia           Asia       1952    48.5 6.75e6     1831. Não            
+ 938 Malaysia           Asia       1957    52.1 7.74e6     1810. Não            
+ 939 Malaysia           Asia       1962    55.7 8.91e6     2037. Não            
+ 940 Malaysia           Asia       1967    59.4 1.02e7     2278. Não            
+ 941 Malaysia           Asia       1972    63.0 1.14e7     2849. Não            
+ 942 Malaysia           Asia       1977    65.3 1.28e7     3828. Não            
+ 943 Malaysia           Asia       1982    68   1.44e7     4920. Não            
+ 944 Malaysia           Asia       1987    69.5 1.63e7     5250. Não            
+ 945 Malaysia           Asia       1992    70.7 1.83e7     7278. Não            
+ 946 Malaysia           Asia       1997    71.9 2.05e7    10133. Não            
+ 947 Malaysia           Asia       2002    73.0 2.27e7    10207. Não            
+ 948 Malaysia           Asia       2007    74.2 2.48e7    12452. Não            
+ 949 Mali               Africa     1952    33.7 3.84e6      452. Não            
+ 950 Mali               Africa     1957    35.3 4.24e6      490. Não            
+ 951 Mali               Africa     1962    36.9 4.69e6      496. Não            
+ 952 Mali               Africa     1967    38.5 5.21e6      545. Não            
+ 953 Mali               Africa     1972    40.0 5.83e6      581. Não            
+ 954 Mali               Africa     1977    41.7 6.49e6      686. Não            
+ 955 Mali               Africa     1982    43.9 7.00e6      618. Não            
+ 956 Mali               Africa     1987    46.4 7.63e6      684. Não            
+ 957 Mali               Africa     1992    48.4 8.42e6      739. Não            
+ 958 Mali               Africa     1997    49.9 9.38e6      790. Não            
+ 959 Mali               Africa     2002    51.8 1.06e7      951. Não            
+ 960 Mali               Africa     2007    54.5 1.20e7     1043. Não            
+ 961 Mauritania         Africa     1952    40.5 1.02e6      743. Não            
+ 962 Mauritania         Africa     1957    42.3 1.08e6      846. Não            
+ 963 Mauritania         Africa     1962    44.2 1.15e6     1056. Não            
+ 964 Mauritania         Africa     1967    46.3 1.23e6     1421. Não            
+ 965 Mauritania         Africa     1972    48.4 1.33e6     1587. Não            
+ 966 Mauritania         Africa     1977    50.9 1.46e6     1497. Não            
+ 967 Mauritania         Africa     1982    53.6 1.62e6     1481. Não            
+ 968 Mauritania         Africa     1987    56.1 1.84e6     1422. Não            
+ 969 Mauritania         Africa     1992    58.3 2.12e6     1361. Não            
+ 970 Mauritania         Africa     1997    60.4 2.44e6     1483. Não            
+ 971 Mauritania         Africa     2002    62.2 2.83e6     1579. Não            
+ 972 Mauritania         Africa     2007    64.2 3.27e6     1803. Não            
+ 973 Mauritius          Africa     1952    51.0 5.17e5     1968. Não            
+ 974 Mauritius          Africa     1957    58.1 6.10e5     2034. Não            
+ 975 Mauritius          Africa     1962    60.2 7.01e5     2529. Não            
+ 976 Mauritius          Africa     1967    61.6 7.89e5     2475. Não            
+ 977 Mauritius          Africa     1972    62.9 8.51e5     2575. Não            
+ 978 Mauritius          Africa     1977    64.9 9.13e5     3711. Não            
+ 979 Mauritius          Africa     1982    66.7 9.92e5     3688. Não            
+ 980 Mauritius          Africa     1987    68.7 1.04e6     4784. Não            
+ 981 Mauritius          Africa     1992    69.7 1.10e6     6058. Não            
+ 982 Mauritius          Africa     1997    70.7 1.15e6     7426. Não            
+ 983 Mauritius          Africa     2002    72.0 1.20e6     9022. Não            
+ 984 Mauritius          Africa     2007    72.8 1.25e6    10957. Não            
+ 985 Mexico             Americas   1952    50.8 3.01e7     3478. Não            
+ 986 Mexico             Americas   1957    55.2 3.50e7     4132. Não            
+ 987 Mexico             Americas   1962    58.3 4.11e7     4582. Não            
+ 988 Mexico             Americas   1967    60.1 4.80e7     5755. Não            
+ 989 Mexico             Americas   1972    62.4 5.60e7     6809. Sim            
+ 990 Mexico             Americas   1977    65.0 6.38e7     7675. Sim            
+ 991 Mexico             Americas   1982    67.4 7.16e7     9611. Sim            
+ 992 Mexico             Americas   1987    69.5 8.01e7     8688. Sim            
+ 993 Mexico             Americas   1992    71.5 8.81e7     9472. Sim            
+ 994 Mexico             Americas   1997    73.7 9.59e7     9767. Sim            
+ 995 Mexico             Americas   2002    74.9 1.02e8    10742. Sim            
+ 996 Mexico             Americas   2007    76.2 1.09e8    11978. Sim            
+ 997 Mongolia           Asia       1952    42.2 8.01e5      787. Não            
+ 998 Mongolia           Asia       1957    45.2 8.82e5      913. Não            
+ 999 Mongolia           Asia       1962    48.3 1.01e6     1056. Não            
+1000 Mongolia           Asia       1967    51.3 1.15e6     1226. Não            
+1001 Mongolia           Asia       1972    53.8 1.32e6     1422. Não            
+1002 Mongolia           Asia       1977    55.5 1.53e6     1648. Não            
+1003 Mongolia           Asia       1982    57.5 1.76e6     2001. Não            
+1004 Mongolia           Asia       1987    60.2 2.02e6     2338. Não            
+1005 Mongolia           Asia       1992    61.3 2.31e6     1785. Não            
+1006 Mongolia           Asia       1997    63.6 2.49e6     1902. Não            
+1007 Mongolia           Asia       2002    65.0 2.67e6     2141. Não            
+1008 Mongolia           Asia       2007    66.8 2.87e6     3096. Não            
+1009 Montenegro         Europe     1952    59.2 4.14e5     2648. Não            
+1010 Montenegro         Europe     1957    61.4 4.43e5     3682. Não            
+1011 Montenegro         Europe     1962    63.7 4.75e5     4650. Não            
+1012 Montenegro         Europe     1967    67.2 5.01e5     5908. Não            
+1013 Montenegro         Europe     1972    70.6 5.28e5     7778. Não            
+1014 Montenegro         Europe     1977    73.1 5.60e5     9596. Não            
+1015 Montenegro         Europe     1982    74.1 5.63e5    11223. Não            
+1016 Montenegro         Europe     1987    74.9 5.69e5    11733. Não            
+1017 Montenegro         Europe     1992    75.4 6.22e5     7003. Não            
+1018 Montenegro         Europe     1997    75.4 6.93e5     6466. Não            
+1019 Montenegro         Europe     2002    74.0 7.20e5     6557. Não            
+1020 Montenegro         Europe     2007    74.5 6.85e5     9254. Não            
+1021 Morocco            Africa     1952    42.9 9.94e6     1688. Não            
+1022 Morocco            Africa     1957    45.4 1.14e7     1642. Não            
+1023 Morocco            Africa     1962    47.9 1.31e7     1566. Não            
+1024 Morocco            Africa     1967    50.3 1.48e7     1711. Não            
+1025 Morocco            Africa     1972    52.9 1.67e7     1930. Não            
+1026 Morocco            Africa     1977    55.7 1.84e7     2371. Não            
+1027 Morocco            Africa     1982    59.6 2.02e7     2703. Não            
+1028 Morocco            Africa     1987    62.7 2.30e7     2755. Não            
+1029 Morocco            Africa     1992    65.4 2.58e7     2948. Não            
+1030 Morocco            Africa     1997    67.7 2.85e7     2982. Não            
+1031 Morocco            Africa     2002    69.6 3.12e7     3258. Não            
+1032 Morocco            Africa     2007    71.2 3.38e7     3820. Não            
+1033 Mozambique         Africa     1952    31.3 6.45e6      469. Não            
+1034 Mozambique         Africa     1957    33.8 7.04e6      496. Não            
+1035 Mozambique         Africa     1962    36.2 7.79e6      557. Não            
+1036 Mozambique         Africa     1967    38.1 8.68e6      567. Não            
+1037 Mozambique         Africa     1972    40.3 9.81e6      725. Não            
+1038 Mozambique         Africa     1977    42.5 1.11e7      502. Não            
+1039 Mozambique         Africa     1982    42.8 1.26e7      462. Não            
+1040 Mozambique         Africa     1987    42.9 1.29e7      390. Não            
+1041 Mozambique         Africa     1992    44.3 1.32e7      411. Não            
+1042 Mozambique         Africa     1997    46.3 1.66e7      472. Não            
+1043 Mozambique         Africa     2002    44.0 1.85e7      634. Não            
+1044 Mozambique         Africa     2007    42.1 2.00e7      824. Não            
+1045 Myanmar            Asia       1952    36.3 2.01e7      331  Não            
+1046 Myanmar            Asia       1957    41.9 2.17e7      350  Não            
+1047 Myanmar            Asia       1962    45.1 2.36e7      388  Não            
+1048 Myanmar            Asia       1967    49.4 2.59e7      349  Não            
+1049 Myanmar            Asia       1972    53.1 2.85e7      357  Não            
+1050 Myanmar            Asia       1977    56.1 3.15e7      371  Não            
+1051 Myanmar            Asia       1982    58.1 3.47e7      424  Não            
+1052 Myanmar            Asia       1987    58.3 3.80e7      385  Não            
+1053 Myanmar            Asia       1992    59.3 4.05e7      347  Não            
+1054 Myanmar            Asia       1997    60.3 4.32e7      415  Não            
+1055 Myanmar            Asia       2002    59.9 4.56e7      611  Não            
+1056 Myanmar            Asia       2007    62.1 4.78e7      944  Não            
+1057 Namibia            Africa     1952    41.7 4.86e5     2424. Não            
+1058 Namibia            Africa     1957    45.2 5.48e5     2621. Não            
+1059 Namibia            Africa     1962    48.4 6.21e5     3173. Não            
+1060 Namibia            Africa     1967    51.2 7.07e5     3794. Não            
+1061 Namibia            Africa     1972    53.9 8.22e5     3746. Não            
+1062 Namibia            Africa     1977    56.4 9.77e5     3876. Não            
+1063 Namibia            Africa     1982    59.0 1.10e6     4191. Não            
+1064 Namibia            Africa     1987    60.8 1.28e6     3694. Não            
+1065 Namibia            Africa     1992    62.0 1.55e6     3805. Não            
+1066 Namibia            Africa     1997    58.9 1.77e6     3900. Não            
+1067 Namibia            Africa     2002    51.5 1.97e6     4072. Não            
+1068 Namibia            Africa     2007    52.9 2.06e6     4811. Não            
+1069 Nepal              Asia       1952    36.2 9.18e6      546. Não            
+1070 Nepal              Asia       1957    37.7 9.68e6      598. Não            
+1071 Nepal              Asia       1962    39.4 1.03e7      652. Não            
+1072 Nepal              Asia       1967    41.5 1.13e7      676. Não            
+1073 Nepal              Asia       1972    44.0 1.24e7      675. Não            
+1074 Nepal              Asia       1977    46.7 1.39e7      694. Não            
+1075 Nepal              Asia       1982    49.6 1.58e7      718. Não            
+1076 Nepal              Asia       1987    52.5 1.79e7      776. Não            
+1077 Nepal              Asia       1992    55.7 2.03e7      898. Não            
+1078 Nepal              Asia       1997    59.4 2.30e7     1011. Não            
+1079 Nepal              Asia       2002    61.3 2.59e7     1057. Não            
+1080 Nepal              Asia       2007    63.8 2.89e7     1091. Não            
+1081 Netherlands        Europe     1952    72.1 1.04e7     8942. Não            
+1082 Netherlands        Europe     1957    73.0 1.10e7    11276. Não            
+1083 Netherlands        Europe     1962    73.2 1.18e7    12791. Não            
+1084 Netherlands        Europe     1967    73.8 1.26e7    15363. Não            
+1085 Netherlands        Europe     1972    73.8 1.33e7    18795. Não            
+1086 Netherlands        Europe     1977    75.2 1.39e7    21209. Não            
+1087 Netherlands        Europe     1982    76.0 1.43e7    21399. Não            
+1088 Netherlands        Europe     1987    76.8 1.47e7    23651. Não            
+1089 Netherlands        Europe     1992    77.4 1.52e7    26791. Não            
+1090 Netherlands        Europe     1997    78.0 1.56e7    30246. Não            
+1091 Netherlands        Europe     2002    78.5 1.61e7    33725. Não            
+1092 Netherlands        Europe     2007    79.8 1.66e7    36798. Não            
+1093 New Zealand        Oceania    1952    69.4 1.99e6    10557. Não            
+1094 New Zealand        Oceania    1957    70.3 2.23e6    12247. Não            
+1095 New Zealand        Oceania    1962    71.2 2.49e6    13176. Não            
+1096 New Zealand        Oceania    1967    71.5 2.73e6    14464. Não            
+1097 New Zealand        Oceania    1972    71.9 2.93e6    16046. Não            
+1098 New Zealand        Oceania    1977    72.2 3.16e6    16234. Não            
+1099 New Zealand        Oceania    1982    73.8 3.21e6    17632. Não            
+1100 New Zealand        Oceania    1987    74.3 3.32e6    19007. Não            
+1101 New Zealand        Oceania    1992    76.3 3.44e6    18363. Não            
+1102 New Zealand        Oceania    1997    77.6 3.68e6    21050. Não            
+1103 New Zealand        Oceania    2002    79.1 3.91e6    23190. Não            
+1104 New Zealand        Oceania    2007    80.2 4.12e6    25185. Não            
+1105 Nicaragua          Americas   1952    42.3 1.17e6     3112. Não            
+1106 Nicaragua          Americas   1957    45.4 1.36e6     3457. Não            
+1107 Nicaragua          Americas   1962    48.6 1.59e6     3634. Não            
+1108 Nicaragua          Americas   1967    51.9 1.87e6     4643. Não            
+1109 Nicaragua          Americas   1972    55.2 2.18e6     4689. Não            
+1110 Nicaragua          Americas   1977    57.5 2.55e6     5486. Não            
+1111 Nicaragua          Americas   1982    59.3 2.98e6     3470. Não            
+1112 Nicaragua          Americas   1987    62.0 3.34e6     2956. Não            
+1113 Nicaragua          Americas   1992    65.8 4.02e6     2170. Não            
+1114 Nicaragua          Americas   1997    68.4 4.61e6     2253. Não            
+1115 Nicaragua          Americas   2002    70.8 5.15e6     2475. Não            
+1116 Nicaragua          Americas   2007    72.9 5.68e6     2749. Não            
+1117 Niger              Africa     1952    37.4 3.38e6      762. Não            
+1118 Niger              Africa     1957    38.6 3.69e6      836. Não            
+1119 Niger              Africa     1962    39.5 4.08e6      998. Não            
+1120 Niger              Africa     1967    40.1 4.53e6     1054. Não            
+1121 Niger              Africa     1972    40.5 5.06e6      954. Não            
+1122 Niger              Africa     1977    41.3 5.68e6      809. Não            
+1123 Niger              Africa     1982    42.6 6.44e6      910. Não            
+1124 Niger              Africa     1987    44.6 7.33e6      668. Não            
+1125 Niger              Africa     1992    47.4 8.39e6      581. Não            
+1126 Niger              Africa     1997    51.3 9.67e6      580. Não            
+1127 Niger              Africa     2002    54.5 1.11e7      601. Não            
+1128 Niger              Africa     2007    56.9 1.29e7      620. Não            
+1129 Nigeria            Africa     1952    36.3 3.31e7     1077. Não            
+1130 Nigeria            Africa     1957    37.8 3.72e7     1101. Não            
+1131 Nigeria            Africa     1962    39.4 4.19e7     1151. Não            
+1132 Nigeria            Africa     1967    41.0 4.73e7     1015. Não            
+1133 Nigeria            Africa     1972    42.8 5.37e7     1698. Sim            
+1134 Nigeria            Africa     1977    44.5 6.22e7     1982. Sim            
+1135 Nigeria            Africa     1982    45.8 7.30e7     1577. Sim            
+1136 Nigeria            Africa     1987    46.9 8.16e7     1385. Sim            
+1137 Nigeria            Africa     1992    47.5 9.34e7     1620. Sim            
+1138 Nigeria            Africa     1997    47.5 1.06e8     1625. Sim            
+1139 Nigeria            Africa     2002    46.6 1.20e8     1615. Sim            
+1140 Nigeria            Africa     2007    46.9 1.35e8     2014. Sim            
+1141 Norway             Europe     1952    72.7 3.33e6    10095. Não            
+1142 Norway             Europe     1957    73.4 3.49e6    11654. Não            
+1143 Norway             Europe     1962    73.5 3.64e6    13450. Não            
+1144 Norway             Europe     1967    74.1 3.79e6    16362. Não            
+1145 Norway             Europe     1972    74.3 3.93e6    18965. Não            
+1146 Norway             Europe     1977    75.4 4.04e6    23311. Não            
+1147 Norway             Europe     1982    76.0 4.11e6    26299. Não            
+1148 Norway             Europe     1987    75.9 4.19e6    31541. Não            
+1149 Norway             Europe     1992    77.3 4.29e6    33966. Não            
+1150 Norway             Europe     1997    78.3 4.41e6    41283. Não            
+1151 Norway             Europe     2002    79.0 4.54e6    44684. Não            
+1152 Norway             Europe     2007    80.2 4.63e6    49357. Não            
+1153 Oman               Asia       1952    37.6 5.08e5     1828. Não            
+1154 Oman               Asia       1957    40.1 5.62e5     2243. Não            
+1155 Oman               Asia       1962    43.2 6.28e5     2925. Não            
+1156 Oman               Asia       1967    47.0 7.15e5     4721. Não            
+1157 Oman               Asia       1972    52.1 8.29e5    10618. Não            
+1158 Oman               Asia       1977    57.4 1.00e6    11848. Não            
+1159 Oman               Asia       1982    62.7 1.30e6    12955. Não            
+1160 Oman               Asia       1987    67.7 1.59e6    18115. Não            
+1161 Oman               Asia       1992    71.2 1.92e6    18617. Não            
+1162 Oman               Asia       1997    72.5 2.28e6    19702. Não            
+1163 Oman               Asia       2002    74.2 2.71e6    19775. Não            
+1164 Oman               Asia       2007    75.6 3.20e6    22316. Não            
+1165 Pakistan           Asia       1952    43.4 4.13e7      685. Não            
+1166 Pakistan           Asia       1957    45.6 4.67e7      747. Não            
+1167 Pakistan           Asia       1962    47.7 5.31e7      803. Sim            
+1168 Pakistan           Asia       1967    49.8 6.06e7      942. Sim            
+1169 Pakistan           Asia       1972    51.9 6.93e7     1050. Sim            
+1170 Pakistan           Asia       1977    54.0 7.82e7     1176. Sim            
+1171 Pakistan           Asia       1982    56.2 9.15e7     1443. Sim            
+1172 Pakistan           Asia       1987    58.2 1.05e8     1705. Sim            
+1173 Pakistan           Asia       1992    60.8 1.20e8     1972. Sim            
+1174 Pakistan           Asia       1997    61.8 1.36e8     2049. Sim            
+1175 Pakistan           Asia       2002    63.6 1.53e8     2093. Sim            
+1176 Pakistan           Asia       2007    65.5 1.69e8     2606. Sim            
+1177 Panama             Americas   1952    55.2 9.40e5     2480. Não            
+1178 Panama             Americas   1957    59.2 1.06e6     2962. Não            
+1179 Panama             Americas   1962    61.8 1.22e6     3537. Não            
+1180 Panama             Americas   1967    64.1 1.41e6     4421. Não            
+1181 Panama             Americas   1972    66.2 1.62e6     5364. Não            
+1182 Panama             Americas   1977    68.7 1.84e6     5352. Não            
+1183 Panama             Americas   1982    70.5 2.04e6     7010. Não            
+1184 Panama             Americas   1987    71.5 2.25e6     7035. Não            
+1185 Panama             Americas   1992    72.5 2.48e6     6619. Não            
+1186 Panama             Americas   1997    73.7 2.73e6     7114. Não            
+1187 Panama             Americas   2002    74.7 2.99e6     7356. Não            
+1188 Panama             Americas   2007    75.5 3.24e6     9809. Não            
+1189 Paraguay           Americas   1952    62.6 1.56e6     1952. Não            
+1190 Paraguay           Americas   1957    63.2 1.77e6     2046. Não            
+1191 Paraguay           Americas   1962    64.4 2.01e6     2148. Não            
+1192 Paraguay           Americas   1967    65.0 2.29e6     2299. Não            
+1193 Paraguay           Americas   1972    65.8 2.61e6     2523. Não            
+1194 Paraguay           Americas   1977    66.4 2.98e6     3248. Não            
+1195 Paraguay           Americas   1982    66.9 3.37e6     4259. Não            
+1196 Paraguay           Americas   1987    67.4 3.89e6     3999. Não            
+1197 Paraguay           Americas   1992    68.2 4.48e6     4196. Não            
+1198 Paraguay           Americas   1997    69.4 5.15e6     4247. Não            
+1199 Paraguay           Americas   2002    70.8 5.88e6     3784. Não            
+1200 Paraguay           Americas   2007    71.8 6.67e6     4173. Não            
+1201 Peru               Americas   1952    43.9 8.03e6     3759. Não            
+1202 Peru               Americas   1957    46.3 9.15e6     4245. Não            
+1203 Peru               Americas   1962    49.1 1.05e7     4957. Não            
+1204 Peru               Americas   1967    51.4 1.21e7     5788. Não            
+1205 Peru               Americas   1972    55.4 1.40e7     5938. Não            
+1206 Peru               Americas   1977    58.4 1.60e7     6281. Não            
+1207 Peru               Americas   1982    61.4 1.81e7     6435. Não            
+1208 Peru               Americas   1987    64.1 2.02e7     6361. Não            
+1209 Peru               Americas   1992    66.5 2.24e7     4446. Não            
+1210 Peru               Americas   1997    68.4 2.47e7     5838. Não            
+1211 Peru               Americas   2002    69.9 2.68e7     5909. Não            
+1212 Peru               Americas   2007    71.4 2.87e7     7409. Não            
+1213 Philippines        Asia       1952    47.8 2.24e7     1273. Não            
+1214 Philippines        Asia       1957    51.3 2.61e7     1548. Não            
+1215 Philippines        Asia       1962    54.8 3.03e7     1650. Não            
+1216 Philippines        Asia       1967    56.4 3.54e7     1814. Não            
+1217 Philippines        Asia       1972    58.1 4.09e7     1989. Não            
+1218 Philippines        Asia       1977    60.1 4.69e7     2373. Não            
+1219 Philippines        Asia       1982    62.1 5.35e7     2603. Sim            
+1220 Philippines        Asia       1987    64.2 6.00e7     2190. Sim            
+1221 Philippines        Asia       1992    66.5 6.72e7     2279. Sim            
+1222 Philippines        Asia       1997    68.6 7.50e7     2537. Sim            
+1223 Philippines        Asia       2002    70.3 8.30e7     2651. Sim            
+1224 Philippines        Asia       2007    71.7 9.11e7     3190. Sim            
+1225 Poland             Europe     1952    61.3 2.57e7     4029. Não            
+1226 Poland             Europe     1957    65.8 2.82e7     4734. Não            
+1227 Poland             Europe     1962    67.6 3.03e7     5339. Não            
+1228 Poland             Europe     1967    69.6 3.18e7     6557. Não            
+1229 Poland             Europe     1972    70.8 3.30e7     8007. Não            
+1230 Poland             Europe     1977    70.7 3.46e7     9508. Não            
+1231 Poland             Europe     1982    71.3 3.62e7     8452. Não            
+1232 Poland             Europe     1987    71.0 3.77e7     9082. Não            
+1233 Poland             Europe     1992    71.0 3.84e7     7739. Não            
+1234 Poland             Europe     1997    72.8 3.87e7    10160. Não            
+1235 Poland             Europe     2002    74.7 3.86e7    12002. Não            
+1236 Poland             Europe     2007    75.6 3.85e7    15390. Não            
+1237 Portugal           Europe     1952    59.8 8.53e6     3068. Não            
+1238 Portugal           Europe     1957    61.5 8.82e6     3775. Não            
+1239 Portugal           Europe     1962    64.4 9.02e6     4728. Não            
+1240 Portugal           Europe     1967    66.6 9.10e6     6362. Não            
+1241 Portugal           Europe     1972    69.3 8.97e6     9022. Não            
+1242 Portugal           Europe     1977    70.4 9.66e6    10172. Não            
+1243 Portugal           Europe     1982    72.8 9.86e6    11754. Não            
+1244 Portugal           Europe     1987    74.1 9.92e6    13039. Não            
+1245 Portugal           Europe     1992    74.9 9.93e6    16207. Não            
+1246 Portugal           Europe     1997    76.0 1.02e7    17641. Não            
+1247 Portugal           Europe     2002    77.3 1.04e7    19971. Não            
+1248 Portugal           Europe     2007    78.1 1.06e7    20510. Não            
+1249 Puerto Rico        Americas   1952    64.3 2.23e6     3082. Não            
+1250 Puerto Rico        Americas   1957    68.5 2.26e6     3907. Não            
+1251 Puerto Rico        Americas   1962    69.6 2.45e6     5108. Não            
+1252 Puerto Rico        Americas   1967    71.1 2.65e6     6929. Não            
+1253 Puerto Rico        Americas   1972    72.2 2.85e6     9123. Não            
+1254 Puerto Rico        Americas   1977    73.4 3.08e6     9771. Não            
+1255 Puerto Rico        Americas   1982    73.8 3.28e6    10331. Não            
+1256 Puerto Rico        Americas   1987    74.6 3.44e6    12281. Não            
+1257 Puerto Rico        Americas   1992    73.9 3.59e6    14642. Não            
+1258 Puerto Rico        Americas   1997    74.9 3.76e6    16999. Não            
+1259 Puerto Rico        Americas   2002    77.8 3.86e6    18856. Não            
+1260 Puerto Rico        Americas   2007    78.7 3.94e6    19329. Não            
+1261 Reunion            Africa     1952    52.7 2.58e5     2719. Não            
+1262 Reunion            Africa     1957    55.1 3.09e5     2769. Não            
+1263 Reunion            Africa     1962    57.7 3.59e5     3174. Não            
+1264 Reunion            Africa     1967    60.5 4.14e5     4021. Não            
+1265 Reunion            Africa     1972    64.3 4.62e5     5048. Não            
+1266 Reunion            Africa     1977    67.1 4.92e5     4320. Não            
+1267 Reunion            Africa     1982    69.9 5.18e5     5267. Não            
+1268 Reunion            Africa     1987    71.9 5.62e5     5303. Não            
+1269 Reunion            Africa     1992    73.6 6.22e5     6101. Não            
+1270 Reunion            Africa     1997    74.8 6.85e5     6072. Não            
+1271 Reunion            Africa     2002    75.7 7.44e5     6316. Não            
+1272 Reunion            Africa     2007    76.4 7.98e5     7670. Não            
+1273 Romania            Europe     1952    61.0 1.66e7     3145. Não            
+1274 Romania            Europe     1957    64.1 1.78e7     3943. Não            
+1275 Romania            Europe     1962    66.8 1.87e7     4735. Não            
+1276 Romania            Europe     1967    66.8 1.93e7     6471. Não            
+1277 Romania            Europe     1972    69.2 2.07e7     8011. Não            
+1278 Romania            Europe     1977    69.5 2.17e7     9356. Não            
+1279 Romania            Europe     1982    69.7 2.24e7     9605. Não            
+1280 Romania            Europe     1987    69.5 2.27e7     9696. Não            
+1281 Romania            Europe     1992    69.4 2.28e7     6598. Não            
+1282 Romania            Europe     1997    69.7 2.26e7     7347. Não            
+1283 Romania            Europe     2002    71.3 2.24e7     7885. Não            
+1284 Romania            Europe     2007    72.5 2.23e7    10808. Não            
+1285 Rwanda             Africa     1952    40   2.53e6      493. Não            
+1286 Rwanda             Africa     1957    41.5 2.82e6      540. Não            
+1287 Rwanda             Africa     1962    43   3.05e6      597. Não            
+1288 Rwanda             Africa     1967    44.1 3.45e6      511. Não            
+1289 Rwanda             Africa     1972    44.6 3.99e6      591. Não            
+1290 Rwanda             Africa     1977    45   4.66e6      670. Não            
+1291 Rwanda             Africa     1982    46.2 5.51e6      882. Não            
+1292 Rwanda             Africa     1987    44.0 6.35e6      848. Não            
+1293 Rwanda             Africa     1992    23.6 7.29e6      737. Não            
+1294 Rwanda             Africa     1997    36.1 7.21e6      590. Não            
+1295 Rwanda             Africa     2002    43.4 7.85e6      786. Não            
+1296 Rwanda             Africa     2007    46.2 8.86e6      863. Não            
+1297 Sao Tome and Prin… Africa     1952    46.5 6.00e4      880. Não            
+1298 Sao Tome and Prin… Africa     1957    48.9 6.13e4      861. Não            
+1299 Sao Tome and Prin… Africa     1962    51.9 6.53e4     1072. Não            
+1300 Sao Tome and Prin… Africa     1967    54.4 7.08e4     1385. Não            
+1301 Sao Tome and Prin… Africa     1972    56.5 7.66e4     1533. Não            
+1302 Sao Tome and Prin… Africa     1977    58.6 8.68e4     1738. Não            
+1303 Sao Tome and Prin… Africa     1982    60.4 9.86e4     1890. Não            
+1304 Sao Tome and Prin… Africa     1987    61.7 1.11e5     1517. Não            
+1305 Sao Tome and Prin… Africa     1992    62.7 1.26e5     1429. Não            
+1306 Sao Tome and Prin… Africa     1997    63.3 1.46e5     1339. Não            
+1307 Sao Tome and Prin… Africa     2002    64.3 1.70e5     1353. Não            
+1308 Sao Tome and Prin… Africa     2007    65.5 2.00e5     1598. Não            
+1309 Saudi Arabia       Asia       1952    39.9 4.01e6     6460. Não            
+1310 Saudi Arabia       Asia       1957    42.9 4.42e6     8158. Não            
+1311 Saudi Arabia       Asia       1962    45.9 4.94e6    11626. Não            
+1312 Saudi Arabia       Asia       1967    49.9 5.62e6    16903. Não            
+1313 Saudi Arabia       Asia       1972    53.9 6.47e6    24837. Não            
+1314 Saudi Arabia       Asia       1977    58.7 8.13e6    34168. Não            
+1315 Saudi Arabia       Asia       1982    63.0 1.13e7    33693. Não            
+1316 Saudi Arabia       Asia       1987    66.3 1.46e7    21198. Não            
+1317 Saudi Arabia       Asia       1992    68.8 1.69e7    24842. Não            
+1318 Saudi Arabia       Asia       1997    70.5 2.12e7    20587. Não            
+1319 Saudi Arabia       Asia       2002    71.6 2.45e7    19015. Não            
+1320 Saudi Arabia       Asia       2007    72.8 2.76e7    21655. Não            
+1321 Senegal            Africa     1952    37.3 2.76e6     1450. Não            
+1322 Senegal            Africa     1957    39.3 3.05e6     1568. Não            
+1323 Senegal            Africa     1962    41.5 3.43e6     1655. Não            
+1324 Senegal            Africa     1967    43.6 3.97e6     1612. Não            
+1325 Senegal            Africa     1972    45.8 4.59e6     1598. Não            
+1326 Senegal            Africa     1977    48.9 5.26e6     1562. Não            
+1327 Senegal            Africa     1982    52.4 6.15e6     1518. Não            
+1328 Senegal            Africa     1987    55.8 7.17e6     1442. Não            
+1329 Senegal            Africa     1992    58.2 8.31e6     1368. Não            
+1330 Senegal            Africa     1997    60.2 9.54e6     1392. Não            
+1331 Senegal            Africa     2002    61.6 1.09e7     1520. Não            
+1332 Senegal            Africa     2007    63.1 1.23e7     1712. Não            
+1333 Serbia             Europe     1952    58.0 6.86e6     3581. Não            
+1334 Serbia             Europe     1957    61.7 7.27e6     4981. Não            
+1335 Serbia             Europe     1962    64.5 7.62e6     6290. Não            
+1336 Serbia             Europe     1967    66.9 7.97e6     7992. Não            
+1337 Serbia             Europe     1972    68.7 8.31e6    10522. Não            
+1338 Serbia             Europe     1977    70.3 8.69e6    12981. Não            
+1339 Serbia             Europe     1982    70.2 9.03e6    15181. Não            
+1340 Serbia             Europe     1987    71.2 9.23e6    15871. Não            
+1341 Serbia             Europe     1992    71.7 9.83e6     9325. Não            
+1342 Serbia             Europe     1997    72.2 1.03e7     7914. Não            
+1343 Serbia             Europe     2002    73.2 1.01e7     7236. Não            
+1344 Serbia             Europe     2007    74.0 1.02e7     9787. Não            
+1345 Sierra Leone       Africa     1952    30.3 2.14e6      880. Não            
+1346 Sierra Leone       Africa     1957    31.6 2.30e6     1004. Não            
+1347 Sierra Leone       Africa     1962    32.8 2.47e6     1117. Não            
+1348 Sierra Leone       Africa     1967    34.1 2.66e6     1206. Não            
+1349 Sierra Leone       Africa     1972    35.4 2.88e6     1354. Não            
+1350 Sierra Leone       Africa     1977    36.8 3.14e6     1348. Não            
+1351 Sierra Leone       Africa     1982    38.4 3.46e6     1465. Não            
+1352 Sierra Leone       Africa     1987    40.0 3.87e6     1294. Não            
+1353 Sierra Leone       Africa     1992    38.3 4.26e6     1069. Não            
+1354 Sierra Leone       Africa     1997    39.9 4.58e6      575. Não            
+1355 Sierra Leone       Africa     2002    41.0 5.36e6      699. Não            
+1356 Sierra Leone       Africa     2007    42.6 6.14e6      863. Não            
+1357 Singapore          Asia       1952    60.4 1.13e6     2315. Não            
+1358 Singapore          Asia       1957    63.2 1.45e6     2843. Não            
+1359 Singapore          Asia       1962    65.8 1.75e6     3675. Não            
+1360 Singapore          Asia       1967    67.9 1.98e6     4977. Não            
+1361 Singapore          Asia       1972    69.5 2.15e6     8598. Não            
+1362 Singapore          Asia       1977    70.8 2.33e6    11210. Não            
+1363 Singapore          Asia       1982    71.8 2.65e6    15169. Não            
+1364 Singapore          Asia       1987    73.6 2.79e6    18862. Não            
+1365 Singapore          Asia       1992    75.8 3.24e6    24770. Não            
+1366 Singapore          Asia       1997    77.2 3.80e6    33519. Não            
+1367 Singapore          Asia       2002    78.8 4.20e6    36023. Não            
+1368 Singapore          Asia       2007    80.0 4.55e6    47143. Não            
+1369 Slovak Republic    Europe     1952    64.4 3.56e6     5075. Não            
+1370 Slovak Republic    Europe     1957    67.4 3.84e6     6093. Não            
+1371 Slovak Republic    Europe     1962    70.3 4.24e6     7481. Não            
+1372 Slovak Republic    Europe     1967    71.0 4.44e6     8413. Não            
+1373 Slovak Republic    Europe     1972    70.4 4.59e6     9674. Não            
+1374 Slovak Republic    Europe     1977    70.4 4.83e6    10923. Não            
+1375 Slovak Republic    Europe     1982    70.8 5.05e6    11349. Não            
+1376 Slovak Republic    Europe     1987    71.1 5.20e6    12037. Não            
+1377 Slovak Republic    Europe     1992    71.4 5.30e6     9498. Não            
+1378 Slovak Republic    Europe     1997    72.7 5.38e6    12126. Não            
+1379 Slovak Republic    Europe     2002    73.8 5.41e6    13639. Não            
+1380 Slovak Republic    Europe     2007    74.7 5.45e6    18678. Não            
+1381 Slovenia           Europe     1952    65.6 1.49e6     4215. Não            
+1382 Slovenia           Europe     1957    67.8 1.53e6     5862. Não            
+1383 Slovenia           Europe     1962    69.2 1.58e6     7402. Não            
+1384 Slovenia           Europe     1967    69.2 1.65e6     9405. Não            
+1385 Slovenia           Europe     1972    69.8 1.69e6    12383. Não            
+1386 Slovenia           Europe     1977    71.0 1.75e6    15277. Não            
+1387 Slovenia           Europe     1982    71.1 1.86e6    17867. Não            
+1388 Slovenia           Europe     1987    72.2 1.95e6    18679. Não            
+1389 Slovenia           Europe     1992    73.6 2.00e6    14215. Não            
+1390 Slovenia           Europe     1997    75.1 2.01e6    17161. Não            
+1391 Slovenia           Europe     2002    76.7 2.01e6    20660. Não            
+1392 Slovenia           Europe     2007    77.9 2.01e6    25768. Não            
+1393 Somalia            Africa     1952    33.0 2.53e6     1136. Não            
+1394 Somalia            Africa     1957    35.0 2.78e6     1258. Não            
+1395 Somalia            Africa     1962    37.0 3.08e6     1369. Não            
+1396 Somalia            Africa     1967    39.0 3.43e6     1285. Não            
+1397 Somalia            Africa     1972    41.0 3.84e6     1255. Não            
+1398 Somalia            Africa     1977    42.0 4.35e6     1451. Não            
+1399 Somalia            Africa     1982    43.0 5.83e6     1177. Não            
+1400 Somalia            Africa     1987    44.5 6.92e6     1093. Não            
+1401 Somalia            Africa     1992    39.7 6.10e6      927. Não            
+1402 Somalia            Africa     1997    43.8 6.63e6      931. Não            
+1403 Somalia            Africa     2002    45.9 7.75e6      882. Não            
+1404 Somalia            Africa     2007    48.2 9.12e6      926. Não            
+1405 South Africa       Africa     1952    45.0 1.43e7     4725. Não            
+1406 South Africa       Africa     1957    48.0 1.62e7     5487. Não            
+1407 South Africa       Africa     1962    50.0 1.84e7     5769. Não            
+1408 South Africa       Africa     1967    51.9 2.10e7     7114. Não            
+1409 South Africa       Africa     1972    53.7 2.39e7     7766. Não            
+1410 South Africa       Africa     1977    55.5 2.71e7     8029. Não            
+1411 South Africa       Africa     1982    58.2 3.11e7     8568. Não            
+1412 South Africa       Africa     1987    60.8 3.59e7     7826. Não            
+1413 South Africa       Africa     1992    61.9 4.00e7     7225. Não            
+1414 South Africa       Africa     1997    60.2 4.28e7     7479. Não            
+1415 South Africa       Africa     2002    53.4 4.44e7     7711. Não            
+1416 South Africa       Africa     2007    49.3 4.40e7     9270. Não            
+1417 Spain              Europe     1952    64.9 2.85e7     3834. Não            
+1418 Spain              Europe     1957    66.7 2.98e7     4565. Não            
+1419 Spain              Europe     1962    69.7 3.12e7     5694. Não            
+1420 Spain              Europe     1967    71.4 3.29e7     7994. Não            
+1421 Spain              Europe     1972    73.1 3.45e7    10639. Não            
+1422 Spain              Europe     1977    74.4 3.64e7    13237. Não            
+1423 Spain              Europe     1982    76.3 3.80e7    13926. Não            
+1424 Spain              Europe     1987    76.9 3.89e7    15765. Não            
+1425 Spain              Europe     1992    77.6 3.95e7    18603. Não            
+1426 Spain              Europe     1997    78.8 3.99e7    20445. Não            
+1427 Spain              Europe     2002    79.8 4.02e7    24835. Não            
+1428 Spain              Europe     2007    80.9 4.04e7    28821. Não            
+1429 Sri Lanka          Asia       1952    57.6 7.98e6     1084. Não            
+1430 Sri Lanka          Asia       1957    61.5 9.13e6     1073. Não            
+1431 Sri Lanka          Asia       1962    62.2 1.04e7     1074. Não            
+1432 Sri Lanka          Asia       1967    64.3 1.17e7     1136. Não            
+1433 Sri Lanka          Asia       1972    65.0 1.30e7     1213. Não            
+1434 Sri Lanka          Asia       1977    65.9 1.41e7     1349. Não            
+1435 Sri Lanka          Asia       1982    68.8 1.54e7     1648. Não            
+1436 Sri Lanka          Asia       1987    69.0 1.65e7     1877. Não            
+1437 Sri Lanka          Asia       1992    70.4 1.76e7     2154. Não            
+1438 Sri Lanka          Asia       1997    70.5 1.87e7     2664. Não            
+1439 Sri Lanka          Asia       2002    70.8 1.96e7     3015. Não            
+1440 Sri Lanka          Asia       2007    72.4 2.04e7     3970. Não            
+1441 Sudan              Africa     1952    38.6 8.50e6     1616. Não            
+1442 Sudan              Africa     1957    39.6 9.75e6     1770. Não            
+1443 Sudan              Africa     1962    40.9 1.12e7     1960. Não            
+1444 Sudan              Africa     1967    42.9 1.27e7     1688. Não            
+1445 Sudan              Africa     1972    45.1 1.46e7     1660. Não            
+1446 Sudan              Africa     1977    47.8 1.71e7     2203. Não            
+1447 Sudan              Africa     1982    50.3 2.04e7     1896. Não            
+1448 Sudan              Africa     1987    51.7 2.47e7     1508. Não            
+1449 Sudan              Africa     1992    53.6 2.82e7     1492. Não            
+1450 Sudan              Africa     1997    55.4 3.22e7     1632. Não            
+1451 Sudan              Africa     2002    56.4 3.71e7     1993. Não            
+1452 Sudan              Africa     2007    58.6 4.23e7     2602. Não            
+1453 Swaziland          Africa     1952    41.4 2.90e5     1148. Não            
+1454 Swaziland          Africa     1957    43.4 3.27e5     1245. Não            
+1455 Swaziland          Africa     1962    45.0 3.70e5     1856. Não            
+1456 Swaziland          Africa     1967    46.6 4.21e5     2613. Não            
+1457 Swaziland          Africa     1972    49.6 4.80e5     3365. Não            
+1458 Swaziland          Africa     1977    52.5 5.51e5     3781. Não            
+1459 Swaziland          Africa     1982    55.6 6.50e5     3895. Não            
+1460 Swaziland          Africa     1987    57.7 7.79e5     3985. Não            
+1461 Swaziland          Africa     1992    58.5 9.62e5     3553. Não            
+1462 Swaziland          Africa     1997    54.3 1.05e6     3877. Não            
+1463 Swaziland          Africa     2002    43.9 1.13e6     4128. Não            
+1464 Swaziland          Africa     2007    39.6 1.13e6     4513. Não            
+1465 Sweden             Europe     1952    71.9 7.12e6     8528. Não            
+1466 Sweden             Europe     1957    72.5 7.36e6     9912. Não            
+1467 Sweden             Europe     1962    73.4 7.56e6    12329. Não            
+1468 Sweden             Europe     1967    74.2 7.87e6    15258. Não            
+1469 Sweden             Europe     1972    74.7 8.12e6    17832. Não            
+1470 Sweden             Europe     1977    75.4 8.25e6    18856. Não            
+1471 Sweden             Europe     1982    76.4 8.33e6    20667. Não            
+1472 Sweden             Europe     1987    77.2 8.42e6    23587. Não            
+1473 Sweden             Europe     1992    78.2 8.72e6    23880. Não            
+1474 Sweden             Europe     1997    79.4 8.90e6    25267. Não            
+1475 Sweden             Europe     2002    80.0 8.95e6    29342. Não            
+1476 Sweden             Europe     2007    80.9 9.03e6    33860. Não            
+1477 Switzerland        Europe     1952    69.6 4.82e6    14734. Não            
+1478 Switzerland        Europe     1957    70.6 5.13e6    17909. Não            
+1479 Switzerland        Europe     1962    71.3 5.67e6    20431. Não            
+1480 Switzerland        Europe     1967    72.8 6.06e6    22966. Não            
+1481 Switzerland        Europe     1972    73.8 6.40e6    27195. Não            
+1482 Switzerland        Europe     1977    75.4 6.32e6    26982. Não            
+1483 Switzerland        Europe     1982    76.2 6.47e6    28398. Não            
+1484 Switzerland        Europe     1987    77.4 6.65e6    30282. Não            
+1485 Switzerland        Europe     1992    78.0 7.00e6    31872. Não            
+1486 Switzerland        Europe     1997    79.4 7.19e6    32135. Não            
+1487 Switzerland        Europe     2002    80.6 7.36e6    34481. Não            
+1488 Switzerland        Europe     2007    81.7 7.55e6    37506. Não            
+1489 Syria              Asia       1952    45.9 3.66e6     1643. Não            
+1490 Syria              Asia       1957    48.3 4.15e6     2117. Não            
+1491 Syria              Asia       1962    50.3 4.83e6     2193. Não            
+1492 Syria              Asia       1967    53.7 5.68e6     1882. Não            
+1493 Syria              Asia       1972    57.3 6.70e6     2571. Não            
+1494 Syria              Asia       1977    61.2 7.93e6     3195. Não            
+1495 Syria              Asia       1982    64.6 9.41e6     3762. Não            
+1496 Syria              Asia       1987    67.0 1.12e7     3117. Não            
+1497 Syria              Asia       1992    69.2 1.32e7     3341. Não            
+1498 Syria              Asia       1997    71.5 1.51e7     4014. Não            
+1499 Syria              Asia       2002    73.1 1.72e7     4091. Não            
+1500 Syria              Asia       2007    74.1 1.93e7     4185. Não            
+1501 Taiwan             Asia       1952    58.5 8.55e6     1207. Não            
+1502 Taiwan             Asia       1957    62.4 1.02e7     1508. Não            
+1503 Taiwan             Asia       1962    65.2 1.19e7     1823. Não            
+1504 Taiwan             Asia       1967    67.5 1.36e7     2644. Não            
+1505 Taiwan             Asia       1972    69.4 1.52e7     4063. Não            
+1506 Taiwan             Asia       1977    70.6 1.68e7     5597. Não            
+1507 Taiwan             Asia       1982    72.2 1.85e7     7426. Não            
+1508 Taiwan             Asia       1987    73.4 1.98e7    11055. Não            
+1509 Taiwan             Asia       1992    74.3 2.07e7    15216. Não            
+1510 Taiwan             Asia       1997    75.2 2.16e7    20207. Não            
+1511 Taiwan             Asia       2002    77.0 2.25e7    23235. Não            
+1512 Taiwan             Asia       2007    78.4 2.32e7    28718. Não            
+1513 Tanzania           Africa     1952    41.2 8.32e6      717. Não            
+1514 Tanzania           Africa     1957    43.0 9.45e6      699. Não            
+1515 Tanzania           Africa     1962    44.2 1.09e7      722. Não            
+1516 Tanzania           Africa     1967    45.8 1.26e7      848. Não            
+1517 Tanzania           Africa     1972    47.6 1.47e7      916. Não            
+1518 Tanzania           Africa     1977    49.9 1.71e7      962. Não            
+1519 Tanzania           Africa     1982    50.6 1.98e7      874. Não            
+1520 Tanzania           Africa     1987    51.5 2.30e7      832. Não            
+1521 Tanzania           Africa     1992    50.4 2.66e7      826. Não            
+1522 Tanzania           Africa     1997    48.5 3.07e7      789. Não            
+1523 Tanzania           Africa     2002    49.7 3.46e7      899. Não            
+1524 Tanzania           Africa     2007    52.5 3.81e7     1107. Não            
+1525 Thailand           Asia       1952    50.8 2.13e7      758. Não            
+1526 Thailand           Asia       1957    53.6 2.50e7      794. Não            
+1527 Thailand           Asia       1962    56.1 2.93e7     1002. Não            
+1528 Thailand           Asia       1967    58.3 3.40e7     1295. Não            
+1529 Thailand           Asia       1972    60.4 3.93e7     1524. Não            
+1530 Thailand           Asia       1977    62.5 4.41e7     1961. Não            
+1531 Thailand           Asia       1982    64.6 4.88e7     2393. Não            
+1532 Thailand           Asia       1987    66.1 5.29e7     2983. Sim            
+1533 Thailand           Asia       1992    67.3 5.67e7     4617. Sim            
+1534 Thailand           Asia       1997    67.5 6.02e7     5853. Sim            
+1535 Thailand           Asia       2002    68.6 6.28e7     5913. Sim            
+1536 Thailand           Asia       2007    70.6 6.51e7     7458. Sim            
+1537 Togo               Africa     1952    38.6 1.22e6      860. Não            
+1538 Togo               Africa     1957    41.2 1.36e6      926. Não            
+1539 Togo               Africa     1962    43.9 1.53e6     1068. Não            
+1540 Togo               Africa     1967    46.8 1.74e6     1478. Não            
+1541 Togo               Africa     1972    49.8 2.06e6     1650. Não            
+1542 Togo               Africa     1977    52.9 2.31e6     1533. Não            
+1543 Togo               Africa     1982    55.5 2.64e6     1345. Não            
+1544 Togo               Africa     1987    56.9 3.15e6     1202. Não            
+1545 Togo               Africa     1992    58.1 3.75e6     1034. Não            
+1546 Togo               Africa     1997    58.4 4.32e6      982. Não            
+1547 Togo               Africa     2002    57.6 4.98e6      886. Não            
+1548 Togo               Africa     2007    58.4 5.70e6      883. Não            
+1549 Trinidad and Toba… Americas   1952    59.1 6.63e5     3023. Não            
+1550 Trinidad and Toba… Americas   1957    61.8 7.65e5     4100. Não            
+1551 Trinidad and Toba… Americas   1962    64.9 8.87e5     4998. Não            
+1552 Trinidad and Toba… Americas   1967    65.4 9.60e5     5621. Não            
+1553 Trinidad and Toba… Americas   1972    65.9 9.75e5     6620. Não            
+1554 Trinidad and Toba… Americas   1977    68.3 1.04e6     7900. Não            
+1555 Trinidad and Toba… Americas   1982    68.8 1.12e6     9120. Não            
+1556 Trinidad and Toba… Americas   1987    69.6 1.19e6     7389. Não            
+1557 Trinidad and Toba… Americas   1992    69.9 1.18e6     7371. Não            
+1558 Trinidad and Toba… Americas   1997    69.5 1.14e6     8793. Não            
+1559 Trinidad and Toba… Americas   2002    69.0 1.10e6    11461. Não            
+1560 Trinidad and Toba… Americas   2007    69.8 1.06e6    18009. Não            
+1561 Tunisia            Africa     1952    44.6 3.65e6     1468. Não            
+1562 Tunisia            Africa     1957    47.1 3.95e6     1395. Não            
+1563 Tunisia            Africa     1962    49.6 4.29e6     1660. Não            
+1564 Tunisia            Africa     1967    52.1 4.79e6     1932. Não            
+1565 Tunisia            Africa     1972    55.6 5.30e6     2753. Não            
+1566 Tunisia            Africa     1977    59.8 6.01e6     3121. Não            
+1567 Tunisia            Africa     1982    64.0 6.73e6     3560. Não            
+1568 Tunisia            Africa     1987    66.9 7.72e6     3810. Não            
+1569 Tunisia            Africa     1992    70.0 8.52e6     4333. Não            
+1570 Tunisia            Africa     1997    72.0 9.23e6     4877. Não            
+1571 Tunisia            Africa     2002    73.0 9.77e6     5723. Não            
+1572 Tunisia            Africa     2007    73.9 1.03e7     7093. Não            
+1573 Turkey             Europe     1952    43.6 2.22e7     1969. Não            
+1574 Turkey             Europe     1957    48.1 2.57e7     2219. Não            
+1575 Turkey             Europe     1962    52.1 2.98e7     2323. Não            
+1576 Turkey             Europe     1967    54.3 3.34e7     2826. Não            
+1577 Turkey             Europe     1972    57.0 3.75e7     3451. Não            
+1578 Turkey             Europe     1977    59.5 4.24e7     4269. Não            
+1579 Turkey             Europe     1982    61.0 4.73e7     4241. Não            
+1580 Turkey             Europe     1987    63.1 5.29e7     5089. Sim            
+1581 Turkey             Europe     1992    66.1 5.82e7     5678. Sim            
+1582 Turkey             Europe     1997    68.8 6.30e7     6601. Sim            
+1583 Turkey             Europe     2002    70.8 6.73e7     6508. Sim            
+1584 Turkey             Europe     2007    71.8 7.12e7     8458. Sim            
+1585 Uganda             Africa     1952    40.0 5.82e6      735. Não            
+1586 Uganda             Africa     1957    42.6 6.68e6      774. Não            
+1587 Uganda             Africa     1962    45.3 7.69e6      767. Não            
+1588 Uganda             Africa     1967    48.1 8.90e6      909. Não            
+1589 Uganda             Africa     1972    51.0 1.02e7      951. Não            
+1590 Uganda             Africa     1977    50.4 1.15e7      844. Não            
+1591 Uganda             Africa     1982    49.8 1.29e7      682. Não            
+1592 Uganda             Africa     1987    51.5 1.53e7      618. Não            
+1593 Uganda             Africa     1992    48.8 1.83e7      644. Não            
+1594 Uganda             Africa     1997    44.6 2.12e7      817. Não            
+1595 Uganda             Africa     2002    47.8 2.47e7      928. Não            
+1596 Uganda             Africa     2007    51.5 2.92e7     1056. Não            
+1597 United Kingdom     Europe     1952    69.2 5.04e7     9980. Sim            
+1598 United Kingdom     Europe     1957    70.4 5.14e7    11283. Sim            
+1599 United Kingdom     Europe     1962    70.8 5.33e7    12477. Sim            
+1600 United Kingdom     Europe     1967    71.4 5.50e7    14143. Sim            
+1601 United Kingdom     Europe     1972    72.0 5.61e7    15895. Sim            
+1602 United Kingdom     Europe     1977    72.8 5.62e7    17429. Sim            
+1603 United Kingdom     Europe     1982    74.0 5.63e7    18232. Sim            
+1604 United Kingdom     Europe     1987    75.0 5.70e7    21665. Sim            
+1605 United Kingdom     Europe     1992    76.4 5.79e7    22705. Sim            
+1606 United Kingdom     Europe     1997    77.2 5.88e7    26075. Sim            
+1607 United Kingdom     Europe     2002    78.5 5.99e7    29479. Sim            
+1608 United Kingdom     Europe     2007    79.4 6.08e7    33203. Sim            
+1609 United States      Americas   1952    68.4 1.58e8    13990. Sim            
+1610 United States      Americas   1957    69.5 1.72e8    14847. Sim            
+1611 United States      Americas   1962    70.2 1.87e8    16173. Sim            
+1612 United States      Americas   1967    70.8 1.99e8    19530. Sim            
+1613 United States      Americas   1972    71.3 2.10e8    21806. Sim            
+1614 United States      Americas   1977    73.4 2.20e8    24073. Sim            
+1615 United States      Americas   1982    74.6 2.32e8    25010. Sim            
+1616 United States      Americas   1987    75.0 2.43e8    29884. Sim            
+1617 United States      Americas   1992    76.1 2.57e8    32004. Sim            
+1618 United States      Americas   1997    76.8 2.73e8    35767. Sim            
+1619 United States      Americas   2002    77.3 2.88e8    39097. Sim            
+1620 United States      Americas   2007    78.2 3.01e8    42952. Sim            
+1621 Uruguay            Americas   1952    66.1 2.25e6     5717. Não            
+1622 Uruguay            Americas   1957    67.0 2.42e6     6151. Não            
+1623 Uruguay            Americas   1962    68.3 2.60e6     5603. Não            
+1624 Uruguay            Americas   1967    68.5 2.75e6     5445. Não            
+1625 Uruguay            Americas   1972    68.7 2.83e6     5703. Não            
+1626 Uruguay            Americas   1977    69.5 2.87e6     6504. Não            
+1627 Uruguay            Americas   1982    70.8 2.95e6     6920. Não            
+1628 Uruguay            Americas   1987    71.9 3.05e6     7452. Não            
+1629 Uruguay            Americas   1992    72.8 3.15e6     8137. Não            
+1630 Uruguay            Americas   1997    74.2 3.26e6     9230. Não            
+1631 Uruguay            Americas   2002    75.3 3.36e6     7727. Não            
+1632 Uruguay            Americas   2007    76.4 3.45e6    10611. Não            
+1633 Venezuela          Americas   1952    55.1 5.44e6     7690. Não            
+1634 Venezuela          Americas   1957    57.9 6.70e6     9802. Não            
+1635 Venezuela          Americas   1962    60.8 8.14e6     8423. Não            
+1636 Venezuela          Americas   1967    63.5 9.71e6     9541. Não            
+1637 Venezuela          Americas   1972    65.7 1.15e7    10505. Não            
+1638 Venezuela          Americas   1977    67.5 1.35e7    13144. Não            
+1639 Venezuela          Americas   1982    68.6 1.56e7    11152. Não            
+1640 Venezuela          Americas   1987    70.2 1.79e7     9884. Não            
+1641 Venezuela          Americas   1992    71.2 2.03e7    10734. Não            
+1642 Venezuela          Americas   1997    72.1 2.24e7    10165. Não            
+1643 Venezuela          Americas   2002    72.8 2.43e7     8605. Não            
+1644 Venezuela          Americas   2007    73.7 2.61e7    11416. Não            
+1645 Vietnam            Asia       1952    40.4 2.62e7      605. Não            
+1646 Vietnam            Asia       1957    42.9 2.90e7      676. Não            
+1647 Vietnam            Asia       1962    45.4 3.38e7      772. Não            
+1648 Vietnam            Asia       1967    47.8 3.95e7      637. Não            
+1649 Vietnam            Asia       1972    50.3 4.47e7      700. Não            
+1650 Vietnam            Asia       1977    55.8 5.05e7      714. Sim            
+1651 Vietnam            Asia       1982    58.8 5.61e7      707. Sim            
+1652 Vietnam            Asia       1987    62.8 6.28e7      821. Sim            
+1653 Vietnam            Asia       1992    67.7 6.99e7      989. Sim            
+1654 Vietnam            Asia       1997    70.7 7.60e7     1386. Sim            
+1655 Vietnam            Asia       2002    73.0 8.09e7     1764. Sim            
+1656 Vietnam            Asia       2007    74.2 8.53e7     2442. Sim            
+1657 West Bank and Gaza Asia       1952    43.2 1.03e6     1516. Não            
+1658 West Bank and Gaza Asia       1957    45.7 1.07e6     1827. Não            
+1659 West Bank and Gaza Asia       1962    48.1 1.13e6     2199. Não            
+1660 West Bank and Gaza Asia       1967    51.6 1.14e6     2650. Não            
+1661 West Bank and Gaza Asia       1972    56.5 1.09e6     3133. Não            
+1662 West Bank and Gaza Asia       1977    60.8 1.26e6     3683. Não            
+1663 West Bank and Gaza Asia       1982    64.4 1.43e6     4336. Não            
+1664 West Bank and Gaza Asia       1987    67.0 1.69e6     5107. Não            
+1665 West Bank and Gaza Asia       1992    69.7 2.10e6     6018. Não            
+1666 West Bank and Gaza Asia       1997    71.1 2.83e6     7111. Não            
+1667 West Bank and Gaza Asia       2002    72.4 3.39e6     4515. Não            
+1668 West Bank and Gaza Asia       2007    73.4 4.02e6     3025. Não            
+1669 Yemen, Rep.        Asia       1952    32.5 4.96e6      782. Não            
+1670 Yemen, Rep.        Asia       1957    34.0 5.50e6      805. Não            
+1671 Yemen, Rep.        Asia       1962    35.2 6.12e6      826. Não            
+1672 Yemen, Rep.        Asia       1967    37.0 6.74e6      862. Não            
+1673 Yemen, Rep.        Asia       1972    39.8 7.41e6     1265. Não            
+1674 Yemen, Rep.        Asia       1977    44.2 8.40e6     1830. Não            
+1675 Yemen, Rep.        Asia       1982    49.1 9.66e6     1978. Não            
+1676 Yemen, Rep.        Asia       1987    52.9 1.12e7     1972. Não            
+1677 Yemen, Rep.        Asia       1992    55.6 1.34e7     1879. Não            
+1678 Yemen, Rep.        Asia       1997    58.0 1.58e7     2117. Não            
+1679 Yemen, Rep.        Asia       2002    60.3 1.87e7     2235. Não            
+1680 Yemen, Rep.        Asia       2007    62.7 2.22e7     2281. Não            
+1681 Zambia             Africa     1952    42.0 2.67e6     1147. Não            
+1682 Zambia             Africa     1957    44.1 3.02e6     1312. Não            
+1683 Zambia             Africa     1962    46.0 3.42e6     1453. Não            
+1684 Zambia             Africa     1967    47.8 3.90e6     1777. Não            
+1685 Zambia             Africa     1972    50.1 4.51e6     1773. Não            
+1686 Zambia             Africa     1977    51.4 5.22e6     1589. Não            
+1687 Zambia             Africa     1982    51.8 6.10e6     1409. Não            
+1688 Zambia             Africa     1987    50.8 7.27e6     1213. Não            
+1689 Zambia             Africa     1992    46.1 8.38e6     1211. Não            
+1690 Zambia             Africa     1997    40.2 9.42e6     1071. Não            
+1691 Zambia             Africa     2002    39.2 1.06e7     1072. Não            
+1692 Zambia             Africa     2007    42.4 1.17e7     1271. Não            
+1693 Zimbabwe           Africa     1952    48.5 3.08e6      407. Não            
+1694 Zimbabwe           Africa     1957    50.5 3.65e6      519. Não            
+1695 Zimbabwe           Africa     1962    52.4 4.28e6      527. Não            
+1696 Zimbabwe           Africa     1967    54.0 5.00e6      570. Não            
+1697 Zimbabwe           Africa     1972    55.6 5.86e6      799. Não            
+1698 Zimbabwe           Africa     1977    57.7 6.64e6      686. Não            
+1699 Zimbabwe           Africa     1982    60.4 7.64e6      789. Não            
+1700 Zimbabwe           Africa     1987    62.4 9.22e6      706. Não            
+1701 Zimbabwe           Africa     1992    60.4 1.07e7      693. Não            
+1702 Zimbabwe           Africa     1997    46.8 1.14e7      792. Não            
+1703 Zimbabwe           Africa     2002    40.0 1.19e7      672. Não            
+1704 Zimbabwe           Africa     2007    43.5 1.23e7      470. Não            </code></pre>
 </div>
 </div>
 </section><section id="desafio" class="slide level2"><h2>Desafio</h2>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Desafio</strong></p>
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Solução do Desafio</strong></p>
 </div>
 <div class="callout-content">
-<p>Crie um código que selecione variáveis usando dois métodos diferentes na mesma instrução:</p>
+<p>Usando dados de 2007, crie uma variável que classifique os países em três categorias baseadas na expectativa de vida:</p>
 <ul>
-<li>Todas as variáveis que contêm a letra “p” OU</li>
-<li>Todas as variáveis que terminam com “p”</li>
+<li>“Baixa”: menos de 60 anos</li>
+<li>“Média”: entre 60 e 75 anos</li>
+<li>“Alta”: mais de 75 anos</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href></a><span class="co"># seleciona todas as variáveis que contêm a letra &quot;p&quot; OU</span></span>
-<span id="cb9-2"><a href></a><span class="co"># que terminam com &quot;p&quot;</span></span>
-<span id="cb9-3"><a href></a>variaveis_combinadas <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
-<span id="cb9-4"><a href></a>  <span class="fu">select</span>(<span class="fu">contains</span>(<span class="st">&quot;p&quot;</span>) <span class="sc">|</span> <span class="fu">ends_with</span>(<span class="st">&quot;p&quot;</span>))</span>
-<span id="cb9-5"><a href></a></span>
-<span id="cb9-6"><a href></a><span class="co"># exibe as primeiras 6 linhas do resultado</span></span>
-<span id="cb9-7"><a href></a><span class="fu">head</span>(variaveis_combinadas)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href></a>multiplas_categorias <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2007</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href></a>  <span class="fu">mutate</span>(<span class="at">categoria_expectativa =</span> <span class="fu">case_when</span>(</span>
+<span id="cb7-4"><a href></a>    lifeExp <span class="sc">&lt;</span> <span class="dv">60</span> <span class="sc">~</span> <span class="st">&quot;Baixa&quot;</span>,</span>
+<span id="cb7-5"><a href></a>    lifeExp <span class="sc">&gt;=</span> <span class="dv">60</span> <span class="sc">&amp;</span> lifeExp <span class="sc">&lt;=</span> <span class="dv">75</span> <span class="sc">~</span> <span class="st">&quot;Média&quot;</span>,</span>
+<span id="cb7-6"><a href></a>    lifeExp <span class="sc">&gt;</span> <span class="dv">75</span> <span class="sc">~</span> <span class="st">&quot;Alta&quot;</span></span>
+<span id="cb7-7"><a href></a>  ))</span>
+<span id="cb7-8"><a href></a></span>
+<span id="cb7-9"><a href></a><span class="co"># exibe todas as linhas da df</span></span>
+<span id="cb7-10"><a href></a><span class="fu">print</span>(multiplas_categorias, <span class="at">n =</span> <span class="cn">Inf</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 3
-  lifeExp      pop gdpPercap
-    &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
-1    28.8  8425333      779.
-2    30.3  9240934      821.
-3    32.0 10267083      853.
-4    34.0 11537966      836.
-5    36.1 13079460      740.
-6    38.4 14880372      786.</code></pre>
-</div>
-</div>
-</section></section><section><section id="função-filter-soluções-dos-exercícios" class="title-slide slide level1 center" data-background-color="#F1E9D2"><h1>Função filter: Soluções dos Exercícios</h1>
-
-</section><section id="nível-1-primeiros-passos-com-filter" class="slide level2"><h2>Nível 1: Primeiros Passos com filter()</h2>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1</strong></p>
-</div>
-<div class="callout-content">
-<p>Complete o código abaixo para filtrar apenas os países da América do sul no ano de 2007.</p>
-<p>Entretanto, a variável continent não possui o valor “South America”, apenas “Americas”. Os valores possíveis da variável continent podem ser encontrados usando a função:</p>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href></a><span class="co"># exibe os valores únicos da variável continent</span></span>
-<span id="cb11-2"><a href></a><span class="fu">unique</span>(gapminder<span class="sc">$</span>continent)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] Asia     Europe   Africa   Americas Oceania 
-Levels: Africa Americas Asia Europe Oceania</code></pre>
-</div>
-</div>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 1 Corrigido</strong></p>
-</div>
-<div class="callout-content">
-<p>Portanto, o texto correto do exercício deve ser:</p>
-<p>Complete o código abaixo para filtrar apenas os países das Americas no ano de 2007.</p>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href></a><span class="co"># dados apenas dos países da América do Sul no ano 2007</span></span>
-<span id="cb13-2"><a href></a>paises_americas_2007 <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
-<span id="cb13-3"><a href></a>  <span class="fu">filter</span>(continent <span class="sc">==</span> <span class="st">&quot;Americas&quot;</span>, year <span class="sc">==</span> <span class="dv">2007</span>)</span>
-<span id="cb13-4"><a href></a></span>
-<span id="cb13-5"><a href></a><span class="co"># exibe as primeiras 6 linhas do resultado</span></span>
-<span id="cb13-6"><a href></a><span class="fu">head</span>(paises_americas_2007)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 6
-  country   continent  year lifeExp       pop gdpPercap
-  &lt;fct&gt;     &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
-1 Argentina Americas   2007    75.3  40301927    12779.
-2 Bolivia   Americas   2007    65.6   9119152     3822.
-3 Brazil    Americas   2007    72.4 190010647     9066.
-4 Canada    Americas   2007    80.7  33390141    36319.
-5 Chile     Americas   2007    78.6  16284741    13172.
-6 Colombia  Americas   2007    72.9  44227550     7007.</code></pre>
-</div>
-</div>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 2</strong></p>
-</div>
-<div class="callout-content">
-<p>Filtre a data frame gapminder para mostrar apenas os dados do Brasil:</p>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href></a><span class="co"># dados apenas sobre o Brasil</span></span>
-<span id="cb15-2"><a href></a>dados_brasil <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
-<span id="cb15-3"><a href></a>  <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">&quot;Brazil&quot;</span>)</span>
-<span id="cb15-4"><a href></a></span>
-<span id="cb15-5"><a href></a><span class="co"># exibe as primeiras 6 linhas do resultado</span></span>
-<span id="cb15-6"><a href></a><span class="fu">head</span>(dados_brasil)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 6
-  country continent  year lifeExp       pop gdpPercap
-  &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
-1 Brazil  Americas   1952    50.9  56602560     2109.
-2 Brazil  Americas   1957    53.3  65551171     2487.
-3 Brazil  Americas   1962    55.7  76039390     3337.
-4 Brazil  Americas   1967    57.6  88049823     3430.
-5 Brazil  Americas   1972    59.5 100840058     4986.
-6 Brazil  Americas   1977    61.5 114313951     6660.</code></pre>
-</div>
-</div>
-</section><section id="nível-2-combinando-condições" class="slide level2"><h2>Nível 2: Combinando Condições</h2>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Exercício 3</strong></p>
-</div>
-<div class="callout-content">
-<p>Crie um filtro para encontrar países que atendam a TODAS estas condições:</p>
-<ul>
-<li>Pertencem à Ásia</li>
-<li>Têm população acima de 50 milhões</li>
-<li>Dados do ano 2007</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href></a>paises_asia_populosos_2007 <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
-<span id="cb17-2"><a href></a>  <span class="fu">filter</span>(continent <span class="sc">==</span> <span class="st">&quot;Asia&quot;</span> <span class="sc">&amp;</span></span>
-<span id="cb17-3"><a href></a>    pop <span class="sc">&gt;</span> <span class="dv">50000000</span> <span class="sc">&amp;</span></span>
-<span id="cb17-4"><a href></a>    year <span class="sc">==</span> <span class="dv">2007</span>)</span>
-<span id="cb17-5"><a href></a></span>
-<span id="cb17-6"><a href></a><span class="co"># exibindo todos as observações (linhas)</span></span>
-<span id="cb17-7"><a href></a><span class="co"># do resultado</span></span>
-<span id="cb17-8"><a href></a><span class="fu">print</span>(paises_asia_populosos_2007, <span class="at">n =</span> <span class="cn">Inf</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10 × 6
-   country     continent  year lifeExp        pop gdpPercap
-   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;      &lt;int&gt;     &lt;dbl&gt;
- 1 Bangladesh  Asia       2007    64.1  150448339     1391.
- 2 China       Asia       2007    73.0 1318683096     4959.
- 3 India       Asia       2007    64.7 1110396331     2452.
- 4 Indonesia   Asia       2007    70.6  223547000     3541.
- 5 Iran        Asia       2007    71.0   69453570    11606.
- 6 Japan       Asia       2007    82.6  127467972    31656.
- 7 Pakistan    Asia       2007    65.5  169270617     2606.
- 8 Philippines Asia       2007    71.7   91077287     3190.
- 9 Thailand    Asia       2007    70.6   65068149     7458.
-10 Vietnam     Asia       2007    74.2   85262356     2442.</code></pre>
-</div>
-</div>
-</section><section id="desafio-2" class="slide level2"><h2>Desafio</h2>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Desafio</strong></p>
-</div>
-<div class="callout-content">
-<p>Encontre países com expectativa de vida acima de 75 anos, mas PIB per capita abaixo de 10.000 dólares em 2007.</p>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href></a>paises_desafio <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
-<span id="cb19-2"><a href></a>  <span class="fu">filter</span>(</span>
-<span id="cb19-3"><a href></a>    lifeExp <span class="sc">&gt;</span> <span class="dv">75</span> <span class="sc">&amp;</span></span>
-<span id="cb19-4"><a href></a>      gdpPercap <span class="sc">&lt;</span> <span class="dv">10000</span> <span class="sc">&amp;</span></span>
-<span id="cb19-5"><a href></a>      year <span class="sc">==</span> <span class="dv">2007</span></span>
-<span id="cb19-6"><a href></a>  )</span>
-<span id="cb19-7"><a href></a></span>
-<span id="cb19-8"><a href></a><span class="co"># exibindo todos as observações (linhas)</span></span>
-<span id="cb19-9"><a href></a><span class="co"># do resultado</span></span>
-<span id="cb19-10"><a href></a><span class="fu">print</span>(paises_desafio, <span class="at">n =</span> <span class="cn">Inf</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 6
-  country    continent  year lifeExp      pop gdpPercap
-  &lt;fct&gt;      &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
-1 Albania    Europe     2007    76.4  3600523     5937.
-2 Costa Rica Americas   2007    78.8  4133884     9645.
-3 Cuba       Americas   2007    78.3 11416987     8948.
-4 Panama     Americas   2007    75.5  3242173     9809.
-5 Reunion    Africa     2007    76.4   798094     7670.</code></pre>
+<pre><code># A tibble: 142 × 7
+    country       continent  year lifeExp    pop gdpPercap categoria_expectativa
+    &lt;fct&gt;         &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;  &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;                
+  1 Afghanistan   Asia       2007    43.8 3.19e7      975. Baixa                
+  2 Albania       Europe     2007    76.4 3.60e6     5937. Alta                 
+  3 Algeria       Africa     2007    72.3 3.33e7     6223. Média                
+  4 Angola        Africa     2007    42.7 1.24e7     4797. Baixa                
+  5 Argentina     Americas   2007    75.3 4.03e7    12779. Alta                 
+  6 Australia     Oceania    2007    81.2 2.04e7    34435. Alta                 
+  7 Austria       Europe     2007    79.8 8.20e6    36126. Alta                 
+  8 Bahrain       Asia       2007    75.6 7.09e5    29796. Alta                 
+  9 Bangladesh    Asia       2007    64.1 1.50e8     1391. Média                
+ 10 Belgium       Europe     2007    79.4 1.04e7    33693. Alta                 
+ 11 Benin         Africa     2007    56.7 8.08e6     1441. Baixa                
+ 12 Bolivia       Americas   2007    65.6 9.12e6     3822. Média                
+ 13 Bosnia and H… Europe     2007    74.9 4.55e6     7446. Média                
+ 14 Botswana      Africa     2007    50.7 1.64e6    12570. Baixa                
+ 15 Brazil        Americas   2007    72.4 1.90e8     9066. Média                
+ 16 Bulgaria      Europe     2007    73.0 7.32e6    10681. Média                
+ 17 Burkina Faso  Africa     2007    52.3 1.43e7     1217. Baixa                
+ 18 Burundi       Africa     2007    49.6 8.39e6      430. Baixa                
+ 19 Cambodia      Asia       2007    59.7 1.41e7     1714. Baixa                
+ 20 Cameroon      Africa     2007    50.4 1.77e7     2042. Baixa                
+ 21 Canada        Americas   2007    80.7 3.34e7    36319. Alta                 
+ 22 Central Afri… Africa     2007    44.7 4.37e6      706. Baixa                
+ 23 Chad          Africa     2007    50.7 1.02e7     1704. Baixa                
+ 24 Chile         Americas   2007    78.6 1.63e7    13172. Alta                 
+ 25 China         Asia       2007    73.0 1.32e9     4959. Média                
+ 26 Colombia      Americas   2007    72.9 4.42e7     7007. Média                
+ 27 Comoros       Africa     2007    65.2 7.11e5      986. Média                
+ 28 Congo, Dem. … Africa     2007    46.5 6.46e7      278. Baixa                
+ 29 Congo, Rep.   Africa     2007    55.3 3.80e6     3633. Baixa                
+ 30 Costa Rica    Americas   2007    78.8 4.13e6     9645. Alta                 
+ 31 Cote d&#39;Ivoire Africa     2007    48.3 1.80e7     1545. Baixa                
+ 32 Croatia       Europe     2007    75.7 4.49e6    14619. Alta                 
+ 33 Cuba          Americas   2007    78.3 1.14e7     8948. Alta                 
+ 34 Czech Republ… Europe     2007    76.5 1.02e7    22833. Alta                 
+ 35 Denmark       Europe     2007    78.3 5.47e6    35278. Alta                 
+ 36 Djibouti      Africa     2007    54.8 4.96e5     2082. Baixa                
+ 37 Dominican Re… Americas   2007    72.2 9.32e6     6025. Média                
+ 38 Ecuador       Americas   2007    75.0 1.38e7     6873. Média                
+ 39 Egypt         Africa     2007    71.3 8.03e7     5581. Média                
+ 40 El Salvador   Americas   2007    71.9 6.94e6     5728. Média                
+ 41 Equatorial G… Africa     2007    51.6 5.51e5    12154. Baixa                
+ 42 Eritrea       Africa     2007    58.0 4.91e6      641. Baixa                
+ 43 Ethiopia      Africa     2007    52.9 7.65e7      691. Baixa                
+ 44 Finland       Europe     2007    79.3 5.24e6    33207. Alta                 
+ 45 France        Europe     2007    80.7 6.11e7    30470. Alta                 
+ 46 Gabon         Africa     2007    56.7 1.45e6    13206. Baixa                
+ 47 Gambia        Africa     2007    59.4 1.69e6      753. Baixa                
+ 48 Germany       Europe     2007    79.4 8.24e7    32170. Alta                 
+ 49 Ghana         Africa     2007    60.0 2.29e7     1328. Média                
+ 50 Greece        Europe     2007    79.5 1.07e7    27538. Alta                 
+ 51 Guatemala     Americas   2007    70.3 1.26e7     5186. Média                
+ 52 Guinea        Africa     2007    56.0 9.95e6      943. Baixa                
+ 53 Guinea-Bissau Africa     2007    46.4 1.47e6      579. Baixa                
+ 54 Haiti         Americas   2007    60.9 8.50e6     1202. Média                
+ 55 Honduras      Americas   2007    70.2 7.48e6     3548. Média                
+ 56 Hong Kong, C… Asia       2007    82.2 6.98e6    39725. Alta                 
+ 57 Hungary       Europe     2007    73.3 9.96e6    18009. Média                
+ 58 Iceland       Europe     2007    81.8 3.02e5    36181. Alta                 
+ 59 India         Asia       2007    64.7 1.11e9     2452. Média                
+ 60 Indonesia     Asia       2007    70.6 2.24e8     3541. Média                
+ 61 Iran          Asia       2007    71.0 6.95e7    11606. Média                
+ 62 Iraq          Asia       2007    59.5 2.75e7     4471. Baixa                
+ 63 Ireland       Europe     2007    78.9 4.11e6    40676. Alta                 
+ 64 Israel        Asia       2007    80.7 6.43e6    25523. Alta                 
+ 65 Italy         Europe     2007    80.5 5.81e7    28570. Alta                 
+ 66 Jamaica       Americas   2007    72.6 2.78e6     7321. Média                
+ 67 Japan         Asia       2007    82.6 1.27e8    31656. Alta                 
+ 68 Jordan        Asia       2007    72.5 6.05e6     4519. Média                
+ 69 Kenya         Africa     2007    54.1 3.56e7     1463. Baixa                
+ 70 Korea, Dem. … Asia       2007    67.3 2.33e7     1593. Média                
+ 71 Korea, Rep.   Asia       2007    78.6 4.90e7    23348. Alta                 
+ 72 Kuwait        Asia       2007    77.6 2.51e6    47307. Alta                 
+ 73 Lebanon       Asia       2007    72.0 3.92e6    10461. Média                
+ 74 Lesotho       Africa     2007    42.6 2.01e6     1569. Baixa                
+ 75 Liberia       Africa     2007    45.7 3.19e6      415. Baixa                
+ 76 Libya         Africa     2007    74.0 6.04e6    12057. Média                
+ 77 Madagascar    Africa     2007    59.4 1.92e7     1045. Baixa                
+ 78 Malawi        Africa     2007    48.3 1.33e7      759. Baixa                
+ 79 Malaysia      Asia       2007    74.2 2.48e7    12452. Média                
+ 80 Mali          Africa     2007    54.5 1.20e7     1043. Baixa                
+ 81 Mauritania    Africa     2007    64.2 3.27e6     1803. Média                
+ 82 Mauritius     Africa     2007    72.8 1.25e6    10957. Média                
+ 83 Mexico        Americas   2007    76.2 1.09e8    11978. Alta                 
+ 84 Mongolia      Asia       2007    66.8 2.87e6     3096. Média                
+ 85 Montenegro    Europe     2007    74.5 6.85e5     9254. Média                
+ 86 Morocco       Africa     2007    71.2 3.38e7     3820. Média                
+ 87 Mozambique    Africa     2007    42.1 2.00e7      824. Baixa                
+ 88 Myanmar       Asia       2007    62.1 4.78e7      944  Média                
+ 89 Namibia       Africa     2007    52.9 2.06e6     4811. Baixa                
+ 90 Nepal         Asia       2007    63.8 2.89e7     1091. Média                
+ 91 Netherlands   Europe     2007    79.8 1.66e7    36798. Alta                 
+ 92 New Zealand   Oceania    2007    80.2 4.12e6    25185. Alta                 
+ 93 Nicaragua     Americas   2007    72.9 5.68e6     2749. Média                
+ 94 Niger         Africa     2007    56.9 1.29e7      620. Baixa                
+ 95 Nigeria       Africa     2007    46.9 1.35e8     2014. Baixa                
+ 96 Norway        Europe     2007    80.2 4.63e6    49357. Alta                 
+ 97 Oman          Asia       2007    75.6 3.20e6    22316. Alta                 
+ 98 Pakistan      Asia       2007    65.5 1.69e8     2606. Média                
+ 99 Panama        Americas   2007    75.5 3.24e6     9809. Alta                 
+100 Paraguay      Americas   2007    71.8 6.67e6     4173. Média                
+101 Peru          Americas   2007    71.4 2.87e7     7409. Média                
+102 Philippines   Asia       2007    71.7 9.11e7     3190. Média                
+103 Poland        Europe     2007    75.6 3.85e7    15390. Alta                 
+104 Portugal      Europe     2007    78.1 1.06e7    20510. Alta                 
+105 Puerto Rico   Americas   2007    78.7 3.94e6    19329. Alta                 
+106 Reunion       Africa     2007    76.4 7.98e5     7670. Alta                 
+107 Romania       Europe     2007    72.5 2.23e7    10808. Média                
+108 Rwanda        Africa     2007    46.2 8.86e6      863. Baixa                
+109 Sao Tome and… Africa     2007    65.5 2.00e5     1598. Média                
+110 Saudi Arabia  Asia       2007    72.8 2.76e7    21655. Média                
+111 Senegal       Africa     2007    63.1 1.23e7     1712. Média                
+112 Serbia        Europe     2007    74.0 1.02e7     9787. Média                
+113 Sierra Leone  Africa     2007    42.6 6.14e6      863. Baixa                
+114 Singapore     Asia       2007    80.0 4.55e6    47143. Alta                 
+115 Slovak Repub… Europe     2007    74.7 5.45e6    18678. Média                
+116 Slovenia      Europe     2007    77.9 2.01e6    25768. Alta                 
+117 Somalia       Africa     2007    48.2 9.12e6      926. Baixa                
+118 South Africa  Africa     2007    49.3 4.40e7     9270. Baixa                
+119 Spain         Europe     2007    80.9 4.04e7    28821. Alta                 
+120 Sri Lanka     Asia       2007    72.4 2.04e7     3970. Média                
+121 Sudan         Africa     2007    58.6 4.23e7     2602. Baixa                
+122 Swaziland     Africa     2007    39.6 1.13e6     4513. Baixa                
+123 Sweden        Europe     2007    80.9 9.03e6    33860. Alta                 
+124 Switzerland   Europe     2007    81.7 7.55e6    37506. Alta                 
+125 Syria         Asia       2007    74.1 1.93e7     4185. Média                
+126 Taiwan        Asia       2007    78.4 2.32e7    28718. Alta                 
+127 Tanzania      Africa     2007    52.5 3.81e7     1107. Baixa                
+128 Thailand      Asia       2007    70.6 6.51e7     7458. Média                
+129 Togo          Africa     2007    58.4 5.70e6      883. Baixa                
+130 Trinidad and… Americas   2007    69.8 1.06e6    18009. Média                
+131 Tunisia       Africa     2007    73.9 1.03e7     7093. Média                
+132 Turkey        Europe     2007    71.8 7.12e7     8458. Média                
+133 Uganda        Africa     2007    51.5 2.92e7     1056. Baixa                
+134 United Kingd… Europe     2007    79.4 6.08e7    33203. Alta                 
+135 United States Americas   2007    78.2 3.01e8    42952. Alta                 
+136 Uruguay       Americas   2007    76.4 3.45e6    10611. Alta                 
+137 Venezuela     Americas   2007    73.7 2.61e7    11416. Média                
+138 Vietnam       Asia       2007    74.2 8.53e7     2442. Média                
+139 West Bank an… Asia       2007    73.4 4.02e6     3025. Média                
+140 Yemen, Rep.   Asia       2007    62.7 2.22e7     2281. Média                
+141 Zambia        Africa     2007    42.4 1.17e7     1271. Baixa                
+142 Zimbabwe      Africa     2007    43.5 1.23e7      470. Baixa                </code></pre>
 </div>
 </div>
 
