@@ -447,10 +447,10 @@ próximas vezes.
 
 
 
-- **Arquivos quarto necessários**
+- **Arquivos necessários**
 
-  - [onlineshop.zip](arquivos/onlineshop.zip)
-  - [01-avaliacao-template.zip](arquivos/01-avaliacao-template.zip)
+  - [onlineshop.zip](arquivos/onlineshop.zip) - arquivo de dados
+  - [01-avaliacao-template.zip](arquivos/01-avaliacao-template.zip) - template de arquivo quarto para resolução da avaliação 
 
 
 
