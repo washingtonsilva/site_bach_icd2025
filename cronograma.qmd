@@ -431,5 +431,99 @@ próximas vezes.
 
   - [06-relatorio (.zip)](arquivos/06-relatorio.zip)
 
+
+
+
+# Semana 8
+
+## Aula 13 (14/05/2025) - **Avaliação 1**
+
+
+
+::: {.callout-note icon=false}
+## Instruções para Resolução da Avaliação 1
+
+**1. Estruturando seu Projeto RStudio:**
+
+- Abra o RStudio e o seu Projeto RStudio da disciplina.
+
+- Baixe o arquivo `onlineshop.zip`, descompacte esse arquivo, 
+copie/recorte o arquivo `onlineshop.csv` e salve-o na subpasta 
+`brutos` da pasta `dados` do seu Projeto RStudio
+
+- Crie uma pasta chamada `avaliacoes` na raíz do seu Projeto RStudio
+
+- Dentro da pasta `avaliacoes`, crie uma subpasta chamada `01-avaliacao`
+
+- Baixe o arquivo `01-avaliacao-template.zip`, descompacte esse arquivo, 
+copie/recorte o arquivo `01-avaliacao-template.qmd` e salve-o na 
+subpasta `01-avaliacao` que você acabou de criar
+
+- Renomeie o arquivo `01-avaliacao-template.qmd` para 
+`01-avaliacao-seunome-sobrenome.qmd`
+
+- Escreva seu nome na chave `author: "SEU NOME AQUI"` do cabeçalho yaml 
+e tente resolver as questões
+
+
+**2. Workflow para Resolver a Avaliação:**
+
+1. Execute cada uma das células de código do arquivo `01-avaliacao-seunome-sobrenome.qmd`para verificar que cada célula de código 
+funciona corretamente. Comece executando a primeira célula de código que 
+carrega os pacotes necessários para a avaliação.
+
+2. Para executar uma célula de código, clique na 
+<span style="color: green;">seta verde</span> localizada no 
+canto superior  direito de cada célula de código ou clique dentro da 
+célula de código e utilize o atalho `Ctrl + Shift + Enter`
+ 
+3. Resolva as questões, escrevendo texto normalmente para responder a 
+questão 1 e completando os espaços em branco indicados por 
+`_______` para este tipo de questão e escrevendo código para 
+resolver as demais questões envolvendo código em R
+
+4. Após resolver todas as questões, clique no botão "Render" para 
+gerar o arquivo HTML da sua avaliação
+
+5. Caso alguma célula de código impeça a renderização do arquivo 
+`01-avaliacao-seunome-sobrenome.qmd` por você não ter completado ou 
+por ter criado código com erro, insira a chave `eval: false` 
+no início da célula de código que está impedindo a renderização, como 
+mostrado abaixo:
+
+
+```{{r}}
+#| eval: false
+
+```
+
+
+Isso irá desativar a execução do código, permitindo que o arquivo 
+seja renderizado
+
+6. Comprima o arquivo `01-avaliacao-seunome-sobrenome.html` e envio o 
+arquivo zipado para o email **washington.silva@ifmg.edu.br**
+
+
+**3. Outras Informações Importantes**
+
+- Você pode utilizar qualquer material de consulta disponibilizado no 
+site da disciplina para a realização da avaliação
+
+- Pode haver colaboração entre vocês para as questões envolvendo código 
+R, mas **não** para a Questão 1
+
+- Você pode utilizar modelos de linguagem de grande porte 
+(por exemplo, ChatGpt, Gemini etc.) para resolver as questões envolvendo 
+código em R
+
+- **Somente** serão avaliados os códigos que **imprimam o resultado** do 
+código
+
+- **Não** utilize modelos de linguagem de grande porte (por exemplo, 
+ChatGpt) para responder a Questão 1. Caso um modelo retorne que há uma alta 
+probabilidade de que a resposta tenha sido gerada por um modelo de 
+linguagem, isso implicará em nota zero para esta questão
+:::
   
   

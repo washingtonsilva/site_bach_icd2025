@@ -228,6 +228,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#aula-11-07052025" id="toc-aula-11-07052025" class="nav-link" data-scroll-target="#aula-11-07052025">Aula 11 (07/05/2025)</a></li>
   <li><a href="#aula-12-09052025" id="toc-aula-12-09052025" class="nav-link" data-scroll-target="#aula-12-09052025">Aula 12 (09/05/2025)</a></li>
   </ul></li>
+  <li><a href="#semana-8" id="toc-semana-8" class="nav-link" data-scroll-target="#semana-8">Semana 8</a>
+  <ul class="collapse">
+  <li><a href="#aula-13-14052025---avaliação-1" id="toc-aula-13-14052025---avaliação-1" class="nav-link" data-scroll-target="#aula-13-14052025---avaliação-1">Aula 13 (14/05/2025) - <strong>Avaliação 1</strong></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -711,6 +715,58 @@ Para navegar e visualizar
 <li><a href="arquivos/06-relatorio.zip">06-relatorio (.zip)</a></li>
 </ul></li>
 </ul>
+</section>
+</section>
+<section id="semana-8" class="level1">
+<h1>Semana 8</h1>
+<section id="aula-13-14052025---avaliação-1" class="level2">
+<h2 class="anchored" data-anchor-id="aula-13-14052025---avaliação-1">Aula 13 (14/05/2025) - <strong>Avaliação 1</strong></h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Instruções para Resolução da Avaliação 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>1. Estruturando seu Projeto RStudio:</strong></p>
+<ul>
+<li><p>Abra o RStudio e o seu Projeto RStudio da disciplina.</p></li>
+<li><p>Baixe o arquivo <code>onlineshop.zip</code>, descompacte esse arquivo, copie/recorte o arquivo <code>onlineshop.csv</code> e salve-o na subpasta <code>brutos</code> da pasta <code>dados</code> do seu Projeto RStudio</p></li>
+<li><p>Crie uma pasta chamada <code>avaliacoes</code> na raíz do seu Projeto RStudio</p></li>
+<li><p>Dentro da pasta <code>avaliacoes</code>, crie uma subpasta chamada <code>01-avaliacao</code></p></li>
+<li><p>Baixe o arquivo <code>01-avaliacao-template.zip</code>, descompacte esse arquivo, copie/recorte o arquivo <code>01-avaliacao-template.qmd</code> e salve-o na subpasta <code>01-avaliacao</code> que você acabou de criar</p></li>
+<li><p>Renomeie o arquivo <code>01-avaliacao-template.qmd</code> para <code>01-avaliacao-seunome-sobrenome.qmd</code></p></li>
+<li><p>Escreva seu nome na chave <code>author: "SEU NOME AQUI"</code> do cabeçalho yaml e tente resolver as questões</p></li>
+</ul>
+<p><strong>2. Workflow para Resolver a Avaliação:</strong></p>
+<ol type="1">
+<li><p>Execute cada uma das células de código do arquivo <code>01-avaliacao-seunome-sobrenome.qmd</code>para verificar que cada célula de código funciona corretamente. Comece executando a primeira célula de código que carrega os pacotes necessários para a avaliação.</p></li>
+<li><p>Para executar uma célula de código, clique na <span style="color: green;">seta verde</span> localizada no canto superior direito de cada célula de código ou clique dentro da célula de código e utilize o atalho <code>Ctrl + Shift + Enter</code></p></li>
+<li><p>Resolva as questões, escrevendo texto normalmente para responder a questão 1 e completando os espaços em branco indicados por <code>_______</code> para este tipo de questão e escrevendo código para resolver as demais questões envolvendo código em R</p></li>
+<li><p>Após resolver todas as questões, clique no botão “Render” para gerar o arquivo HTML da sua avaliação</p></li>
+<li><p>Caso alguma célula de código impeça a renderização do arquivo <code>01-avaliacao-seunome-sobrenome.qmd</code> por você não ter completado ou por ter criado código com erro, insira a chave <code>eval: false</code> no início da célula de código que está impedindo a renderização, como mostrado abaixo:</p></li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Isso irá desativar a execução do código, permitindo que o arquivo seja renderizado</p>
+<ol start="6" type="1">
+<li>Comprima o arquivo <code>01-avaliacao-seunome-sobrenome.html</code> e envio o arquivo zipado para o email <strong>washington.silva@ifmg.edu.br</strong></li>
+</ol>
+<p><strong>3. Outras Informações Importantes</strong></p>
+<ul>
+<li><p>Você pode utilizar qualquer material de consulta disponibilizado no site da disciplina para a realização da avaliação</p></li>
+<li><p>Pode haver colaboração entre vocês para as questões envolvendo código R, mas <strong>não</strong> para a Questão 1</p></li>
+<li><p>Você pode utilizar modelos de linguagem de grande porte (por exemplo, ChatGpt, Gemini etc.) para resolver as questões envolvendo código em R</p></li>
+<li><p><strong>Somente</strong> serão avaliados os códigos que <strong>imprimam o resultado</strong> do código</p></li>
+<li><p><strong>Não</strong> utilize modelos de linguagem de grande porte (por exemplo, ChatGpt) para responder a Questão 1. Caso um modelo retorne que há uma alta probabilidade de que a resposta tenha sido gerada por um modelo de linguagem, isso implicará em nota zero para esta questão</p></li>
+</ul>
+</div>
+</div>
 
 
 </section>
