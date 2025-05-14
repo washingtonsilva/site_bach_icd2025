@@ -439,53 +439,76 @@ próximas vezes.
 ## Aula 13 (14/05/2025) - **Avaliação 1**
 
 
+::: {.callout-tip}
+## Avaliação 1 
+
+[**Clique aqui para acessar a Avaliação 1**](/arquivos/01-avaliacao.html){target="_blank"}
+:::
+
+
+
+- **Arquivos quarto necessários**
+
+  - [onlineshop.zip](arquivos/onlineshop.zip)
+  - [01-avaliacao-template.zip](arquivos/01-avaliacao-template.zip)
+
+
 
 ::: {.callout-note icon=false}
 ## Instruções para Resolução da Avaliação 1
 
 **1. Estruturando seu Projeto RStudio:**
 
-- Abra o RStudio e o seu Projeto RStudio da disciplina.
+1. Abra o RStudio e o seu Projeto RStudio da disciplina.
 
-- Baixe o arquivo `onlineshop.zip`, descompacte esse arquivo, 
+2. Baixe o arquivo de dados `onlineshop.zip`, descompacte esse arquivo, 
 copie/recorte o arquivo `onlineshop.csv` e salve-o na subpasta 
 `brutos` da pasta `dados` do seu Projeto RStudio
 
-- Crie uma pasta chamada `avaliacoes` na raíz do seu Projeto RStudio
+3. Crie uma pasta chamada `avaliacoes` na raiz do seu Projeto RStudio
 
-- Dentro da pasta `avaliacoes`, crie uma subpasta chamada `01-avaliacao`
+4. Dentro da pasta `avaliacoes`, crie uma subpasta chamada `01-avaliacao`
 
-- Baixe o arquivo `01-avaliacao-template.zip`, descompacte esse arquivo, 
+5. Baixe o arquivo `01-avaliacao-template.zip`, descompacte esse arquivo, 
 copie/recorte o arquivo `01-avaliacao-template.qmd` e salve-o na 
 subpasta `01-avaliacao` que você acabou de criar
 
-- Renomeie o arquivo `01-avaliacao-template.qmd` para 
+6. Renomeie o arquivo `01-avaliacao-template.qmd` para 
 `01-avaliacao-seunome-sobrenome.qmd`
 
-- Escreva seu nome na chave `author: "SEU NOME AQUI"` do cabeçalho yaml 
+7. Escreva seu nome na chave `author: "SEU NOME AQUI"` do cabeçalho yaml 
 e tente resolver as questões
+:::
 
 
-**2. Workflow para Resolver a Avaliação:**
 
-1. Execute cada uma das células de código do arquivo `01-avaliacao-seunome-sobrenome.qmd`para verificar que cada célula de código 
-funciona corretamente. Comece executando a primeira célula de código que 
+::: {.callout-note icon=false}
+## Workflow para Resolver a Avaliação 1:
+
+1. Execute cada uma das células de código que você completar ou criar 
+no arquivo `01-avaliacao-seunome-sobrenome.qmd` para verificar que 
+cada célula de código funciona corretamente, antes de tentar 
+renderizar o arquivo. Comece executando a primeira célula de código que 
 carrega os pacotes necessários para a avaliação.
 
 2. Para executar uma célula de código, clique na 
 <span style="color: green;">seta verde</span> localizada no 
-canto superior  direito de cada célula de código ou clique dentro da 
+canto superior direito de cada célula ou clique dentro da 
 célula de código e utilize o atalho `Ctrl + Shift + Enter`
+
+3. Para inserir o operador pipe `%>%` na criação de um pipeline 
+de análise, utilize o atalho `Ctrl + Shift + M`.
  
-3. Resolva as questões, escrevendo texto normalmente para responder a 
-questão 1 e completando os espaços em branco indicados por 
+4. Resolva as questões, escrevendo texto normalmente para responder a 
+Questão 1, completando os espaços indicados por 
 `_______` para este tipo de questão e escrevendo código para 
 resolver as demais questões envolvendo código em R
 
-4. Após resolver todas as questões, clique no botão "Render" para 
+5. Após resolver todas as questões e verificar que todas as células de 
+código funcionam sem erro, clique no botão "**Render**" para 
 gerar o arquivo HTML da sua avaliação
 
-5. Caso alguma célula de código impeça a renderização do arquivo 
+6. Caso alguma célula de código impeça a renderização do arquivo 
 `01-avaliacao-seunome-sobrenome.qmd` por você não ter completado ou 
 por ter criado código com erro, insira a chave `eval: false` 
 no início da célula de código que está impedindo a renderização, como 
@@ -497,21 +520,39 @@ mostrado abaixo:
 
 ```
 
-
-Isso irá desativar a execução do código, permitindo que o arquivo 
-seja renderizado
-
-6. Comprima o arquivo `01-avaliacao-seunome-sobrenome.html` e envio o 
-arquivo zipado para o email **washington.silva@ifmg.edu.br**
+Isso irá desativar a execução do código de uma célula específica, 
+permitindo que o arquivo seja renderizado.
+:::
 
 
-**3. Outras Informações Importantes**
+
+::: {.callout-note icon=false}
+## Envio da Avaliação
+
+1. Compacte seu arquivo HTML em um arquivo ZIP
+
+2. Envie para o email **washington.silva@ifmg.edu.br**
+
+3. Use o assunto: **Avaliação 1 - Seu Nome Completo**
+
+4. **Não** deixe o laboratório antes que eu confirme o recebimento do seu 
+email com o arquivo anexado
+
+5. Horário limite para envio: **20:30** horas 
+:::
+
+
+
+::: {.callout-note icon=false}
+## Consulta e Colaboração
 
 - Você pode utilizar qualquer material de consulta disponibilizado no 
 site da disciplina para a realização da avaliação
 
-- Pode haver colaboração entre vocês para as questões envolvendo código 
-R, mas **não** para a Questão 1
+- Vocês podem colaborar nas questões de código R, **desde que de forma** 
+**organizada, sem atrapalhar os demais e mantendo conversas em volume baixo**. 
+Exceto na Questão 1, que deve ser respondida individualmente, com o texto d
+e autoria própria
 
 - Você pode utilizar modelos de linguagem de grande porte 
 (por exemplo, ChatGpt, Gemini etc.) para resolver as questões envolvendo 
@@ -525,5 +566,7 @@ ChatGpt) para responder a Questão 1. Caso um modelo retorne que há uma alta
 probabilidade de que a resposta tenha sido gerada por um modelo de 
 linguagem, isso implicará em nota zero para esta questão
 :::
-  
+
+
+ 
   
