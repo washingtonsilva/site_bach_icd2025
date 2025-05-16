@@ -436,136 +436,40 @@ próximas vezes.
 
 # Semana 8
 
-## Aula 13 (14/05/2025) - **Avaliação 1**
 
+## Aula 13 (14/05/2025)
 
-::: {.callout-tip}
-## Avaliação 1 
+- **Tópicos**
 
-[**Clique aqui para acessar a Avaliação 1**](/arquivos/01-avaliacao.html){target="_blank"}
-:::
-
-
-
-- **Arquivos necessários**
-
-  - [onlineshop.zip](arquivos/onlineshop.zip) - arquivo de dados
-  - [01-avaliacao-template.zip](arquivos/01-avaliacao-template.zip) - template de arquivo quarto para resolução da avaliação 
+  -  Avaliação 1
 
 
 
-::: {.callout-note icon=false}
-## Instruções para Resolução da Avaliação 1
+## Aula 14 (16/05/2025)
 
-**1. Estruturando seu Projeto RStudio:**
+- **Tópicos**
 
-1. Abra o RStudio e o seu Projeto RStudio da disciplina.
+  - Tipos Básicos de *joins* do Pacote dplyr
 
-2. Baixe o arquivo de dados `onlineshop.zip`, descompacte esse arquivo, 
-copie/recorte o arquivo `onlineshop.csv` e salve-o na subpasta 
-`brutos` da pasta `dados` do seu Projeto RStudio
+  
+  ::: {.callout-tip}
+  ## Para navegar e visualizar 
+  
+  Clique no símbolo > à direita ou use as teclas: seta para direita →, espaço, 
+  ou letra "n"   para avançar. Pressione "F" para modo de tela cheia e "Esc" 
+  para sair.
+  :::
 
-3. Crie uma pasta chamada `avaliacoes` na raiz do seu Projeto RStudio
-
-4. Dentro da pasta `avaliacoes`, crie uma subpasta chamada `01-avaliacao`
-
-5. Baixe o arquivo `01-avaliacao-template.zip`, descompacte esse arquivo, 
-copie/recorte o arquivo `01-avaliacao-template.qmd` e salve-o na 
-subpasta `01-avaliacao` que você acabou de criar
-
-6. Renomeie o arquivo `01-avaliacao-template.qmd` para 
-`01-avaliacao-seunome-sobrenome.qmd`
-
-7. Escreva seu nome na chave `author: "SEU NOME AQUI"` do cabeçalho yaml 
-e tente resolver as questões
-:::
+  <iframe src="/slides/slides_aula14.html" width="100%" height="450px"></iframe>
+  
+  - [slides: versão para download (.zip)](arquivos/slides_aula14.zip)
 
 
+- **Arquivo quarto**
 
-::: {.callout-note icon=false}
-## Workflow para Resolver a Avaliação 1:
-
-1. Execute cada uma das células de código que você completar ou criar 
-no arquivo `01-avaliacao-seunome-sobrenome.qmd` para verificar que 
-cada célula de código funciona corretamente, antes de tentar 
-renderizar o arquivo. Comece executando a primeira célula de código que 
-carrega os pacotes necessários para a avaliação.
-
-2. Para executar uma célula de código, clique na 
-<span style="color: green;">seta verde</span> localizada no 
-canto superior direito de cada célula ou clique dentro da 
-célula de código e utilize o atalho `Ctrl + Shift + Enter`
-
-3. Para inserir o operador pipe `%>%` na criação de um pipeline 
-de análise, utilize o atalho `Ctrl + Shift + M`.
- 
-4. Resolva as questões, escrevendo texto normalmente para responder a 
-Questão 1, completando os espaços indicados por 
-`_______` para este tipo de questão e escrevendo código para 
-resolver as demais questões envolvendo código em R
-
-5. Após resolver todas as questões e verificar que todas as células de 
-código funcionam sem erro, clique no botão "**Render**" para 
-gerar o arquivo HTML da sua avaliação
-
-6. Caso alguma célula de código impeça a renderização do arquivo 
-`01-avaliacao-seunome-sobrenome.qmd` por você não ter completado ou 
-por ter criado código com erro, insira a chave `eval: false` 
-no início da célula de código que está impedindo a renderização, como 
-mostrado abaixo:
+  - [07-relatorio (.zip)](arquivos/07-relatorio.zip)  
 
 
-```{{r}}
-#| eval: false
-
-```
-
-Isso irá desativar a execução do código de uma célula específica, 
-permitindo que o arquivo seja renderizado.
-:::
-
-
-
-::: {.callout-note icon=false}
-## Envio da Avaliação
-
-1. Compacte seu arquivo HTML em um arquivo ZIP
-
-2. Envie para o email **washington.silva@ifmg.edu.br**
-
-3. Use o assunto: **Avaliação 1 - Seu Nome Completo**
-
-4. **Não** deixe o laboratório antes que eu confirme o recebimento do seu 
-email com o arquivo anexado
-
-5. Horário limite para envio: **20:30** horas 
-:::
-
-
-
-::: {.callout-note icon=false}
-## Consulta e Colaboração
-
-- Você pode utilizar qualquer material de consulta disponibilizado no 
-site da disciplina para a realização da avaliação
-
-- Vocês podem colaborar nas questões de código R, **desde que de forma** 
-**organizada, sem atrapalhar os demais e mantendo conversas em volume baixo**. 
-Exceto na Questão 1, que deve ser respondida individualmente, com o texto d
-e autoria própria
-
-- Você pode utilizar modelos de linguagem de grande porte 
-(por exemplo, ChatGpt, Gemini etc.) para resolver as questões envolvendo 
-código em R
-
-- **Somente** serão avaliados os códigos que **imprimam o resultado** do 
-código
-
-- **Não** utilize modelos de linguagem de grande porte (por exemplo, 
-ChatGpt) para responder a Questão 1. Caso um modelo retorne que há uma alta 
-probabilidade de que a resposta tenha sido gerada por um modelo de 
-linguagem, isso implicará em nota zero para esta questão
-:::
 
 
  
