@@ -285,18 +285,18 @@ alterado conforme o andamento da disciplina e o rendimento da turma.
 | 23/04/25   |    2            | Importação de dados com readr e readxl       | 
 | 25/04/25   |    2            | Manipulação de dados com dplyr (Parte 1)     | 
 | 30/04/25   |    2            | Manipulação de dados com dplyr (Parte 2)     | 
-| 07/05/25   |    2            | Reestruturação de dados com tidyr            | 
-| 09/05/25   |    2            | Combinação de conjuntos de dados (joins)     | 
+| 07/05/25   |    2            | Manipulação de dados com dplyr (Parte 3)     | 
+| 09/05/25   |    2            | Reestruturação de dados com tidyr            | 
 | 14/05/25   |    2            | **Avaliação 1**                              | 
-| 16/05/25   |    2            | Fundamentos de Probabilidade                 | 
-| 21/05/25   |    2            | Simulação de Monte Carlo                     |
-| 23/05/25   |    2            | Análise Exploratória Numérica                |
-| 28/05/25   |    2            | Análise Exploratória Numérica                | 
-| 30/05/25   |    2            | Análise Exploratória Gráfica                 |
-| 02/06/25   |    2            | Análise Exploratória Gráfica                 | 
-| 04/06/25   |    2            | Análise Exploratória Gráfica                 |
+| 16/05/25   |    2            | Tipos Básicos de (joins) do dplyr            | 
+| 21/05/25   |    2            | Fundamentos de Probabilidade                 |
+| 23/05/25   |    2            | Fundamentos de Probabilidade                 |
+| 28/05/25   |    2            | Fundamentos de Probabilidade                 | 
+| 30/05/25   |    2            | Análise Exploratória de Dados                |
+| 02/06/25   |    2            | Análise Exploratória de Dados                | 
+| 04/06/25   |    2            | Análise Exploratória de Dados                |
 | 11/06/25   |    2            | **Avaliação 2**                              |
-| 13/06/25   |    2            | Análise Exploratória Gráfica                 |
+| 13/06/25   |    2            | Análise Exploratória de Dados                |
 | 18/06/25   |    2            | Introdução à Inferência Estatística          | 
 | 25/06/25   |    2            | Introdução à Inferência Estatística          |
 | 27/06/25   |    2            | Introdução à Inferência Estatística          |
