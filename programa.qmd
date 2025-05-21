@@ -180,10 +180,9 @@ rendimento da turma.
 ### 4. Fundamentos de Probabilidade para Decisões
 
 - 4.1. Introdução à Probabilidade 
-- 4.2. Probabilidade Condicional 
-- 4.3. Variáveis Aleatórias e Distribuições de Probabilidade 
-- 4.4. Valor Esperado, Variância e Covariância
-- 4.5. Simulação de Monte Carlo aplicada à Administração
+- 4.2. Variáveis Aleatórias e Distribuições de Probabilidade 
+- 4.3. Valor Esperado, Variância e Covariância
+- 4.4. Simulação de Monte Carlo aplicada à Administração
 
 
 ### 5. Análise Exploratória de Dados
