@@ -445,6 +445,7 @@ próximas vezes.
 
 
 
+
 ## Aula 14 (16/05/2025)
 
 - **Tópicos**
@@ -481,9 +482,7 @@ próximas vezes.
    - Fundamentos de Probabilidade para Decisões - Parte 1
      - Variáveis Aleatórias em Finanças
      - Distribuições de Probabilidade 
-     - Distribuição Normal (ou Gaussiana)
-     - Características da Distribuição de uma VA
-         - Valor Esperado (Média)
+     - Início: Distribuição Normal (ou Gaussiana)
   
   
   ::: {.callout-tip}
@@ -502,6 +501,19 @@ próximas vezes.
 
   - [08-relatorio (.zip)](arquivos/08-relatorio.zip)
 
+
+
+
+## Aula 16 (23/05/2025)
+
+- **Tópicos:**
+
+   - Fundamentos de Probabilidade para Decisões - Parte 1
+     - Distribuição Normal (ou Gaussiana)
+     - Características da Distribuição de uma Variável Aleatória
+     - Valor Esperado de uma Vaiável Aleatória
+
+  
 
 
  
