@@ -235,7 +235,7 @@
     "href": "cronograma.html#aula-9-25042025",
     "title": "Cronograma",
     "section": "Aula 9 (25/04/2025)",
-    "text": "Aula 9 (25/04/2025)\n\nTópicos:\n\nSolução dos exercícios sobre as funções select e filter\nFunção mutate\n\nSlides:\n\n::: {.callout-tip} ## Slides desta aula\n\nSlides da aula 8 sobre a função mutate (a partir do slide de número 62)\nOs slides a seguir contém a solução dos exercícios sobre as funções select e filter :::",
+    "text": "Aula 9 (25/04/2025)\n\nTópicos:\n\nSolução dos exercícios sobre as funções select e filter\nFunção mutate\n\nSlides:\n\n::: {.callout-tip} ## Slides desta aula\nSlides da aula 8 sobre a função mutate (a partir do slide de número 62), Os slides a seguir contém a solução dos exercícios sobre as funções select e filter :::",
     "crumbs": [
       "Início",
       "Cronograma"
@@ -246,7 +246,7 @@
     "href": "cronograma.html#aula-10-30042025",
     "title": "Cronograma",
     "section": "Aula 10 (30/04/2025)",
-    "text": "Aula 10 (30/04/2025)\n\nTópicos:\n\nSolução dos exercícios sobre a função mutate\nFunções group_by, summarize e arrange\n\nSlides:\n\n::: {.callout-tip} ## Slides desta aula\n\nSlides da aula 8 sobre as funções group_by, summarize e arrange (a partir do slide de número 75)\nOs slides a seguir contém a solução dos exercícios sobre a função mutate. :::",
+    "text": "Aula 10 (30/04/2025)\n\nTópicos:\n\nSolução dos exercícios sobre a função mutate\nFunções group_by, summarize e arrange\n\nSlides:\n\n::: {.callout-tip} ## Slides desta aula\nSlides da aula 8 sobre as funções group_by, summarize e arrange (a partir do slide de número 75), os slides a seguir contém a solução dos\nexercícios sobre a função mutate. :::",
     "crumbs": [
       "Início",
       "Cronograma"
@@ -312,7 +312,18 @@
     "href": "cronograma.html#aula-16-23052025",
     "title": "Cronograma",
     "section": "Aula 16 (23/05/2025)",
-    "text": "Aula 16 (23/05/2025)\n\nTópicos:\n\nFundamentos de Probabilidade para Decisões - Parte 1\n\nDistribuição Normal (ou Gaussiana)\nCaracterísticas da Distribuição de uma Variável Aleatória\nValor Esperado de uma Vaiável Aleatória\n\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\n\nslides: versão para download (.zip)\n\nArquivo quarto\n\n09-relatorio (.zip)",
+    "text": "Aula 16 (23/05/2025)\n\nTópicos:\n\nFundamentos de Probabilidade para Decisões - Parte 1\n\nDistribuição Normal (ou Gaussiana) -Características da Distribuição de uma Variável Aleatória\nValor Esperado de uma Vaiável Aleatória\n\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\n\nslides: versão para download (.zip)\n\nArquivo quarto\n\n09-relatorio (.zip)",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
+    "objectID": "cronograma.html#aula-17-28052025",
+    "href": "cronograma.html#aula-17-28052025",
+    "title": "Cronograma",
+    "section": "Aula 17 (28/05/2025)",
+    "text": "Aula 17 (28/05/2025)\n\nTópicos:\n\nCaracterísticas da Distribuição de uma VA\n\nVariância e Desvio-Padrão\nAssimetria e Curtose\nCovariância e Correlação\nFundamentos de Simulação de Monte Carlo\n\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\n\nslides: versão para download (.zip)\n\nArquivo quarto\n\n10-relatorio (.zip)",
     "crumbs": [
       "Início",
       "Cronograma"
