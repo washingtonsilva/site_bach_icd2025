@@ -276,34 +276,34 @@ alterado conforme o andamento da disciplina e o rendimento da turma.
 |            |                 | Apresentação da Disciplina                   |
 | 28/03/25   |    2            | CRISP-DM e Tipos de análise                  | 
 |            |                 | Configuração Git/GitHub                      |
-| 02/04/25   |    2            | Visão Geral RStudio/Quarto/R/Git/GitHub I    |
-| 04/04/25   |    2            | Visão Geral RStudio/Quarto/R/Git/GitHub II   |
-| 09/04/25   |    2            | Visão Geral RStudio/Quarto/R/Git/GitHub III  | 
-| 11/04/25   |    2            | Introdução à Linguagem R (Parte 1)           | 
-| 16/04/25   |    2            | Introdução à Linguagem R (Parte 2)           |  
+| 02/04/25   |    2            | Visão Geral RStudio/Quarto/R/Git/GitHub      |
+| 04/04/25   |    2            | Visão Geral RStudio/Quarto/R/Git/GitHub      |
+| 09/04/25   |    2            | Visão Geral RStudio/Quarto/R/Git/GitHub      | 
+| 11/04/25   |    2            | Introdução à Linguagem R                     | 
+| 16/04/25   |    2            | Introdução à Linguagem R                     |  
 | 23/04/25   |    2            | Importação de dados com readr e readxl       | 
-| 25/04/25   |    2            | Manipulação de dados com dplyr (Parte 1)     | 
-| 30/04/25   |    2            | Manipulação de dados com dplyr (Parte 2)     | 
-| 07/05/25   |    2            | Manipulação de dados com dplyr (Parte 3)     | 
-| 09/05/25   |    2            | Reestruturação de dados com tidyr            | 
+| 25/04/25   |    2            | Manipulação de dados com dplyr               | 
+| 30/04/25   |    2            | Manipulação de dados com dplyr               | 
+| 07/05/25   |    2            | Manipulação de dados com dplyr               | 
+| 09/05/25   |    2            | Organização de dados com tidyr               | 
 | 14/05/25   |    2            | **Avaliação 1**                              | 
 | 16/05/25   |    2            | Tipos Básicos de (joins) do dplyr            | 
 | 21/05/25   |    2            | Fundamentos de Probabilidade                 |
 | 23/05/25   |    2            | Fundamentos de Probabilidade                 |
 | 28/05/25   |    2            | Fundamentos de Probabilidade                 | 
-| 30/05/25   |    2            | Análise Exploratória de Dados                |
+| 30/05/25   |    2            | Fundamentos de Probabilidade                 |
 | 02/06/25   |    2            | Análise Exploratória de Dados                | 
 | 04/06/25   |    2            | Análise Exploratória de Dados                |
 | 11/06/25   |    2            | **Avaliação 2**                              |
 | 13/06/25   |    2            | Análise Exploratória de Dados                |
-| 18/06/25   |    2            | Introdução à Inferência Estatística          | 
+| 18/06/25   |    2            | Análise Exploratória de Dados                | 
 | 25/06/25   |    2            | Introdução à Inferência Estatística          |
 | 27/06/25   |    2            | Introdução à Inferência Estatística          |
 | 02/07/25   |    2            | Introdução à Inferência Estatística          | 
-| 04/07/25   |    2            | Relatórios Quarto Parametrizados             | 
-| 09/07/25   |    2            | Dashboards                                   | 
+| 04/07/25   |    2            | Introdução à Inferência Estatística          | 
+| 09/07/25   |    2            | Introdução à Inferência Estatística          | 
 | 11/07/25   |    2            | **Avaliação 3**                              |
-| 18/07/25   |    2            | Encerramento                                 | 
+| 18/07/25   |    2            | Dashboards Quarto                            | 
 
 
 
