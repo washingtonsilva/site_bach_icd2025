@@ -10,14 +10,14 @@ author: "Prof. Dr. Washington S. da Silva"
 ## Objetivo Geral (Versão Aprimorada)
 
 Esta disciplina aborda os fundamentos da Ciência de Dados através da 
-metodologia CRISP-DM (Cross-Industry Standard Process for Data Mining), 
-combinando ferramentas computacionais modernas (R, RStudio, Quarto, Git/GitHub), 
-manipulação e visualização de dados e conceitos básicos de estatística e 
-probabilidade. O curso introduz os princípios do processo estruturado 
-de análise de dados, apresentando técnicas de manipulação de dados, 
-estatística descritiva, visualização e elementos de inferência 
-estatística organizadas segundo as fases do CRISP-DM. O propósito 
-é desenvolver no estudante de Administração habilidades iniciais 
+metodologia CRISP-DM (*Cross-Industry Standard Process for Data Mining*), 
+combinando ferramentas computacionais modernas (linguagem R, IDERStudio, 
+sistema de publicação Quarto, Git/GitHub), manipulação e visualização de 
+dados e conceitos básicos de estatística e probabilidade. O curso introduz 
+os princípios do processo estruturado de análise de dados, apresentando 
+técnicas de manipulação de dados, estatística descritiva, visualização e 
+elementos de inferência estatística organizadas segundo as fases do CRISP-DM. 
+O propósito é desenvolver no estudante de Administração habilidades iniciais 
 para interpretar e analisar dados de forma crítica e metodologicamente 
 fundamentada, permitindo que identifiquem oportunidades de aplicação 
 dessas ferramentas em contextos empresariais. Ao final da disciplina, 
