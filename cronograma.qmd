@@ -579,5 +579,24 @@ próximas vezes.
 
 
 
+
+## Aula 18 (30/05/2025)
+
+- **Tópicos:**
+
+  - Características da Distribuição de uma VA
+  
+       - Covariância e Correlação
+       - Fundamentos de Simulação de Monte Carlo
+
+
+- **Slides:**
+
+  ::: {.callout-tip}
+  ## Cont. Aula 17
+  
+  Slides da Aula 17, a partir do slide 35.
+  :::  
+
  
   
