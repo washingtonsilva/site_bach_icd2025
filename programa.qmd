@@ -7,11 +7,11 @@ author: "Prof. Dr. Washington S. da Silva"
 
 
 
-## Objetivo Geral (Versão Aprimorada)
+## Objetivo Geral 
 
 Esta disciplina aborda os fundamentos da Ciência de Dados através da 
 metodologia CRISP-DM (*Cross-Industry Standard Process for Data Mining*), 
-combinando ferramentas computacionais modernas (linguagem R, IDERStudio, 
+combinando ferramentas computacionais modernas (linguagem R, IDE RStudio, 
 sistema de publicação Quarto, Git/GitHub), manipulação e visualização de 
 dados e conceitos básicos de estatística e probabilidade. O curso introduz 
 os princípios do processo estruturado de análise de dados, apresentando 
@@ -31,7 +31,7 @@ em análise de dados.
 
 
 
-## Objetivos Específicos (Versão Aprimorada)
+## Objetivos Específicos
 
 1. Aplicar a metodologia CRISP-DM como framework estruturador para projetos 
 de análise de dados, capacitando o graduando em ferramentas e técnicas 
