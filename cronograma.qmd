@@ -598,6 +598,9 @@ próximas vezes.
   Slides da Aula 17, a partir do slide 35.
   :::  
 
+- **Aplicativo Interativo:**
+
+  - [Explorador de Correlação](https://washington-silva.shinyapps.io/explorador_correlacao/){target="_blank"}
 
 
 
