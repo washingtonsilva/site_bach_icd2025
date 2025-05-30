@@ -7,45 +7,57 @@ author: "Prof. Dr. Washington S. da Silva"
 
 
 
-## Objetivo Geral
+## Objetivo Geral (Versão Aprimorada)
 
-Esta disciplina aborda os fundamentos da Ciência de Dados, combinando 
-ferramentas computacionais (R, RStudio, Quarto, Git/GitHub), 
-manipulação e visualização de dados e conceitos básicos de estatística 
-e probabilidade. O curso introduz os princípios do processo de análise de 
-dados, apresentando técnicas de manipulação de dados, estatística descritiva, 
-visualização e elementos de inferência estatística. O propósito é desenvolver 
-no estudante de Administração habilidades iniciais para interpretar e analisar 
-dados de forma crítica, permitindo que identifiquem oportunidades de aplicação 
+Esta disciplina aborda os fundamentos da Ciência de Dados através da 
+metodologia CRISP-DM (Cross-Industry Standard Process for Data Mining), 
+combinando ferramentas computacionais modernas (R, RStudio, Quarto, Git/GitHub), 
+manipulação e visualização de dados e conceitos básicos de estatística e 
+probabilidade. O curso introduz os princípios do processo estruturado 
+de análise de dados, apresentando técnicas de manipulação de dados, 
+estatística descritiva, visualização e elementos de inferência 
+estatística organizadas segundo as fases do CRISP-DM. O propósito 
+é desenvolver no estudante de Administração habilidades iniciais 
+para interpretar e analisar dados de forma crítica e metodologicamente 
+fundamentada, permitindo que identifiquem oportunidades de aplicação 
 dessas ferramentas em contextos empresariais. Ao final da disciplina, 
-espera-se que os graduandos não apenas compreendam o potencial da análise 
-de dados para a tomada de decisões, mas também adquiram um alicerce sólido 
-de conceitos e ferramentas que constituirá a base necessária para estudos 
-mais avançados e aplicações profissionais em análise de dados.
+espera-se que os graduandos não apenas compreendam o potencial da 
+análise de dados para a tomada de decisões, mas também dominem uma 
+abordagem estruturada para conduzir projetos analíticos e adquiram 
+um alicerce sólido de conceitos e ferramentas que constituirá a 
+base necessária para estudos mais avançados e aplicações profissionais 
+em análise de dados.
 
 
-## Objetivos Específicos
 
-1. Capacitar o graduando em ferramentas e técnicas modernas essenciais 
-para Ciência de Dados, com foco na linguagem R e no ambiente RStudio para 
-a importação, manipulação, visualização e análise estatística de dados.
 
-2. Desenvolver habilidades de preparação e manipulação de dados usando o 
-metapacote tidyverse, capacitando o estudante a transformar dados brutos 
-em formatos adequados para análise.
+## Objetivos Específicos (Versão Aprimorada)
+
+1. Aplicar a metodologia CRISP-DM como framework estruturador para projetos 
+de análise de dados, capacitando o graduando em ferramentas e técnicas 
+modernas essenciais para Ciência de Dados, com foco na linguagem R e 
+no ambiente RStudio para a importação, manipulação, visualização e 
+análise estatística de dados.
+
+2. Desenvolver habilidades de preparação e manipulação de dados usando 
+o metapacote tidyverse, capacitando o estudante a transformar dados 
+brutos em formatos adequados para análise seguindo as boas práticas 
+de entendimento e preparação de dados do CRISP-DM.
 
 3. Aplicar conceitos fundamentais de estatística descritiva e visualização 
-de dados para identificar padrões e tendências relevantes em conjuntos de 
-dados.
+de dados para identificar padrões e tendências relevantes em conjuntos 
+de dados, integrando análise exploratória e diagnóstica dentro do 
+processo estruturado de análise de dados.
 
 4. Introduzir fundamentos de probabilidade e inferência estatística 
-necessários para a tomada de decisão baseada em dados, incluindo simulações 
-de Monte Carlo aplicadas a problemas de negócios.
+necessários para a tomada de decisão baseada em dados, incluindo 
+simulações de Monte Carlo aplicadas a problemas de negócios, 
+contextualizados nas fases de modelagem e avaliação de projetos analíticos.
 
-5. Capacitar o graduando para a criação de relatórios usando 
-o sistema Quarto, permitindo a reprodutibilidade das análises e a
-comunicação eficaz de resultados analíticos.
-
+5. Capacitar o graduando para a criação de relatórios usando o 
+sistema Quarto, permitindo a reprodutibilidade das análises e a 
+comunicação eficaz de resultados analíticos seguindo os princípios 
+de documentação e apresentação de projetos de ciência de dados.
 
 
 
@@ -58,7 +70,6 @@ Sistema Quarto). Preparação, manipulação e transformação de dados com
 tidyverse. Estatística descritiva. Visualização de dados com ggplot2. 
 Fundamentos de probabilidade. Introdução à inferência estatística. Criação de 
 relatórios e dashboards para comunicação de resultados.
-
 
 
 
@@ -100,6 +111,7 @@ CHANG, Winston. **R Graphics Cookbook**. 2025, O'Reilly. Disponível em:
 **Recursos Online:**
 
 - [Manual do Sistema Quarto](https://quarto.org/docs/guide/){target="_blank"}
+
 
 
 
@@ -219,6 +231,7 @@ rendimento da turma.
 
 
 
+
 ## Recursos Didáticos e Materiais de Estudo
 
 Entre os recursos didáticos utilizados na disciplina estão:
@@ -250,6 +263,7 @@ ambiente virtual de aprendizagem.
 
 
 
+
 ## Metodologia de Ensino
 
 Trata-se de um curso do tipo "*hands-on*" e baseado no conceito de 
@@ -262,6 +276,7 @@ dados e avançando para análises mais complexas, culminando em um projeto
 final que sintetiza as competências desenvolvidas ao longo do 
 semestre. Esta abordagem visa facilitar a aplicação imediata dos 
 conhecimentos no contexto profissional dos estudantes.
+
 
 
 
@@ -304,6 +319,7 @@ alterado conforme o andamento da disciplina e o rendimento da turma.
 | 09/07/25   |    2            | Introdução à Inferência Estatística          | 
 | 11/07/25   |    2            | **Avaliação 3**                              |
 | 18/07/25   |    2            | Dashboards Quarto                            | 
+
 
 
 
