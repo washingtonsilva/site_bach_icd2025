@@ -194,16 +194,16 @@ rendimento da turma.
 - 4.1. Introdução à Probabilidade 
 - 4.2. Variáveis Aleatórias e Distribuições de Probabilidade 
 - 4.3. Valor Esperado, Variância e Covariância
-- 4.4. Simulação de Monte Carlo aplicada à Administração
+- 4.4. Distribuição Normal
+- 4.5. Simulação de Monte Carlo aplicada à Administração
 
 
 ### 5. Análise Exploratória de Dados
 
-- 5.1. Tipos de Variáveis
-- 5.2. Análise exploratória numérica
-  - 5.2.1. Medidas de Posição e de Variação
-  - 5.2.2. Correlações e tabelas de contingência
-- 5.5. Análise exploratória gráfica
+- 5.1. Análise exploratória numérica
+  - 5.1.1. Medidas de Posição e de Variação
+  - 5.1.2. Correlações e tabelas de contingência
+- 5.2. Análise exploratória gráfica
 
 
 ### 6. Visualização de Dados com ggplot2
