@@ -309,9 +309,9 @@ alterado conforme o andamento da disciplina e o rendimento da turma.
 | 30/05/25   |    2            | Fundamentos de Probabilidade                 |
 | 02/06/25   |    2            | Análise Exploratória de Dados                | 
 | 04/06/25   |    2            | Análise Exploratória de Dados                |
-| 11/06/25   |    2            | **Avaliação 2**                              |
+| 11/06/25   |    2            | Análise Exploratória de Dados                |
 | 13/06/25   |    2            | Análise Exploratória de Dados                |
-| 18/06/25   |    2            | Análise Exploratória de Dados                | 
+| 18/06/25   |    2            | **Avaliação 2**                              | 
 | 25/06/25   |    2            | Introdução à Inferência Estatística          |
 | 27/06/25   |    2            | Introdução à Inferência Estatística          |
 | 02/07/25   |    2            | Introdução à Inferência Estatística          | 
