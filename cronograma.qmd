@@ -725,7 +725,7 @@ próximas vezes.
   Eles constituem a principal referência para **estudo** sobre o tipo e o 
   nível dos exercícios que poderão constar na **Avaliação 2**.
   
-  [**Clique aqui para acessar a resolução dos exercícios vistos ns aulas**](/slides/solucoes_exercicios.html){target="_blank"}
+  [**Clique aqui para acessar a resolução dos exercícios vistos nas aulas**](/slides/solucoes_exercicios.html){target="_blank"}
   :::
 
 
