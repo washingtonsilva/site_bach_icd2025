@@ -702,7 +702,9 @@ próximas vezes.
   - A aula de hoje consiste de uma lista de exercícios para treinar para a 
   Avaliação 2, acesse a lista no link abaixo. 
   
-  [**Clique aqui para acessar a Avaliação 2**](/slides/01-lista.html){target="_blank"}
+  [**Clique aqui para acessar a Lista de Exercícios - Treino para Avaliação 2**](/slides/01-lista.html){target="_blank"}
+  
+  [**Clique aqui para acessar a Solução da Lista de Exercícios - Treino para Avaliação 2**](/slides/01-lista-solucoes.html){target="_blank"}
   :::
 
 - **Arquivo quarto para resolução da lista**
