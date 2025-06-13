@@ -715,7 +715,7 @@ próximas vezes.
   - [01-lista-template (.zip)](arquivos/01-lista-template.zip)
 
 
-- **Exercíciops Resolvidos em Aula**
+- **Exercícios Resolvidos em Aula**
 
   ::: {.callout-tip}
   ## Exercícios e Soluções vistos em Aula
