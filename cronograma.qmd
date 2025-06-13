@@ -685,5 +685,36 @@ próximas vezes.
 
   - [13-relatorio (.zip)](arquivos/13-relatorio.zip)
 
+
+
+
+## Aula 22 (13/06/2025)
+
+- **Tópicos:**
+
+  - Liste de Exercícios - Treino para a Avaliação 2
+  
+- **Lista:**
+
+  ::: {.callout-tip}
+  ## Lista de Exercícios
+  
+  [**Clique aqui para acessar a Avaliação 1**](/slides/01-lista.html){target="_blank"}
+  :::
+
+- **Arquivo quarto para resolução da lista**
+
+  - [01-lista-template (.zip)](arquivos/01-lista-template.zip)
+
+
+- **Exercíciops Resolvidos em Aula**
+
+  ::: {.callout-tip}
+  ## Exercícios e Soluções vistos em Aula
+  
+  [**Clique aqui para acessar a resolução dos exercícios vistos ns aulas**](/slides/solucoes_exercicios.html){target="_blank"}
+  :::
+
+
  
   
