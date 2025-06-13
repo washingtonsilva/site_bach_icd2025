@@ -720,6 +720,11 @@ próximas vezes.
   ::: {.callout-tip}
   ## Exercícios e Soluções vistos em Aula
   
+  Este arquivo contém todos os exercícios vistos em aula, com as soluções, 
+  referentes aos módulos da disciplina que serão abordados na **Avaliação 2**. 
+  Eles constituem a principal referência para **estudo** sobre o tipo e o 
+  nível dos exercícios que poderão constar na **Avaliação 2**.
+  
   [**Clique aqui para acessar a resolução dos exercícios vistos ns aulas**](/slides/solucoes_exercicios.html){target="_blank"}
   :::
 
