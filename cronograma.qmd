@@ -692,17 +692,25 @@ próximas vezes.
 
 - **Tópicos:**
 
-  - Liste de Exercícios - Treino para a Avaliação 2
+  - Lista de Exercícios - Treino para a Avaliação 2
   
 - **Lista:**
 
   ::: {.callout-tip}
   ## Lista de Exercícios
   
-  [**Clique aqui para acessar a Avaliação 1**](/slides/01-lista.html){target="_blank"}
+  - A aula de hoje consiste de uma lista de exercícios para treinar para a 
+  Avaliação 2, acesse a lista no link abaixo. 
+  
+  [**Clique aqui para acessar a Avaliação 2**](/slides/01-lista.html){target="_blank"}
   :::
 
 - **Arquivo quarto para resolução da lista**
+
+  - Recomendo que crie uma pasta chamada "**listas_exercicios**"dentro 
+  do seu projeto RStudio e, dentro desta pasta, crie a subpasta "**01-lista**". 
+  Em seguida, baixe, descompacte e copie/recorte o template de arquivo quarto 
+  abaixo para tentar resolver a lista.
 
   - [01-lista-template (.zip)](arquivos/01-lista-template.zip)
 
