@@ -744,126 +744,30 @@ próximas vezes.
   -  Avaliação 2
 
 
-::: {.callout-tip}
-## Avaliação 2 
-
-[**Clique aqui para acessar a Avaliação 2**](/arquivos/02-avaliacao.html){target="_blank"}
-:::
-
-
-- **Arquivo necessário**
-
-  - [02-avaliacao-template.zip](arquivos/02-avaliacao-template.zip) - template de arquivo quarto para resolução da avaliação 
-
-
-
-::: {.callout-note icon=false}
-## Instruções para Resolução da Avaliação 2 
-
-**1. Estruturando seu Projeto RStudio:**
-
-1. Abra o RStudio e o seu Projeto RStudio da disciplina.
-
-2. Dentro da pasta `avaliacoes`, crie uma subpasta chamada `02-avaliacao`
-
-3. Baixe o arquivo `02-avaliacao-template.zip`, descompacte esse arquivo, 
-copie/recorte o arquivo `02-avaliacao-template.qmd` e salve-o na 
-subpasta `01-avaliacao` que você acabou de criar
-
-4. Renomeie o arquivo `01-avaliacao-template.qmd` para 
-`01-avaliacao-seunome-sobrenome.qmd`
-
-5. Abra o arquivo, escreva os nomes dos membros do grupo abaixo 
-da chave `author` do cabeçalho yaml e comecem a resolver as questões.
-:::
-
-
-
-::: {.callout-note icon=false}
-## Consultas Permitidas
-
-- Vocês podem utilizar qualquer material de consulta disponibilizado no 
-site da disciplina para a realização da avaliação
-
-- Cada grupo pode utilizar modelos de linguagem de grande porte 
-(por exemplo, ChatGpt, Gemini etc.) para resolver as questões envolvendo 
-código em R
-
-- **Somente** serão avaliados os códigos que **imprimam o resultado** do 
-código
-
-- **Não** utilizem modelos de linguagem de grande porte (por exemplo, 
-ChatGpt) para responder às seguintes questões:
-
-- **Questão 1: itens d) e e)**
-
-- **Questão 3: item c)**
-
-- **Questão 4: item c)**
-
-- **Questão 5: Explicação do por quê as demais opções estão incorretas**
-
-**Atenção!** Caso um modelo retorne que há uma alta probabilidade de que 
-a resposta tenha sido gerada por um modelo de linguagem, isso implicará 
-em nota zero para esta questão.
-:::
-
-
-
-
-::: {.callout-note icon=false}
-## Workflow para Resolver a Avaliação 2 por 1 Membro do Grupo
-
-1. Execute cada uma das células de código que vocês criarem 
-no arquivo `02-avaliacao-seunome-sobrenome.qmd` para verificar que 
-cada célula de código funciona corretamente, antes de tentar 
-renderizar o arquivo. Comece executando a primeira célula de código que 
-carrega os pacotes necessários para a avaliação.
-
-2. Para executar uma célula de código, clique na 
-<span style="color: green;">seta verde</span> localizada no 
-canto superior direito de cada célula ou clique dentro da 
-célula de código e utilize o atalho `Ctrl + Shift + Enter`
-
-3. Para inserir o operador pipe `%>%` na criação de um pipeline 
-de análise, utilize o atalho `Ctrl + Shift + M`.
- 
-5. Após resolver todas as questões e verificar que todas as células de 
-código funcionam sem erro, clique no botão "**Render**" para 
-gerar o arquivo HTML da sua avaliação
-
-6. Caso alguma célula de código impeça a renderização do arquivo 
-`01-avaliacao-seunome-sobrenome.qmd` por você não ter completado ou 
-por ter criado código com erro, insira a chave `eval: false` 
-no início da célula de código que está impedindo a renderização, como 
-mostrado abaixo:
-
-
-```{{r}}
-#| eval: false
-
-```
-
-Isso irá desativar a execução do código de uma célula específica, 
-permitindo que o arquivo seja renderizado.
-:::
-
-
-
-::: {.callout-note icon=false}
-## Envio da Avaliação Por 1 Membro do Grupo
-
-1. Compacte o arquivo HTML em um arquivo ZIP
-
-2. Envie para o email **washington.silva@ifmg.edu.br**
-
-3. Use o assunto: **Avaliação 2 - Seu Nome Completo**
-
-4. **Não** deixe o laboratório antes que eu confirme o recebimento do seu 
-email com o arquivo anexado
-
-5. Horário limite para envio: **20:30** horas 
-:::
 
  
+# Semana 14
+
+## Aula 24 (25/06/2025)
+
+- **Tópicos:**
+
+  - Introdução à Inferência Estatística - Parte 1
+
+- **Slides:**
+
+  ::: {.callout-tip}
+  ## Para navegar e visualizar 
   
+  Clique no símbolo > à direita ou use as teclas: seta para direita →, espaço, 
+  ou letra "n"   para avançar. Pressione "F" para modo de tela cheia e "Esc" 
+  para sair.
+  :::  
+  
+  <iframe src="/slides/slides_aula24.html" width="100%" height="450px"></iframe>
+  
+  - [slides: versão para download (.zip)](arquivos/slides_aula24.zip)
+
+- **Arquivo quarto**
+
+  - [14-relatorio (.zip)](arquivos/14-relatorio.zip)
