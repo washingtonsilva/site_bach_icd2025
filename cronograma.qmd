@@ -431,7 +431,7 @@ próximas vezes.
 
   <iframe src="/slides/slides_aula12.html" width="100%" height="450px"></iframe>
   
-  - [slides: versão para download (.zip)](arquivos/slides_aula12.zip)
+  - [slides: versão para download (.zip)](slides/slides_aula12.zip)
 
 
 - **Arquivo quarto**
@@ -449,6 +449,7 @@ próximas vezes.
 - **Tópicos**
 
   -  Avaliação 1
+  - [Solução - Avaliação 1](slides/01-avaliacao-solucao.html){target="_blank"}
 
 
 
