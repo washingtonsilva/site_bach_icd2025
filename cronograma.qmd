@@ -807,6 +807,7 @@ próximas vezes.
 - **Tópicos:**
 
   - Introdução à Inferência Estatística - Parte 3
+  - [Solução dos Exercícios 1 e 2](slides/slides_aula26_solucoes.html){target="_blank"}
 
 - **Slides:**
 
