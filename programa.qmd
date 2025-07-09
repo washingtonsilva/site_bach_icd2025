@@ -221,13 +221,12 @@ rendimento da turma.
 
 - 7.1. Amostragem e distribuições amostrais
 - 7.2. Estimação Pontual, Intervalos de Confiança e Bootstrap
-- 7.3. Introdução aos Testes de Hipóteses com aplicações práticas
+- 7.3. Introdução aos Testes de Hipóteses
 
 
 ### 8. Tópicos Extras
 
-- 8.1. Relatórios Parametrizados com Quarto
-- 8.2. Dashboards básicos para monitoramento de indicadores
+- 8.2. Dashboards Quarto
 
 
 
@@ -316,8 +315,8 @@ alterado conforme o andamento da disciplina e o rendimento da turma.
 | 27/06/25   |    2            | Introdução à Inferência Estatística          |
 | 02/07/25   |    2            | Introdução à Inferência Estatística          | 
 | 04/07/25   |    2            | Introdução à Inferência Estatística          | 
-| 09/07/25   |    2            | Introdução à Inferência Estatística          | 
-| 11/07/25   |    2            | **Avaliação 3**                              |
+| 09/07/25   |    2            | **Avaliação 3**                              | 
+| 11/07/25   |    2            | Dashboards Quarto                            |
 | 18/07/25   |    2            | Dashboards Quarto                            | 
 
 
