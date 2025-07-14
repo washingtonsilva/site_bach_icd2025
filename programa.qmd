@@ -317,7 +317,7 @@ alterado conforme o andamento da disciplina e o rendimento da turma.
 | 04/07/25   |    2            | Introdução à Inferência Estatística          | 
 | 09/07/25   |    2            | **Avaliação 3**                              | 
 | 11/07/25   |    2            | *Tópico Extra*: Dashboards Quarto            |
-| 18/07/25   |    2            | *Fim da Jornada*                             | 
+| 18/07/25   |    2            | Encerramento da Disciplina.                  | 
 
 
 

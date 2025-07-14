@@ -114,7 +114,7 @@
     "href": "programa.html#plano-de-aulas",
     "title": "Programa da Disciplina",
     "section": "Plano de Aulas",
-    "text": "Plano de Aulas\nO cronograma a seguir é apenas um planejamento, portanto, pode ser alterado conforme o andamento da disciplina e o rendimento da turma.\n\n\n\n\n\n\n\n\nData\nTotal de Aulas\nTópico\n\n\n\n\n26/03/25\n2\nO que é Ciência de Dados?\n\n\n\n\nApresentação da Disciplina\n\n\n28/03/25\n2\nCRISP-DM e Tipos de análise\n\n\n\n\nConfiguração Git/GitHub\n\n\n02/04/25\n2\nVisão Geral RStudio/Quarto/R/Git/GitHub\n\n\n04/04/25\n2\nVisão Geral RStudio/Quarto/R/Git/GitHub\n\n\n09/04/25\n2\nVisão Geral RStudio/Quarto/R/Git/GitHub\n\n\n11/04/25\n2\nIntrodução à Linguagem R\n\n\n16/04/25\n2\nIntrodução à Linguagem R\n\n\n23/04/25\n2\nImportação de dados com readr e readxl\n\n\n25/04/25\n2\nManipulação de dados com dplyr\n\n\n30/04/25\n2\nManipulação de dados com dplyr\n\n\n07/05/25\n2\nManipulação de dados com dplyr\n\n\n09/05/25\n2\nOrganização de dados com tidyr\n\n\n14/05/25\n2\nAvaliação 1\n\n\n16/05/25\n2\nTipos Básicos de (joins) do dplyr\n\n\n21/05/25\n2\nFundamentos de Probabilidade\n\n\n23/05/25\n2\nFundamentos de Probabilidade\n\n\n28/05/25\n2\nFundamentos de Probabilidade\n\n\n30/05/25\n2\nFundamentos de Probabilidade\n\n\n02/06/25\n2\nAnálise Exploratória de Dados\n\n\n04/06/25\n2\nAnálise Exploratória de Dados\n\n\n11/06/25\n2\nAnálise Exploratória de Dados\n\n\n13/06/25\n2\nAnálise Exploratória de Dados\n\n\n18/06/25\n2\nAvaliação 2\n\n\n25/06/25\n2\nIntrodução à Inferência Estatística\n\n\n27/06/25\n2\nIntrodução à Inferência Estatística\n\n\n02/07/25\n2\nIntrodução à Inferência Estatística\n\n\n04/07/25\n2\nIntrodução à Inferência Estatística\n\n\n09/07/25\n2\nAvaliação 3\n\n\n11/07/25\n2\nTópico Extra: Dashboards Quarto\n\n\n18/07/25\n2\nFim da Jornada",
+    "text": "Plano de Aulas\nO cronograma a seguir é apenas um planejamento, portanto, pode ser alterado conforme o andamento da disciplina e o rendimento da turma.\n\n\n\n\n\n\n\n\nData\nTotal de Aulas\nTópico\n\n\n\n\n26/03/25\n2\nO que é Ciência de Dados?\n\n\n\n\nApresentação da Disciplina\n\n\n28/03/25\n2\nCRISP-DM e Tipos de análise\n\n\n\n\nConfiguração Git/GitHub\n\n\n02/04/25\n2\nVisão Geral RStudio/Quarto/R/Git/GitHub\n\n\n04/04/25\n2\nVisão Geral RStudio/Quarto/R/Git/GitHub\n\n\n09/04/25\n2\nVisão Geral RStudio/Quarto/R/Git/GitHub\n\n\n11/04/25\n2\nIntrodução à Linguagem R\n\n\n16/04/25\n2\nIntrodução à Linguagem R\n\n\n23/04/25\n2\nImportação de dados com readr e readxl\n\n\n25/04/25\n2\nManipulação de dados com dplyr\n\n\n30/04/25\n2\nManipulação de dados com dplyr\n\n\n07/05/25\n2\nManipulação de dados com dplyr\n\n\n09/05/25\n2\nOrganização de dados com tidyr\n\n\n14/05/25\n2\nAvaliação 1\n\n\n16/05/25\n2\nTipos Básicos de (joins) do dplyr\n\n\n21/05/25\n2\nFundamentos de Probabilidade\n\n\n23/05/25\n2\nFundamentos de Probabilidade\n\n\n28/05/25\n2\nFundamentos de Probabilidade\n\n\n30/05/25\n2\nFundamentos de Probabilidade\n\n\n02/06/25\n2\nAnálise Exploratória de Dados\n\n\n04/06/25\n2\nAnálise Exploratória de Dados\n\n\n11/06/25\n2\nAnálise Exploratória de Dados\n\n\n13/06/25\n2\nAnálise Exploratória de Dados\n\n\n18/06/25\n2\nAvaliação 2\n\n\n25/06/25\n2\nIntrodução à Inferência Estatística\n\n\n27/06/25\n2\nIntrodução à Inferência Estatística\n\n\n02/07/25\n2\nIntrodução à Inferência Estatística\n\n\n04/07/25\n2\nIntrodução à Inferência Estatística\n\n\n09/07/25\n2\nAvaliação 3\n\n\n11/07/25\n2\nTópico Extra: Dashboards Quarto\n\n\n18/07/25\n2\nEncerramento da Disciplina.",
     "crumbs": [
       "Início",
       "Programa da Disciplina"
@@ -455,7 +455,18 @@
     "href": "cronograma.html#aula-29-11072025",
     "title": "Cronograma",
     "section": "Aula 29 (11/07/2025)",
-    "text": "Aula 29 (11/07/2025)\n\nTópico Extra\n\nDashboards Quarto (último tópico da disciplina)\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\nArquivos necessários\n\n17-relatorio (.zip)\n\nAvisos Finais\n\nAs notas das avaliações 2 e 3 serão divulgadas até o dia 15/07/2025 no sistema acadêmico.\nConforme o calendário acadêmico, não teremos aula na próxima quarta-feira (16/07/2025).\nAgradeço a todos pela participação ao longo do semestre, espero que tenham adquirido novas habilidades e conhecimentos úteis. Desejo sucesso na conclusão do bacharelado e em suas carreiras profissionais.",
+    "text": "Aula 29 (11/07/2025)\n\nTópico Extra\n\nDashboards Quarto (último tópico da disciplina)\n\nSlides:\n\n\n\n\n\n\nPara navegar e visualizar\n\n\n\nClique no símbolo &gt; à direita ou use as teclas: seta para direita →, espaço, ou letra “n” para avançar. Pressione “F” para modo de tela cheia e “Esc” para sair.\n\n\n\n\nArquivos necessários\n\n17-relatorio (.zip)\n\nAvisos Finais\n\nAs notas das avaliações 2 e 3 serão divulgadas até o dia 15/07/2025 no sistema acadêmico.\nConforme o calendário acadêmico, não teremos aula na próxima quarta-feira (16/07/2025).",
+    "crumbs": [
+      "Início",
+      "Cronograma"
+    ]
+  },
+  {
+    "objectID": "cronograma.html#aula-30-18072025",
+    "href": "cronograma.html#aula-30-18072025",
+    "title": "Cronograma",
+    "section": "Aula 30 (18/07/2025)",
+    "text": "Aula 30 (18/07/2025)\n\nTópico\n\nEncerramento da disciplina",
     "crumbs": [
       "Início",
       "Cronograma"
