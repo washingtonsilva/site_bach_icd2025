@@ -68,8 +68,7 @@ Fundamentos de Ciência de Dados aplicados à Administração. Ambiente de
 trabalho e ferramentas computacionais (RStudio, Linguagem R, Git, GitHub e 
 Sistema Quarto). Preparação, manipulação e transformação de dados com 
 tidyverse. Estatística descritiva. Visualização de dados com ggplot2. 
-Fundamentos de probabilidade. Introdução à inferência estatística. Criação de 
-relatórios e dashboards para comunicação de resultados.
+Fundamentos de probabilidade e simulação. Introdução à inferência estatística.
 
 
 
@@ -118,31 +117,18 @@ CHANG, Winston. **R Graphics Cookbook**. 2025, O'Reilly. Disponível em:
 ## Avaliação
 
 O planejamento da distribuição dos pontos referentes às avaliações 
-**poderá** ser realizado da seguinte forma:
+será realizado da seguinte forma:
 
-- Avaliação 1 (33 pontos): Fundamentos de R e Manipulação de Dados
+- Avaliação 1 (33 pontos)
 
-    - Aplicada após o módulo 3
-    - Projeto individual: importação e manipulação de dados empresariais
-    - Entrega: Relatório quarto.
+- Avaliação 2 (33 pontos)
 
-- Avaliação 2 (33 pontos): Estatística Descritiva e Visualização
-
-    - Aplicada após o módulo 5
-    - Projeto em duplas: importação, manipulação, análise exploratória e 
-      visualizações de dados.
-    - Entrega: Relatório quarto com análises e visualizações comentadas.
-
-- Avaliação 3 (34 pontos): Projeto Final 
-
-    - Aplicada ao final do curso
-    - Projeto em grupos de 3-4 alunos: análise completa de um problema aplicado
-    - Entrega: Relatório Quarto (ou Dashboard) analítico e apresentação pelo 
-      grupo.
+- Avaliação 3 (34 pontos)
 
 Para aprovação, é necessária a obtenção de pelo menos 60 pontos. Pode haver 
 alterações no formato das avaliações conforme o andamento da disciplina e 
 rendimento da turma.
+
 
 
 
@@ -270,11 +256,10 @@ aprendizagem ativa. Nesse sentido, e dados os objetivos do curso, faremos
 uso intensivo de aulas práticas nas quais os graduandos deverão praticar 
 as metodologias para análise de dados e sua implementação via linguagem R 
 e sistema Quarto. O aprendizado será estruturado por meio de 
-projetos progressivos, começando com exercícios simples de manipulação de 
-dados e avançando para análises mais complexas, culminando em um projeto 
+exercícios progressivos, começando com exercícios simples de manipulação de 
+dados e avançando para análises mais complexas, culminando em uma avaliação
 final que sintetiza as competências desenvolvidas ao longo do 
-semestre. Esta abordagem visa facilitar a aplicação imediata dos 
-conhecimentos no contexto profissional dos estudantes.
+semestre. 
 
 
 
@@ -317,7 +302,7 @@ alterado conforme o andamento da disciplina e o rendimento da turma.
 | 04/07/25   |    2            | Introdução à Inferência Estatística          | 
 | 09/07/25   |    2            | **Avaliação 3**                              | 
 | 11/07/25   |    2            | *Tópico Extra*: Dashboards Quarto            |
-| 18/07/25   |    2            | Encerramento da Disciplina.                  | 
+| 18/07/25   |    2            | Encerramento da Disciplina                   | 
 
 
 
